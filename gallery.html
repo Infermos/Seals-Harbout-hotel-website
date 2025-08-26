@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Seals Harbour Hotel | Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+.lang-menu .selected-lang:before {
+    content: '';
+    position: absolute;
+    left: 0;                       /* Position flag on the left */
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background-image: url(en.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+/* Add hover effects for swiper slides */
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo_word-removebg-preview.png" alt="Marriott Logo" style="height: 44px; position: relative; top: 5px;">
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="facilities.html">Facilities</a>
+            <a href="meetings.html">Meetings & Events</a>
+            <a href="gallery.html"  class="active">Gallery</a>
+            <a href="contact.html">Contact</a>
+
+            
+            
+            <div class="lang-menu">
+                <div class="lang-menu-content">
+                    <div class="selected-lang">
+                        <span style="position: relative; top: -6px;">English</span>
+                    </div>  
+                    <ul>
+                        <li><a href="gallery_de.html" class="de" >German</a></li>
+                        <li><a href="gallery_ru.html" class="ru">Russian</a></li>
+                        <li><a href="gallery_fr.html" class="fr">French</a></li>
+                        <li><a href="gallery_ar.html" class="ar">Chinese</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        
+    </header>
+
+    <!-- Add Mobile Menu Button -->
+    <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Add Mobile Menu -->
+    <div class="mobile-menu">
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="facilities.html">Facilities</a>
+            <a href="meetings.html">Meetings & Events</a>
+            <a href="gallery.html"  class="active" >Gallery</a>
+            <a href="contact.html">Contact</a>
+            <div class="lang-menu">
+                <div class="lang-menu-content">
+                    <div class="selected-lang">
+                        <span>English</span>
+                    </div>
+                    <ul>
+                        <li><a href="gallery_de.html" class="de" >German</a></li>
+                        <li><a href="gallery_ru.html" class="ru">Russian</a></li>
+                        <li><a href="gallery_fr.html" class="fr">French</a></li>
+                        <li><a href="gallery_ar.html" class="ar">Chinese</a></li>
+                    </ul>
+                </div>
+            </div>
+            <button onclick="window.location.href='https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=318615&label=New_English_EN_LK_27027142825-OOHRKEm2e9cX4E5_mJSvaAS640874803405%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-199482273865%3Alp1009922%3Ali%3Adec%3Adm%3Aag27027142825%3Acmp400679785&sid=2282f1b3f1fc39bd7afc4ef015ecdbc7&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1747303756&srpvid=bd91476173de06f4&type=total&ucfs=1&'" style="background: #2652b2; color: #fff; border: none; padding: 12px 24px; border-radius: 4px; font-size: 1.1rem; cursor: pointer; width: 80%; text-align: center;">Book Now</button>
+        </nav>
+    </div>
+    
+
+    <section style="background: #1c3f8b; padding: 48px 0 0 0; margin-bottom: 0;">
+        <div class="gallery-hero">
+            <h1>Our Gallery</h1>
+            <p>Explore the beauty of Seals Harbour Hotel through our collection of images</p>
+        </div>
+    </section>
+
+    <main class="gallery-container">
+        <div class="gallery-categories">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="rooms">Rooms</button>
+            <button class="category-btn" data-category="dining">Dining</button>
+            <button class="category-btn" data-category="facilities">Facilities</button>
+            <button class="category-btn" data-category="views">Views</button>
+            <button class="category-btn" data-category="other">Other</button>
+        </div>
+
+        <div class="gallery-grid">
+            <!-- Room Images -->
+            <div class="gallery-item" data-category="rooms">
+                <img src="Deluxe Double Room.jpg" alt="Deluxe Double Room">
+                <div class="gallery-overlay">
+                    <h3>Deluxe Double Room</h3>
+                    <p>Spacious room with ocean view</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="rooms">
+                <img src="deluxFamilyRoom1.jpg" alt="Family Room">
+                <div class="gallery-overlay">
+                    <h3>Family Room</h3>
+                    <p>Perfect for family vacations</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="rooms">
+                <img src="double or twin bedroom img2.jpg" alt="Family or twin bedroom">
+                <div class="gallery-overlay">
+                    <h3>Family or twin  bedroom</h3>
+                    <p>Perfect for family or couple vacations</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="rooms">
+                <img src="dormitory room img1.jpg" alt="Dormitory Room">
+                <div class="gallery-overlay">
+                    <h3>Dormitory Room</h3>
+                    <p>Perfect for budget friendly stays</p>
+                </div>
+            </div>
+            
+            <!-- Dining Images -->
+            <div class="gallery-item" data-category="dining">
+                <img src="gal_restaurant.jpg" alt="Main Restaurant">
+                <div class="gallery-overlay">
+                    <h3>Seals Harbor Restaurant</h3>    
+                    <p>International cuisine with local flavors</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="dining">
+                <img src="gal_bar.jpg" alt="Lobby Bar">
+                <div class="gallery-overlay">
+                    <h3>Sunset Bar</h3>
+                    <p>Signature cocktails with ocean view</p>
+                </div>
+            </div>
+            
+            <!-- Facilities Images -->
+            <div class="gallery-item" data-category="facilities">
+                <img src="gal_pool1.jpg" alt="Infinity Pool">
+                <div class="gallery-overlay">
+                    <h3>Infinity Pool</h3>
+                    <p>Stunning ocean-edge swimming experience</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="facilities">
+                <img src="gal_pool2.jpg" alt="Infinity Pool">
+                <div class="gallery-overlay">
+                    <h3>Infinity Pool</h3>
+                    <p>Stunning ocean-edge swimming experience</p>
+
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="facilities">
+                <img src="yoga3.jpg" alt="Yoga">
+                <div class="gallery-overlay">
+                    <h3>Yoga</h3>
+                    <p>Relaxing treatments with sea views</p>
+                </div>
+            </div>
+            
+            <!-- View Images -->
+            <div class="gallery-item" data-category="views">
+                <img src="gal_view3.jpg" alt="Sunset View">
+                <div class="gallery-overlay">
+                    <h3>Harbor Sunset</h3>
+                    <p>Our famous golden hour</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="views">
+                <img src="gal_view.jpg" alt="Coastal View">
+                <div class="gallery-overlay">
+                    <h3>Coastal View</h3>
+                    <p>Breathtaking views of the Weligama Beach</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="views">
+                <img src="gal_view2.jpg" alt="Rooftop View">
+                <div class="gallery-overlay">
+                    <h3>Rooftop Dining</h3>
+                    <p>Enjoy meals while with an excellent view</p>
+                </div>
+            </div>
+            
+            <!-- Other Images -->
+            
+            
+            
+            
+            <!-- More images can be added as needed -->
+            
+            
+            
+        </div>
+        
+        <div class="gallery-modal">
+            <span class="close-modal">&times;</span>
+            <img class="modal-content" id="expanded-img">
+            <div class="modal-caption"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="rooms.html">Rooms</a></li>
+                    <li><a href="facilities.html">Our Services</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Get Help</h3>
+                <ul>
+                    <li><a href="contact.html">Mail Us</a></li>
+                    <li><a href="contact.html">Call Us</a></li>
+                    <li><a href="contact.html">Other concerns</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Accommodations</h3>
+                <ul>
+                    <li><a href="rooms.html#double-twin-popup">Double or Twin Bedroom</a></li>
+                    <li><a href="rooms.html#deluxe-double-popup">Deluxe Double Room</a></li>
+                    <li><a href="rooms.html#deluxe-family-popup">Deluxe Family Room</a></li>
+                    <li><a href="rooms.html#dormitory-popup">Single Bed Mixed Dormitory</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/sealsharborhotel/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/94773264818" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/seals_harbor_hotel/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Seals Harbor Hotel. All rights reserved | Designed by Moditha Fernando</p>
+        </div>
+    </footer>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        
+    
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const body = document.body;
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                body.style.overflow = '';
+            });
+        });
+
+
+    </script>
+    
+    <script>
+      function redirectToBooking() {
+        const checkin = document.getElementById("checkin").value;
+        const checkout = document.getElementById("checkout").value;
+        const guests = document.getElementById("guests").value;
+
+        // Replace with your actual Booking.com hotel ID
+        const hotelId = 'lk/seals-harbor'; // Using the ID from the original button URL
+
+        
+        const url = `https://www.booking.com/hotel/${hotelId}.en-gb.html?checkin=${checkin}&checkout=${checkout}&group_adults=${guests}&no_rooms=1&group_children=0`;
+
+        window.open(url, '_blank'); // Opens in new tab
+      }
+
+      // Gallery Filtering
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.category-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            const category = this.getAttribute('data-category');
+            
+            galleryItems.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Modal functionality
+    const modal = document.querySelector('.gallery-modal');
+    const modalImg = document.getElementById('expanded-img');
+    const captionText = document.querySelector('.modal-caption');
+    const closeModal = document.querySelector('.close-modal');
+    
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', function() {
+            modal.style.display = 'block';
+            modalImg.src = this.querySelector('img').src;
+            captionText.innerHTML = this.querySelector('h3').innerHTML + 
+                                  '<br>' + this.querySelector('p').innerHTML;
+        });
+    });
+    
+    closeModal.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+    
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
+    </script>
+ 
+    
+</body>
+</html>

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Seals Harbour Hotel | 客房</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="rooms.css">
+
+    <style>
+@media (min-width:1480px) {
+    .lang-menu {
+        left: 1000px !important;
+        right: auto !important;
+        margin-left: 0 !important;
+        margin-right: auto !important;
+        position: absolute !important;
+    }
+}
+
+
+.rooms-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .room-section {
+            margin-bottom: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .room-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .room-header h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .room-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .room-card {
+            display: flex;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .room-image {
+            flex: 1;
+            min-height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .room-content {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .room-content h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .room-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .learn-more-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #2652b2;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+            width: fit-content;
+        }
+
+        .learn-more-btn:hover {
+            background: #1e429f;
+        }
+
+        @media (max-width: 768px) {
+            .room-card {
+                flex-direction: column;
+            }
+            
+            .room-image {
+                min-height: 300px;
+            }
+        }
+
+        .banner-image {
+            width: 100%;
+            /* height is set inline, but you can override here */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 40px; /* Add some space below the banner */
+        }
+
+        .lang-menu .selected-lang:before {
+    content: '';
+    position: absolute;
+    left: 0;                       /* Position flag on the left */
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background-image: url(https://flagcdn.com/w40/cn.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+        position: relative;
+        top: -540px;
+    }
+    .mobile-menu {
+        display: block;
+    }
+    header nav {
+        display: none;
+    }
+}
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo_word-removebg-preview.png" alt="Marriott Logo" style="height: 44px; position: relative; top: 5px;">
+        </div>
+        <nav>
+            <a href="home_ar.html">首页</a>
+            <a href="rooms_ar.html" class="active">客房</a>
+            <a href="facilities_ar.html">设施</a>
+            <a href="meetings_ar.html">会议与活动</a>
+            <a href="gallery_ar.html">画廊</a>
+            <a href="contact_ar.html">联系我们</a>
+
+            
+            
+            <div class="lang-menu">
+                <div class="lang-menu-content">
+                    <div class="selected-lang">
+                        <span style="position: relative; top: -6px;">中文</span>
+                    </div>
+                    <ul>
+                        
+                        <li><a href="rooms.html" class="en">英语</a></li>
+                        <li><a href="rooms_de.html" class="de">德语</a></li>
+                        <li><a href="rooms_ru.html" class="ru">俄语</a></li>
+                        <li><a href="rooms_fr.html" class="fr">法语</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+       
+        
+    </header>
+
+    <div class="banner-image" style="background-image: url('rooms_banner.png'); height: 500px; background-size: cover; background-position: center;"></div>
+
+
+    <!-- Add Mobile Menu Button -->
+    <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Add Mobile Menu -->
+    <div class="mobile-menu">
+        <nav>
+            <a href="home_ar.html">首页</a>
+            <a href="rooms_ar.html" class="active">客房</a>
+            <a href="facilities_ar.html">设施</a>
+            <a href="meetings_ar.html">会议与活动</a>
+            <a href="gallery_ar.html">画廊</a>
+            <a href="contact_ar.html">联系我们</a>
+            <div class="lang-menu">
+                <div class="lang-menu-content">
+                    <div class="selected-lang">
+                        <span>中文</span>
+                    </div>
+                    <ul>
+                        
+                        <li><a href="rooms.html" class="en">英语</a></li>
+                        <li><a href="rooms_de.html" class="de">德语</a></li>
+                        <li><a href="rooms_ru.html" class="ru">俄语</a></li>
+                        <li><a href="rooms_fr.html" class="fr">法语</a></li>
+                    </ul>
+                </div>
+            </div>
+            <button onclick="window.location.href='https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=318615&label=New_English_EN_LK_27027142825-OOHRKEm2e9cX4E5_mJSvaAS640874803405%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-199482273865%3Alp1009922%3Ali%3Adec%3Adm%3Aag27027142825%3Acmp400679785&sid=2282f1b3f1fc39bd7afc4ef015ecdbc7&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1747303756&srpvid=bd91476173de06f4&type=total&ucfs=1&'" style="background: #2652b2; color: #fff; border: none; padding: 12px 24px; border-radius: 4px; font-size: 1.1rem; cursor: pointer; width: 80%; text-align: center;">立即预订</button>
+        </nav>
+    </div>
+
+
+    <div class="rooms-container">
+        <div class="room-header">
+            <h1>我们的客房与套房</h1>
+            <p>体验我们精心设计的住宿环境，享受舒适与奢华，每一间客房都旨在为客人提供完美的住宿体验。</p>
+        </div>
+
+        <div class="room-section">
+            <div class="room-card">
+                <div class="room-image" style="background-image: url('double\ or\ twin\ bedroom\ img1.jpg');"></div>
+                <div class="room-content">
+                    <h2>双床或双人房</h2>
+                    <p>我们宽敞的双床或双人房提供17平方米的舒适空间，可选择两张双人床或两张单人床。配备空调、独立厨房、现代家具、独立浴室和烧烤设施。</p>
+                    <a href="#" class="learn-more-btn" data-room="double-twin">了解更多</a>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-image" style="background-image: url('Deluxe\ Double\ Room.jpg');"></div>
+                <div class="room-content">
+                    <h2>豪华海景双人房</h2>
+                    <p>在我们的豪华双人房欣赏令人叹为观止的海景。这间22平方米的房间配备1张特大双人床，可根据要求提供婴儿床。设施包括私人阳台、绝佳海景、空调、独立浴室、隔音设施和烧烤设施。</p>
+                    <a href="#" class="learn-more-btn" data-room="deluxe-double">了解更多</a>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-image" style="background-image: url('delux\ family\ room\ img\ 1.jpg');"></div>
+                <div class="room-content">
+                    <h2>豪华家庭房</h2>
+                    <p>我们宽敞的豪华家庭房配备1张特大双人床和2张双层床，非常适合家庭入住。房间还配备空调和独立浴室。</p>
+                    <a href="#" class="learn-more-btn" data-room="deluxe-family">了解更多</a>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-image" style="background-image: url('dormitory\ room\ img1.jpg');"></div>
+                <div class="room-content">
+                    <h2>混合宿舍单人床</h2>
+                    <p>我们经济实惠的混合宿舍单人床房配备1张单人床、独立厨房、空调和烧烤设施，非常适合寻求经济住宿的旅行者。</p>
+                    <a href="#" class="learn-more-btn" data-room="dormitory">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Room Popups -->
+    <div id="double-twin-popup" class="room-popup">
+        <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <h1 class="room-title">双床或双人房</h1>
+            <p class="room-price">起价 $25/晚</p><br>
+            <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=1474702&label=popup-clicktrip-bn-n82-140625-seals_harbor_hotel-i1816583-s44465-weh1zqoJ9iCxeMy60-cu_tab-d501-dc3-close_no&sid=cb29c30bbca41d7b4034ee35aeb2323d&all_sr_blocks=224276204_338165583_2_0_0&checkin=2025-06-15&checkout=2025-06-16&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=224276204_338165583_2_0_0&hpos=1&matching_block_id=224276204_338165583_2_0_0&nflt=at_bun%3D30%3Bht_id%3D216&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=224276204_338165583_2_0_0__2500&srepoch=1749917376&srpvid=f0817107b6580946&type=total&ucfs=1&#room_224276204" class="book-now-btn">立即预订</a>
+            <br><br><br>
+
+            <div class="swiper room-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="double or twin bedroom img1.jpg" alt="双床或双人房">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="double or twin bedroom img2.jpg" alt="房间景观">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="room-tags">
+                <span class="room-tag">2张双人床或2张单人床</span>
+                <span class="room-tag">17平方米</span>
+                <span class="room-tag">独立厨房</span>
+                <span class="room-tag">空调</span>
+            </div>
+
+            <div class="room-description">
+                <p>我们宽敞的双床或双人房提供17平方米的舒适空间，可选择两张双人床或两张单人床。配备空调、独立厨房、现代家具、独立浴室和烧烤设施。</p>
+            </div>
+
+            <div class="room-amenities">
+                <div class="amenity-item">
+                    <i class="fas fa-wifi"></i>
+                    <span>免费高速WiFi</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-snowflake"></i>
+                    <span>空调</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-utensils"></i>
+                    <span>独立厨房</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-shower"></i>
+                    <span>独立浴室</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-fire"></i>
+                    <span>烧烤设施</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="deluxe-double-popup" class="room-popup">
+        <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <h1 class="room-title">豪华海景双人房</h1>
+            <p class="room-price">起价 $40/晚</p><br>
+            <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=1474702&label=popup-clicktrip-bn-n82-140625-seals_harbor_hotel-i1816583-s44465-weh1zqoJ9iCxeMy60-cu_tab-d501-dc3-close_no&sid=cb29c30bbca41d7b4034ee35aeb2323d&all_sr_blocks=224276204_338165583_2_0_0&checkin=2025-06-15&checkout=2025-06-16&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=224276204_338165583_2_0_0&hpos=1&matching_block_id=224276204_338165583_2_0_0&nflt=at_bun%3D30%3Bht_id%3D216&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=224276204_338165583_2_0_0__2500&srepoch=1749917376&srpvid=f0817107b6580946&type=total&ucfs=1&#room_224276203" class="book-now-btn">立即预订</a>
+            <br><br><br>
+
+            <div class="swiper room-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="Deluxe Double Room.jpg" alt="豪华双人房">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Deluxe Double Room 2.jpg" alt="豪华双人房">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Deluxe Double Room 3.jpg" alt="豪华双人房">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="room-tags">
+                <span class="room-tag">特大双人床</span>
+                <span class="room-tag">22平方米</span>
+                <span class="room-tag">海景</span>
+                <span class="room-tag">私人阳台</span>
+            </div>
+
+            <div class="room-description">
+                <p>在我们的豪华双人房欣赏令人叹为观止的海景。这间22平方米的房间配备1张特大双人床，可根据要求提供婴儿床。设施包括私人阳台、绝佳海景、空调、独立浴室、隔音设施和烧烤设施。</p>
+            </div>
+
+            <div class="room-amenities">
+                <div class="amenity-item">
+                    <i class="fas fa-wifi"></i>
+                    <span>免费高速WiFi</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-snowflake"></i>
+                    <span>空调</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <span>海景</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-shower"></i>
+                    <span>独立浴室</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-volume-mute"></i>
+                    <span>隔音设施</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="deluxe-family-popup" class="room-popup">
+        <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <h1 class="room-title">豪华家庭房</h1>
+            <p class="room-price">起价 $50/晚</p><br>
+            <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=1474702&label=popup-clicktrip-bn-n82-140625-seals_harbor_hotel-i1816583-s44465-weh1zqoJ9iCxeMy60-cu_tab-d501-dc3-close_no&sid=cb29c30bbca41d7b4034ee35aeb2323d&all_sr_blocks=224276204_338165583_2_0_0&checkin=2025-06-15&checkout=2025-06-16&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=224276204_338165583_2_0_0&hpos=1&matching_block_id=224276204_338165583_2_0_0&nflt=at_bun%3D30%3Bht_id%3D216&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=224276204_338165583_2_0_0__2500&srepoch=1749917376&srpvid=f0817107b6580946&type=total&ucfs=1&#room_224276207" class="book-now-btn">立即预订</a>
+            <br><br><br>
+
+            <div class="swiper room-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="delux family room img 1.jpg" alt="豪华家庭房">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="deluxFamilyRoom2.jpg" alt="浴室">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="deluxFamilyRoom3.jpg" alt="房间景观">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="room-tags">
+                <span class="room-tag">特大双人床</span>
+                <span class="room-tag">2张双层床</span>
+                <span class="room-tag">45平方米</span>
+                <span class="room-tag">可提供婴儿床</span>
+            </div>
+
+            <div class="room-description">
+                <p>欢迎入住Seals Harbor酒店的豪华家庭房——您与家人享受轻松海滩度假的完美住所。这间宽敞的房间设计注重舒适和便利，配备一张大号特大床和舒适的双层床，最多可容纳四位客人，非常适合家庭或小团体入住。房间配备空调、吊扇和蚊帐，让您在入住期间保持凉爽舒适。享受独立浴室的热水、新鲜毛巾和免费洗浴用品，每日客房服务保持房间整洁。</p>
+            </div>
+
+            <div class="room-amenities">
+                <div class="amenity-item">
+                    <i class="fas fa-wifi"></i>
+                    <span>免费高速WiFi</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-snowflake"></i>
+                    <span>空调</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-swimming-pool"></i>
+                    <span>游泳池</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-shower"></i>
+                    <span>热带雨淋</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-utensils"></i>
+                    <span>客房服务</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="dormitory-popup" class="room-popup">
+        <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <h1 class="room-title">混合宿舍单床</h1>
+            <p class="room-price">起价 $8/晚</p><br>
+            <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=1474702&label=popup-clicktrip-bn-n82-140625-seals_harbor_hotel-i1816583-s44465-weh1zqoJ9iCxeMy60-cu_tab-d501-dc3-close_no&sid=cb29c30bbca41d7b4034ee35aeb2323d&all_sr_blocks=224276204_338165583_2_0_0&checkin=2025-06-15&checkout=2025-06-16&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=224276204_338165583_2_0_0&hpos=1&matching_block_id=224276204_338165583_2_0_0&nflt=at_bun%3D30%3Bht_id%3D216&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=224276204_338165583_2_0_0__2500&srepoch=1749917376&srpvid=f0817107b6580946&type=total&ucfs=1&#room_224276205" class="book-now-btn">立即预订</a>
+            <br><br><br>
+
+            <div class="swiper room-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="dormitory room img1.jpg" alt="宿舍房间">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="dormitory room img2.jpg" alt="宿舍景观">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="dormitory room img3.jpg" alt="宿舍景观">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="room-tags">
+                <span class="room-tag">单人床</span>
+                <span class="room-tag">独立厨房</span>
+                <span class="room-tag">空调</span>
+                <span class="room-tag">烧烤设施</span>
+            </div>
+
+            <div class="room-description">
+                <p>我们经济实惠的混合宿舍单人床房配备1张单人床、独立厨房、空调和烧烤设施，非常适合寻求经济住宿的旅行者。</p>
+            </div>
+
+            <div class="room-amenities">
+                <div class="amenity-item">
+                    <i class="fas fa-wifi"></i>
+                    <span>免费高速WiFi</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-snowflake"></i>
+                    <span>空调</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-utensils"></i>
+                    <span>独立厨房</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-fire"></i>
+                    <span>烧烤设施</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-lock"></i>
+                    <span>安全储物柜</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>快速链接</h3>
+                <ul>
+                    <li><a href="rooms_ar.html">客房</a></li>
+                    <li><a href="facilities_ar.html">我们的服务</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="contact_ar.html">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>获取帮助</h3>
+                <ul>
+                    <li><a href="contact_ar.html">给我们发邮件</a></li>
+                    <li><a href="contact_ar.html">给我们打电话</a></li>
+                    <li><a href="contact_ar.html">其他问题</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>住宿</h3>
+                <ul>
+                    <li><a href="rooms_ar.html#double-twin-popup">双人或双床房</a></li>
+                    <li><a href="rooms_ar.html#deluxe-double-popup">豪华双人房</a></li>
+                    <li><a href="rooms_ar.html#deluxe-family-popup">豪华家庭房</a></li>
+                    <li><a href="rooms_ar.html#dormitory-popup">混合宿舍单床</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>通讯</h3>
+                <p>订阅我们的通讯以获取更新。</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="您的电子邮件地址" required>
+                    <button type="submit">订阅</button>
+                </form>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/sealsharborhotel/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/94773264818" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/seals_harbor_hotel/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Seals Harbor Hotel. 保留所有权利 | 设计：Moditha Fernando</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const body = document.body;
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                body.style.overflow = '';
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize all room sliders
+        document.querySelectorAll('.room-slider').forEach(slider => {
+            new Swiper(slider, {
+                loop: true,
+                pagination: {
+                    el: slider.querySelector('.swiper-pagination'),
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: slider.querySelector('.swiper-button-next'),
+                    prevEl: slider.querySelector('.swiper-button-prev'),
+                },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+            });
+        });
+
+        // Check for hash in URL and open corresponding popup
+        const hash = window.location.hash;
+        if (hash) {
+            const popup = document.querySelector(hash);
+            if (popup) {
+                popup.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // Popup functionality
+        const learnMoreButtons = document.querySelectorAll('.learn-more-btn');
+        learnMoreButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const roomType = this.getAttribute('data-room');
+                const popup = document.getElementById(`${roomType}-popup`);
+                if (popup) {
+                    popup.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        // Close popup functionality
+        const closeButtons = document.querySelectorAll('.close-popup');
+        closeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const popup = this.closest('.room-popup');
+                if (popup) {
+                    popup.style.display = 'none';
+                    document.body.style.overflow = '';
+                    // Remove hash from URL when closing popup
+                    history.pushState("", document.title, window.location.pathname);
+                }
+            });
+        });
+
+        // Close popup when clicking outside
+        const popups = document.querySelectorAll('.room-popup');
+        popups.forEach(popup => {
+            popup.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.style.display = 'none';
+                    document.body.style.overflow = '';
+                    // Remove hash from URL when closing popup
+                    history.pushState("", document.title, window.location.pathname);
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Seals Harbour Hotel | Rooms</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="facilities.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        
+        html {
+  scroll-behavior: smooth;
+}
+        .banner-image {
+            width: 100%;
+            /* height is set inline, but you can override here */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 40px; /* Add some space below the banner */   
+        }
+
+        .lang-menu .selected-lang:before {
+    content: '';
+    position: absolute;
+    left: 0;                       /* Position flag on the left */
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background-image: url(en.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+        position: relative;
+        top: -540px;
+    }
+    .mobile-menu {
+        display: block;
+    }
+    header nav {
+        display: none;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+p{
+    line-height: 1.5;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo_word-removebg-preview.png" alt="Marriott Logo" style="height: 44px; position: relative; top: 5px;">
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="facilities.html" class="active">Facilities</a>
+            <a href="meetings.html">Meetings & Events</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+
+            
+            
+            <div class="lang-menu">
+                <div class="lang-menu-content">
+                    <div class="selected-lang">
+                        <span style="position: relative; top: -6px;">English</span>
+                    </div>  
+                    <ul>
+                        <li><a href="facilities_de.html" class="de" >German</a></li>
+                        <li><a href="facilities_ru.html" class="ru">Russian</a></li>
+                        <li><a href="facilities_fr.html" class="fr">French</a></li>
+                        <li><a href="facilities_ar.html" class="ar">Chinese</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+
+        
+    </header>
+
+    <div class="banner-image" style="background-image: url('facilities_banner.png'); height: 500px; background-size: cover; background-position: center;"></div>
+
+    <!-- Add Mobile Menu Button -->
+    <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Add Mobile Menu -->
+    <div class="mobile-menu">
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="facilities.html" class="active">Facilities</a>
+            <a href="meetings.html">Meetings & Events</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <div class="lang-menu">
+                <div class="lang-menu-content">
+                    <div class="selected-lang">
+                        <span>English</span>
+                    </div>
+                    <ul>
+                        <li><a href="facilities_de.html" class="de" >German</a></li>
+                        <li><a href="facilities_ru.html" class="ru">Russian</a></li>
+                        <li><a href="facilities_fr.html" class="fr">French</a></li>
+                        <li><a href="facilities_ar.html" class="ar">Chinese</a></li>
+                    </ul>
+                </div>
+            </div>
+            <button onclick="window.location.href='https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=318615&label=New_English_EN_LK_27027142825-OOHRKEm2e9cX4E5_mJSvaAS640874803405%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-199482273865%3Alp1009922%3Ali%3Adec%3Adm%3Aag27027142825%3Acmp400679785&sid=2282f1b3f1fc39bd7afc4ef015ecdbc7&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1747303756&srpvid=bd91476173de06f4&type=total&ucfs=1&'" style="background: #2652b2; color: #fff; border: none; padding: 12px 24px; border-radius: 4px; font-size: 1.1rem; cursor: pointer; width: 80%; text-align: center;">Book Now</button>
+        </nav>
+    </div>
+
+    <main class="container facilities-content">
+        <h1>Hotel Facilities</h1>
+        <p>At Seals Harbour Hotel, we offer a range of facilities designed to make your stay comfortable and enjoyable. From relaxing spaces to exciting activities, we have something for everyone.</p>
+        <br><br><br>
+        <div class="facility-item" >
+            <div class="facility-image">
+                <img src="room.jpg" alt="Rooms image" class="main-facility-image">
+                <img src="delux family room img 1.jpg" alt="Overlaid rooms image" class="overlaid-image" >
+            </div>
+            <div class="facility-details" id="facility-item-room" style="scroll-margin-top: 100px;" >
+                <h2 >Rooms</h2>
+                <p>Our rooms in Weligama offer the perfect blend of coastal comfort and modern luxury. Whether you're here to surf, relax, or explore, each room is designed to be your peaceful retreat—featuring cozy beds, air conditioning, free Wi-Fi, and private balconies with stunning views of the ocean or lush gardens. With options ranging from budget-friendly doubles to spacious family suites, you'll find the ideal space to unwind after a day in paradise.</p>
+            </div>
+            
+        </div>
+
+        <div class="facility-item">
+            <div class="facility-image">
+                <img src="pool.jpg" alt="Pool image" class="main-facility-image">
+                <img src="pool2.jpg" alt="Overlaid pool image" class="overlaid-image">
+            </div>
+            <div class="facility-details" id="facility-item-pool" style="scroll-margin-top: 100px;">
+                <h2>Pool</h2>
+                <p>Dive into our refreshing swimming pool or lounge by the poolside with a drink. It's the perfect spot to unwind and soak up the sun.</p>
+            </div>
+        </div>
+
+        <div class="facility-item" >
+            <div class="facility-image">
+                <img src="rooftopDine.jpg" alt="Rooftop Dine In image" class="main-facility-image">
+                <img src="rooftopDine2.jpg" alt="Overlaid rooftop image" class="overlaid-image">
+            </div>
+            <div class="facility-details" id="facility-item-dine" style="scroll-margin-top: 100px;">
+                <h2>Rooftop Dine In</h2>
+                <p>Head up to our rooftop for a dining experience with a view. Overlooking the Weligama coastline, it's the perfect place to enjoy delicious local and international dishes while watching the sunset. Our rooftop bar serves up everything from fresh tropical cocktails to fine wines and chilled beers, all in a laid-back, scenic setting.</p>
+            </div>
+        </div>
+
+        <div class="facility-item">
+            <div class="facility-image">
+                <img src="surfing2.jpg" alt="Surfing image" class="main-facility-image">
+                <img src="surfing.jpg" alt="Overlaid surfing image" class="overlaid-image">
+            </div>
+            <div class="facility-details" id="facility-item-surf" style="scroll-margin-top: 100px;">
+                <h2>Surfing</h2>
+                <p>Weligama is one of the best spots in Sri Lanka for beginner-friendly surfing. Just a short walk from the hotel, you'll find plenty of local surf schools offering lessons, board rentals, and guided sessions. The gentle waves and sandy bottom make it perfect for first-timers looking to catch their first wave, as well as more experienced surfers wanting to refine their skills.</p>
+            </div>
+        </div>
+
+        <div class="facility-item">
+            <div class="facility-image">
+                <img src="yoga2.jpg" alt="Yoga image" class="main-facility-image">
+                <img src="yoga3.jpg" alt="Overlaid yoga image" class="overlaid-image">
+            </div>
+            <div class="facility-details" id="facility-item-yoga">
+                <h2>Yoga</h2>
+                <p>Reconnect with your mind and body through our guided yoga sessions, offered right here at the hotel. Whether you're a beginner or an experienced yogi, our instructors tailor each class to suit all levels. Sessions are held in peaceful, open-air spaces—often at sunrise or sunset—so you can stretch, breathe, and flow with the natural rhythm of Weligama. It's the perfect way to start your day or wind down after a beach adventure.</p>
+            </div>
+        </div>
+
+        <p>Discover the beauty of our hotel and the surrounding area through stunning visuals in our gallery.</p>
+        <button class="gallery-button" onclick="window.location.href='gallery.html'">Go to gallery</button>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="rooms.html">Rooms</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Get Help</h3>
+                <ul>
+                    <li><a href="contact.html">Send us an Email</a></li>
+                    <li><a href="contact.html">Call Us</a></li>
+                    <li><a href="contact.html">Other Questions</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Accommodation</h3>
+                <ul>
+                    <li><a href="rooms.html#double-twin-popup">Double or Twin Room</a></li>
+                    <li><a href="rooms.html#deluxe-double-popup">Deluxe Double Room</a></li>
+                    <li><a href="rooms.html#deluxe-family-popup">Deluxe Family Room</a></li>
+                    <li><a href="rooms.html#dormitory-popup">Mixed Dormitory Bed</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/sealsharborhotel/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/94773264818" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/seals_harbor_hotel/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Seals Harbor Hotel. All rights reserved | Design: Moditha Fernando</p>
+        </div>
+    </footer>
+</body>
+    <script>
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const body = document.body;
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            });
+
+            // Close mobile menu when clicking a link
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    body.style.overflow = '';
+                });
+            });
+    </script>
+</html>

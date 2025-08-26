@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Seals Harbour Hotel | Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+.lang-menu .selected-lang:before {
+    content: '';
+    position: absolute;
+    left: 0;                       /* Position flag on the left */
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background-image: url(https://flagcdn.com/w40/fr.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+@media (min-width:1480px) {
+    .lang-menu {
+        left: 1000px !important;
+        right: auto !important;
+        margin-left: 0 !important;
+        margin-right: auto !important;
+        position: absolute !important;
+    }
+}
+
+
+
+
+
+/* Add hover effects for swiper slides */
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo_word-removebg-preview.png" alt="Marriott Logo" style="height: 44px; position: relative; top: 5px;">
+        </div>
+        <nav>
+            <a href="home_fr.html">Accueil</a>
+            <a href="rooms_fr.html">Chambres</a>
+            <a href="facilities_fr.html">Équipements</a>
+            <a href="meetings_fr.html">Réunions & Événements</a>
+            <a href="gallery_fr.html"  class="active">Galerie</a>
+            <a href="contact_fr.html">Contact</a>
+
+            
+            
+            <div class="lang-menu">
+                <div class="lang-menu-content">
+                    <div class="selected-lang">
+                        <span style="position: relative; top: -6px;">Français</span>
+                    </div>  
+                    <ul>
+                        
+                        
+                        <li><a href="gallery_ar.html" class="ar">Chinois</a></li>
+                        <li><a href="gallery.html" class="en" >Anglais</a></li>
+                        <li><a href="gallery_ru.html" class="ru">Allemand</a></li>
+                        <li><a href="gallery_fr.html" class="fr">Russe</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        
+    </header>
+
+    <!-- Add Mobile Menu Button -->
+    <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Add Mobile Menu -->
+    <div class="mobile-menu">
+        <nav>
+            <a href="home_fr.html">Accueil</a>
+            <a href="rooms_fr.html">Chambres</a>
+            <a href="facilities_fr.html">Équipements</a>
+            <a href="meetings_fr.html">Réunions & Événements</a>
+            <a href="gallery_fr.html"  class="active">Galerie</a>
+            <a href="contact_fr.html">Contact</a>
+            <div class="lang-menu">
+                <div class="lang-menu-content">
+                    <div class="selected-lang">
+                        <span style="position: relative; top: -6px;">Français</span>
+                    </div>  
+                    <ul>
+                        
+                        
+                        <li><a href="gallery_ar.html" class="ar">Chinois</a></li>
+                        <li><a href="gallery.html" class="en" >Anglais</a></li>
+                        <li><a href="gallery_ru.html" class="ru">Allemand</a></li>
+                        <li><a href="gallery_fr.html" class="fr">Russe</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <button onclick="window.location.href='https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=318615&label=New_English_EN_LK_27027142825-OOHRKEm2e9cX4E5_mJSvaAS640874803405%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-199482273865%3Alp1009922%3Ali%3Adec%3Adm%3Aag27027142825%3Acmp400679785&sid=2282f1b3f1fc39bd7afc4ef015ecdbc7&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1747303756&srpvid=bd91476173de06f4&type=total&ucfs=1&'" style="background: #2652b2; color: #fff; border: none; padding: 12px 24px; border-radius: 4px; font-size: 1.1rem; cursor: pointer; width: 80%; text-align: center;">Réserver</button>
+        </nav>
+    </div>
+    
+
+    <section style="background: #1c3f8b; padding: 48px 0 0 0; margin-bottom: 0;">
+        <div class="gallery-hero">
+            <h1>Notre Galerie</h1>
+            <p>Découvrez la beauté de l'hôtel Seals Harbour à travers notre collection d'images</p>
+        </div>
+    </section>
+
+    <main class="gallery-container">
+        <div class="gallery-categories">
+            <button class="category-btn active" data-category="all">Tous</button>
+            <button class="category-btn" data-category="rooms">Chambres</button>
+            <button class="category-btn" data-category="dining">Restauration</button>
+            <button class="category-btn" data-category="facilities">Équipements</button>
+            <button class="category-btn" data-category="views">Vues</button>
+            <button class="category-btn" data-category="other">Autres</button>
+        </div>
+
+        <div class="gallery-grid">
+            <!-- Room Images -->
+            <div class="gallery-item" data-category="rooms">
+                <img src="Deluxe Double Room.jpg" alt="Chambre Double Deluxe">
+                <div class="gallery-overlay">
+                    <h3>Chambre Double Deluxe</h3>
+                    <p>Chambre spacieuse avec vue sur l'océan</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="rooms">
+                <img src="deluxFamilyRoom1.jpg" alt="Chambre Familiale">
+                <div class="gallery-overlay">
+                    <h3>Chambre Familiale</h3>
+                    <p>Parfait pour les vacances en famille</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="rooms">
+                <img src="double or twin bedroom img2.jpg" alt="Chambre familiale ou twin">
+                <div class="gallery-overlay">
+                    <h3>Chambre familiale ou twin</h3>
+                    <p>Idéal pour les familles ou les couples</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="rooms">
+                <img src="dormitory room img1.jpg" alt="Dortoir">
+                <div class="gallery-overlay">
+                    <h3>Dortoir</h3>
+                    <p>Parfait pour les séjours économiques</p>
+                </div>
+            </div>
+            
+            <!-- Dining Images -->
+            <div class="gallery-item" data-category="dining">
+                <img src="gal_restaurant.jpg" alt="Restaurant principal">
+                <div class="gallery-overlay">
+                    <h3>Restaurant Seals Harbour</h3>    
+                    <p>Cuisine internationale aux saveurs locales</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="dining">
+                <img src="gal_bar.jpg" alt="Bar du hall">
+                <div class="gallery-overlay">
+                    <h3>Bar Sunset</h3>
+                    <p>Cocktails signature avec vue sur l'océan</p>
+                </div>
+            </div>
+            
+            <!-- Facilities Images -->
+            <div class="gallery-item" data-category="facilities">
+                <img src="gal_pool1.jpg" alt="Piscine à débordement">
+                <div class="gallery-overlay">
+                    <h3>Piscine à débordement</h3>
+                    <p>Expérience de baignade au bord de l'océan</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="facilities">
+                <img src="gal_pool2.jpg" alt="Piscine à débordement">
+                <div class="gallery-overlay">
+                    <h3>Piscine à débordement</h3>
+                    <p>Expérience de baignade au bord de l'océan</p>
+
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="facilities">
+                <img src="yoga3.jpg" alt="Yoga">
+                <div class="gallery-overlay">
+                    <h3>Yoga</h3>
+                    <p>Séances de relaxation avec vue sur la mer</p>
+                </div>
+            </div>
+            
+            <!-- View Images -->
+            <div class="gallery-item" data-category="views">
+                <img src="gal_view3.jpg.jpg" alt="Vue sur le coucher du soleil">
+                <div class="gallery-overlay">
+                    <h3>Coucher de soleil sur le port</h3>
+                    <p>Notre célèbre heure dorée</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="views">
+                <img src="gal_view.jpg" alt="Vue côtière">
+                <div class="gallery-overlay">
+                    <h3>Vue côtière</h3>
+                    <p>Vues imprenables sur la plage de Weligama</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="views">
+                <img src="gal_view2.jpg" alt="Vue du toit">
+                <div class="gallery-overlay">
+                    <h3>Restaurant sur le toit</h3>
+                    <p>Profitez de vos repas avec une vue magnifique</p>
+                </div>
+            </div>
+            
+            <!-- Other Images -->
+            
+            
+            
+            
+            <!-- More images can be added as needed -->
+            
+            
+            
+        </div>
+        
+        <div class="gallery-modal">
+            <span class="close-modal">&times;</span>
+            <img class="modal-content" id="expanded-img">
+            <div class="modal-caption"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="rooms.html">Chambres</a></li>
+                    <li><a href="facilities.html">Nos services</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Aide</h3>
+                <ul>
+                    <li><a href="contact.html">Nous écrire</a></li>
+                    <li><a href="contact.html">Nous appeler</a></li>
+                    <li><a href="contact.html">Autres demandes</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Hébergements</h3>
+                <ul>
+                    <li><a href="rooms.html#double-twin-popup">Chambre double ou twin</a></li>
+                    <li><a href="rooms.html#deluxe-double-popup">Chambre Double Deluxe</a></li>
+                    <li><a href="rooms.html#deluxe-family-popup">Chambre Familiale Deluxe</a></li>
+                    <li><a href="rooms.html#dormitory-popup">Dortoir mixte</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Abonnez-vous à notre newsletter pour recevoir les actualités.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Ihre E-Mail-Adresse" required>
+                    <button type="submit">Abonnieren</button>
+                </form>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/sealsharborhotel/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/94773264818" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/seals_harbor_hotel/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Seals Harbour Hotel. Tous droits réservés | Design : Moditha Fernando</p>
+        </div>
+    </footer>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu functionality
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const body = document.body;
+
+    mobileMenuBtn.addEventListener('click', function() {
+        this.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Close menu when clicking links
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenuBtn.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            body.style.overflow = '';
+        });
+    });
+
+            // Initialize all room sliders with enhanced settings
+            document.querySelectorAll('.room-slider').forEach(slider => {
+                new Swiper(slider, {
+                    loop: true,
+                    effect: 'fade',
+                    fadeEffect: {
+                        crossFade: true
+                    },
+                    pagination: {
+                        el: slider.querySelector('.swiper-pagination'),
+                        clickable: true,
+                        dynamicBullets: true,
+                    },
+                    navigation: {
+                        nextEl: slider.querySelector('.swiper-button-next'),
+                        prevEl: slider.querySelector('.swiper-button-prev'),
+                    },
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    },
+                    keyboard: {
+                        enabled: true,
+                        onlyInViewport: true,
+                    },
+                    grabCursor: true,
+                });
+            });
+
+            // Check for hash in URL and open corresponding popup
+            const hash = window.location.hash;
+            if (hash) {
+                const popup = document.querySelector(hash);
+                if (popup) {
+                    popup.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+
+            // Popup functionality
+            const learnMoreButtons = document.querySelectorAll('.learn-more-btn');
+            learnMoreButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const roomType = this.getAttribute('data-room');
+                    const popup = document.getElementById(`${roomType}-popup`);
+                    if (popup) {
+                        popup.style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                        // Update URL with hash
+                        window.location.hash = `${roomType}-popup`;
+                        
+                        // Initialize the slider in this popup if not already initialized
+                        const slider = popup.querySelector('.swiper');
+                        if (slider && !slider.swiper) {
+                            new Swiper(slider, {
+                                loop: true,
+                                effect: 'fade',
+                                fadeEffect: {
+                                    crossFade: true
+                                },
+                                pagination: {
+                                    el: slider.querySelector('.swiper-pagination'),
+                                    clickable: true,
+                                    dynamicBullets: true,
+                                },
+                                navigation: {
+                                    nextEl: slider.querySelector('.swiper-button-next'),
+                                    prevEl: slider.querySelector('.swiper-button-prev'),
+                                },
+                                autoplay: {
+                                    delay: 5000,
+                                    disableOnInteraction: false,
+                                },
+                                keyboard: {
+                                    enabled: true,
+                                    onlyInViewport: true,
+                                },
+                                grabCursor: true,
+                            });
+                        }
+                    }
+                });
+            });
+
+            // Close popup functionality
+            const closeButtons = document.querySelectorAll('.close-popup');
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const popup = this.closest('.room-popup');
+                    if (popup) {
+                        popup.style.display = 'none';
+                        document.body.style.overflow = '';
+                        // Remove hash from URL when closing popup
+                        history.pushState("", document.title, window.location.pathname + window.location.search);
+                    }
+                });
+            });
+
+            // Close popup when clicking outside or pressing ESC
+            const popups = document.querySelectorAll('.room-popup');
+            popups.forEach(popup => {
+                popup.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        this.style.display = 'none';
+                        document.body.style.overflow = '';
+                        // Remove hash from URL when closing popup
+                        history.pushState("", document.title, window.location.pathname + window.location.search);
+                    }
+                });
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const visiblePopup = document.querySelector('.room-popup[style="display: block;"]');
+                    if (visiblePopup) {
+                        visiblePopup.style.display = 'none';
+                        document.body.style.overflow = '';
+                        // Remove hash from URL when closing popup
+                        history.pushState("", document.title, window.location.pathname + window.location.search);
+                    }
+                }
+            });
+        });
+    </script>
+ 
+    
+</body>
+</html>

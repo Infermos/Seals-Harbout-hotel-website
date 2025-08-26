@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Seals Harbour Hotel | Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+
+        
+.lang-menu .selected-lang:before {
+    content: '';
+    position: absolute;
+    left: 0;                       /* Position flag on the left */
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background-image: url(https://flagcdn.com/w40/de.png);
+    background-size: contain;
+    background-repeat: no-repeat;    
+}
+
+@media (min-width:1480px) {
+    .lang-menu {
+        left: 1000px !important;
+        right: auto !important;
+        margin-left: 0 !important;
+        margin-right: auto !important;
+        position: absolute !important;
+    }
+}
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo_word-removebg-preview.png" alt="Hotel Logo" style="height: 44px; position: relative; top: 5px;">
+        </div>
+        <nav>
+            <a href="home_de.html" class="active">Startseite</a>
+            <a href="rooms_de.html">Zimmer</a>
+            <a href="facilities_de.html">Einrichtungen</a>
+            <a href="meetings_de.html">Tagungen & Veranstaltungen</a>
+            <a href="gallery_de.html">Galerie</a>
+            <a href="contact_de.html">Kontakt</a>
+
+            
+            
+            <div class="lang-menu">
+                <div class="lang-menu-content">
+                    <div class="selected-lang">
+                        <span style="position: relative; top: -6px;">Deutsch</span>
+                    </div>
+                    <ul>
+                        
+                        <li><a href="home_ru.html" class="ru">Russisch</a></li>
+                        <li><a href="home_fr.html" class="fr">Französisch</a></li>
+                        <li><a href="home_ar.html" class="ar">Chinesisch</a></li>
+                        <li><a href="home.html" class="en" >Englisch</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+
+        
+    </header>
+
+    <!-- Add Mobile Menu Button -->
+    <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Add Mobile Menu -->
+    <div class="mobile-menu">
+        <nav>
+            <a href="home_de.html" class="active">Startseite</a>
+            <a href="rooms_de.html">Zimmer</a>
+            <a href="facilities_de.html">Einrichtungen</a>
+            <a href="meetings_de.html">Tagungen & Veranstaltungen</a>
+            <a href="gallery_de.html">Galerie</a>
+            <a href="contact_de.html">Kontakt</a>
+            <div class="lang-menu">
+                <div class="lang-menu-content">
+                    <div class="selected-lang">
+                        <span>Deutsch</span>
+                    </div>
+                    <ul>
+                        <li><a href="home_ru.html" class="ru">Russisch</a></li>
+                        <li><a href="home_fr.html" class="fr">Französisch</a></li>
+                        <li><a href="home_ar.html" class="ar">Chinesisch</a></li>
+                        <li><a href="home.html" class="en" >Englisch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <button onclick="window.location.href='https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=318615&label=New_English_EN_LK_27027142825-OOHRKEm2e9cX4E5_mJSvaAS640874803405%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-199482273865%3Alp1009922%3Ali%3Adec%3Adm%3Aag27027142825%3Acmp400679785&sid=2282f1b3f1fc39bd7afc4ef015ecdbc7&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1747303756&srpvid=bd91476173de06f4&type=total&ucfs=1&'" style="background: #2652b2; color: #fff; border: none; padding: 12px 24px; border-radius: 4px; font-size: 1.1rem; cursor: pointer; width: 80%; text-align: center;">Book Now</button>
+        </nav>
+    </div>
+    
+    <section class="hero">
+        <div class="hero-content"><br><br><br><br>
+            <h1>Willkommen im Seals Harbour Hotel</h1>
+            <p>Erleben Sie Komfort am Meer, herzliche Gastfreundschaft und den Charme eines familiengeführten Rückzugsortes im Seal Harbour Hotel. Buchen Sie Ihren Aufenthalt und entspannen Sie sich in Eleganz, nur wenige Schritte vom Ufer von Weligama entfernt.</p><br>
+            <div class="form-container"></div>
+            <form id="booking-form" onsubmit="redirectToBooking(); return false;">
+              <div class="form-inputs">
+                
+                <label>     
+                  <span class="input-label">Einchecken</span>
+                  <input type="date" id="checkin" required>
+                </label>
+                <label>
+                  <span class="input-label">Kasse</span>
+                  <input type="date" id="checkout" required>
+                </label>
+                <label>
+                  <span class="input-label">
+                    Gäste   </span>
+                  <input type="number" id="guests" value="2" min="1" required>
+                </label>
+                <button type="submit"> Überprüfen Sie die Verfügbarkeit </button>
+              
+              </div>
+              
+            </form>
+        </div>
+    </section>
+
+    <section class="section" style="background: #f5f5f5;">
+        <div class="swiper-container custom-carousel">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <a href="facilities_de.html#facility-item-room" >
+                    <img src="rooms.jpg" alt="Orlando" />
+                    <div class="slide-content">
+                        <h2>Zimmer</h2>
+                        <p>Entspannen Sie sich, tanken Sie neue Energie und erleben Sie Komfort und Küstencharme in unseren elegant gestalteten Zimmern.</p>
+                    </div>
+                </a>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <a href="facilities_de.html#facility-item-pool" >
+                    <img src="pool.jpg" alt="Pool" />
+                    <div class="slide-content">
+                        <h2>Pool</h2>
+                        <p>Entspannen Sie sich und genießen Sie unseren luxuriösen Poolbereich.</p>
+                    </div>
+                </a>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <a href="facilities_de.html#facility-item-dine" >
+                    <img src="rooftopDine.jpg" alt="Rooftop Dining" />
+                    <div class="slide-content">
+                        <h2>Dachterrassen-Restaurant</h2>
+                        <p>Genießen Sie Gourmetgerichte mit herrlichem Blick auf den Strand von Weligama in unserem Dachterrassen-Restaurant.</p>
+                    </div>
+                </a>
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <a href="facilities_de.html#facility-item-surf" >
+                    <img src="surfing.jpg" alt="Surfing" />
+                    <div class="slide-content">
+                        <h2>Surfen</h2>
+                        <p>Erleben Sie die Wellen mit fantastischen <br> Surfschulen.</p>
+                    </div>
+                    </a>
+                </div>
+                <!-- Slide 5 -->
+                <div class="swiper-slide">
+                    <a href="facilities_de.html#facility-item-yoga" >
+                    <img src="yoga.jpg" alt="Yoga" />
+                    <div class="slide-content">
+                        <h2>Yoga</h2>
+                        <p>Entspannen Sie sich bei täglichen, geführten Yoga-Sitzungen.</p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="custom-carousel-controls">
+            <div class="swiper-pagination" style="position: relative; top: 0px;"></div>
+            
+            <div class="swiper-autoplay-control">
+                <button id="swiper-autoplay-toggle">⏸</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Section Start -->
+    <section style="background: #dae3e2; padding: 40px 0 0 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+            <div style="font-size: 2.2rem; font-family: 'Segoe UI', serif; margin-bottom: 18px; color: #222; display: flex; align-items: center; gap: 18px;">
+                Bewertung auf
+                <img src="google_logo.png" alt="Google" style="height: 38px; vertical-align: middle;">
+                <img src="taicon.png" alt="Google" style="height: 38px; vertical-align: middle;">
+                <img src="Bookingcomiconpng.png" alt="Google" style="height: 38px; vertical-align: middle;">
+            </div>
+            <!-- Review Selector -->
+            <div id="review-selector" style="display: flex; gap: 0; margin-bottom: 28px; border-bottom: 2px solid #e0e0e0; max-width: 400px;">
+                
+            </div>
+            
+            <!-- End Review Selector -->
+            <!-- Google Reviews Widget -->
+            <div id="google-reviews" style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
+                <div style="width: 100%; display: flex; justify-content: center;">
+                    <div  class="elfsight-app-f4d02457-57a8-47e2-85c7-7942e9024e42" data-elfsight-app-lazy style="padding: 20px;"></div>
+                </div>
+                <script src="https://static.elfsight.com/platform/platform.js" async></script>
+            </div>
+            <div style="display: flex; justify-content: center; gap: 24px; margin-top: 32px;">
+                <a href="https://www.tripadvisor.com/Hotel_Review-g612380-d21499354-Reviews-Seals_Harbor_Hotel-Weligama_Matara_Southern_Province.html?m=19905" target="_blank" style="text-decoration: none;">
+                    <button class="more-reviews-btn">Mehr Bewertungen auf TripAdvisor ansehen <img src="taicon.png" alt="TripAdvisor"><span>&#8594;</span></button>
+                </a>
+                <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=318615&label=New_English_EN_LK_27027142825-OOHRKEm2e9cX4E5_mJSvaAS640874803405%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-199482273865%3Alp1009922%3Ali%3Adec%3Adm%3Aag27027142825%3Acmp400679785-Share-2QQs7m%401747302663&sid=2282f1b3f1fc39bd7afc4ef015ecdbc7&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1747303756&srpvid=bd91476173de06f4&type=total&ucfs=1&" target="_blank" style="text-decoration: none;">
+                    <button class="more-reviews-btn">Mehr Bewertungen auf Booking.com ansehen <img src="Bookingcomiconpng.png" alt="Booking.com"><span>&#8594;</span></button>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Review Section End --><br><br><br><br>
+
+    <section style="background: #1c3f8b; color: #fff; padding: 48px 0; text-align: center;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 60px; max-width: 1100px; margin: 0 auto;">
+            <div style="min-width: 220px;">
+                <div style="font-size: 2.2rem; margin-bottom: 10px;">📞</div>
+                <div style="font-size: 1.2rem; font-weight: 600;">+94 773264818</div>
+            </div>
+            <div style="min-width: 220px;">
+                <div style="font-size: 2.2rem; margin-bottom: 10px;">📍</div>
+                <div style="font-size: 1.2rem; font-weight: 600;"><a href="https://www.google.com/maps/place/Seals+Harbor+Hotel/@5.9729652,80.4321243,17z/data=!3m1!4b1!4m9!3m8!1s0x3ae11547cffca11f:0x3cb7f7e3bd8590f4!5m2!4m1!1i2!8m2!3d5.9729599!4d80.4346992!16s%2Fg%2F11clysvygn?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="color: white; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">540, Sea Road,<br>
+Weligama, Sri lanka</a></div>
+            </div>
+            <div style="min-width: 220px;">
+                <div style="font-size: 2.2rem; margin-bottom: -8px;">✉️</div>
+                <div style="font-size: 1.2rem; font-weight: 600;"><p><a href="mailto:sealsharbor@gmail.com" style="color: white; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">sealsharbor@gmail.com</a></p></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Schnelllinks</h3>
+                <ul>
+                    <li><a href="rooms_de.html">Zimmer</a></li>
+                    <li><a href="facilities_de.html">Unsere Dienstleistungen</a></li>
+                    <li><a href="#">Über uns</a></li>
+                    <li><a href="contact_de.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Hilfe</h3>
+                <ul>
+                    <li><a href="contact_de.html">Mailen Sie uns</a></li>
+                    <li><a href="contact_de.html">Rufen Sie uns an</a></li>
+                    <li><a href="contact_de.html">Andere Anliegen</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Unterkünfte</h3>
+                <ul>
+                    <li><a href="rooms_de.html#double-twin-popup">Doppel- oder Zweibettzimmer</a></li>
+                    <li><a href="rooms_de.html#deluxe-double-popup">Deluxe Doppelzimmer</a></li>
+                    <li><a href="rooms_de.html#deluxe-family-popup">Deluxe Familienzimmer</a></li>
+                    <li><a href="rooms_de.html#dormitory-popup">Einzelbett im gemischten Schlafsaal</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Abonnieren Sie unseren Newsletter für Updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Ihre E-Mail-Adresse" required>
+                    <button type="submit">Abonnieren</button>
+                </form>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/sealsharborhotel/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/94773264818" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/seals_harbor_hotel/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Seals Harbor Hotel. Alle Rechte vorbehalten | Entworfen von Moditha Fernando</p>
+        </div>
+    </footer>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper with autoplay disabled initially
+        const swiper = new Swiper('.swiper-container.custom-carousel', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            initialSlide: 0, // Start from Rooms slide
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            speed: 700,
+            grabCursor: true,
+            breakpoints: {
+            0: {            // For phones
+            slidesPerView: 1,
+            centeredSlides: false, // important to avoid overflow
+            },
+            768: {          // Tablets
+            slidesPerView: 2,
+            centeredSlides: true,
+            },
+            1024: {         // Desktops
+            slidesPerView: 3,
+            centeredSlides: true,
+            }
+        }
+        });
+
+        // Disable autoplay initially
+        swiper.autoplay.stop();
+
+        // Create Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // When slideshow is in view, start autoplay
+                    swiper.autoplay.start();
+                    isPlaying = true;
+                    autoplayBtn.textContent = '⏸';
+                } else {
+                    // When slideshow is out of view, stop autoplay
+                    swiper.autoplay.stop();
+                    isPlaying = false;
+                    autoplayBtn.textContent = '▶';
+                }
+            });
+        }, {
+            threshold: 0.5 // Trigger when 50% of the element is visible
+        });
+
+        // Observe the slideshow section
+        const slideshowSection = document.querySelector('.swiper-container.custom-carousel');
+        observer.observe(slideshowSection);
+
+        // Autoplay toggle
+        const autoplayBtn = document.getElementById('swiper-autoplay-toggle');
+        let isPlaying = false;
+        autoplayBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                swiper.autoplay.stop();
+                autoplayBtn.textContent = '▶';
+            } else {
+                swiper.autoplay.start();
+                autoplayBtn.textContent = '⏸';
+            }
+            isPlaying = !isPlaying;
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const body = document.body;
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                body.style.overflow = '';
+            });
+        });
+    </script>
+    
+</body>
+</html>

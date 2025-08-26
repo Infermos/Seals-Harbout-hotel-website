@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Seals Harbour Hotel | Luxury Accommodations</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="rooms.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2652b2;
+            --primary-dark: #1e429f;
+            --secondary-color: #e8b143;
+            --dark-text: #333;
+            --medium-text: #555;
+            --light-text: #777;
+            --bg-light: #f9f9f9;
+            --border-radius: 8px;
+            --box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-color: var(--bg-light);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        .rooms-container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .room-section {
+            margin-bottom: 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .room-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .room-header h1 {
+            font-size: 2.8rem;
+            color: var(--dark-text);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .room-header h1:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        .room-header p {
+            font-size: 1.2rem;
+            color: var(--medium-text);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .room-card {
+            display: flex;
+            background: #fff;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .room-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .room-image {
+            flex: 1;
+            min-height: 400px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .room-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .room-card:hover .room-image::before {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .room-content {
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .room-content h2 {
+            font-size: 2rem;
+            color: var(--dark-text);
+            margin-bottom: 20px;
+        }
+
+        .room-content p {
+            color: var(--medium-text);
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .learn-more-btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            width: fit-content;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            border: 2px solid var(--primary-color);
+        }
+
+        .learn-more-btn:hover {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+
+        .banner-image {
+            width: 100%;
+            height: 600px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .banner-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .banner-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .banner-content p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+
+        /* Room Popup Styles */
+        .room-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        .popup-content {
+            background: white;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        .close-popup {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: var(--light-text);
+            cursor: pointer;
+            z-index: 10;
+            transition: var(--transition);
+        }
+
+        .close-popup:hover {
+            color: var(--primary-color);
+            transform: rotate(90deg);
+        }
+
+        .room-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 40px 0 10px;
+            padding: 0 20px;
+            color: var(--dark-text);
+        }
+
+        .room-price {
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .book-now-btn {
+            display: block;
+            width: 200px;
+            margin: 0 auto 40px;
+            padding: 15px 25px;
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            border: 2px solid var(--primary-color);
+        }
+
+        .book-now-btn:hover {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Enhanced Swiper Styles */
+        .room-slider {
+            width: 100%;
+            height: 500px;
+            margin-bottom: 40px;
+        }
+
+        .room-slider .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .room-slider .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .room-slider .swiper-slide:hover img {
+            transform: scale(1.05);
+        }
+
+        .room-slider .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: white;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .room-slider .swiper-pagination-bullet-active {
+            background: var(--secondary-color);
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        .room-slider .swiper-button-next,
+        .room-slider .swiper-button-prev {
+            color: white;
+            background: rgba(0,0,0,0.3);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .room-slider .swiper-button-next:after,
+        .room-slider .swiper-button-prev:after {
+            font-size: 1.5rem;
+        }
+
+        .room-slider .swiper-button-next:hover,
+        .room-slider .swiper-button-prev:hover {
+            background: rgba(0,0,0,0.5);
+        }
+
+        .room-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+
+        .room-tag {
+            background: #f0f4ff;
+            color: var(--primary-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .room-description {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            padding: 0 20px;
+            text-align: center;
+            color: var(--medium-text);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .room-amenities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .amenity-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .amenity-item:hover {
+            background: #f0f4ff;
+            transform: translateY(-3px);
+        }
+
+        .amenity-item i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            width: 30px;
+            text-align: center;
+        }
+
+        @media (max-width: 992px) {
+            .room-slider {
+                height: 400px;
+            }
+            
+            .room-content {
+                padding: 30px;
+            }
+            
+            .room-amenities {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .room-card {
+                flex-direction: column;
+            }
+            
+            .room-image {
+                min-height: 300px;
+            }
+            
+            .banner-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .banner-content p {
+                font-size: 1.1rem;
+            }
+            
+            .room-slider {
+                height: 300px;
+            }
+            
+            .room-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .room-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .room-header p {
+                font-size: 1rem;
+            }
+            
+            .banner-image {
+                height: 500px;
+            }
+            
+            .room-amenities {
+                grid-template-columns: 1fr;
+            }
+            
+            .room-tags {
+                justify-content: flex-start;
+            }
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            cursor: pointer;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 6px 0;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.98);
+            z-index: 99;
+            padding: 100px 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: var(--transition);
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mobile-menu nav {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .mobile-menu nav a {
+            color: var(--dark-text);
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            transition: var(--transition);
+        }
+
+        .mobile-menu nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu nav a.active {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            header nav {
+                display: none;
+            }
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #222;
+            color: #fff;
+            padding: 60px 0 0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-column h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column ul li a:hover {
+            color: #fff;
+            padding-left: 5px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+            font-size: 0.9rem;
+        }
+
+        .newsletter-form button {
+            background: var(--secondary-color);
+            color: #222;
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            background: #ffc845;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #333;
+            border-radius: 50%;
+            color: #fff;
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 60px;
+            border-top: 1px solid #444;
+            color: #999;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo_word-removebg-preview.png" alt="Seals Harbour Logo" style="height: 50px;">
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="rooms.html" class="active">Rooms</a>
+            <a href="facilities.html">Facilities</a>
+            <a href="meetings.html">Meetings & Events</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+            
+            <div class="lang-menu">
+                <div class="lang-menu-content">
+                    <div class="selected-lang">
+                        <span>English</span>
+                    </div>  
+                    <ul>
+                        <li><a href="rooms_de.html" class="de">German</a></li>
+                        <li><a href="rooms_ru.html" class="ru">Russian</a></li>
+                        <li><a href="rooms_fr.html" class="fr">French</a></li>
+                        <li><a href="rooms_ar.html" class="ar">Chinese</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="banner-image" style="background-image: url('rooms_banner.png');">
+        <div class="banner-content">
+            <h1>Luxury Accommodations</h1>
+            <p>Experience unparalleled comfort in our thoughtfully designed rooms and suites, each offering a perfect blend of elegance and modern amenities.</p>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="rooms.html" class="active">Rooms</a>
+            <a href="facilities.html">Facilities</a>
+            <a href="meetings.html">Meetings & Events</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <div class="lang-menu">
+                <div class="lang-menu-content">
+                    <div class="selected-lang">
+                        <span>English</span>
+                    </div>
+                    <ul>
+                        <li><a href="rooms_de.html" class="de">German</a></li>
+                        <li><a href="rooms_ru.html" class="ru">Russian</a></li>
+                        <li><a href="rooms_fr.html" class="fr">French</a></li>
+                        <li><a href="rooms_ar.html" class="ar">Chinese</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html" class="book-now-btn" style="margin-top: 20px; display: inline-block;">Book Now</a>
+        </nav>
+    </div>
+    
+    <div class="rooms-container">
+        <div class="room-header">
+            <h1>Our Rooms & Suites</h1>
+            <p>Discover our carefully curated selection of accommodations, each designed to provide the perfect sanctuary for your stay with us.</p>
+        </div>
+
+        <div class="room-section">
+            <div class="room-card">
+                <div class="room-image" style="background-image: url('double\ or\ twin\ bedroom\ img1.jpg');"></div>
+                <div class="room-content">
+                    <h2>Double or Twin Bedroom</h2>
+                    <p>Our spacious Double or Twin bedroom offers 183 ft² of comfort with your choice of two double beds or two twin beds. Features air conditioned room, a private kitchen, modern furnishings, ensuited bathroom, and barbecue facililties.</p>
+                    <a href="#" class="learn-more-btn" data-room="double-twin">Explore Room</a>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-image" style="background-image: url('Deluxe\ Double\ Room.jpg');"></div>
+                <div class="room-content">
+                    <h2>Deluxe Double Room with Sea View</h2>
+                    <p>Enjoy breathtaking ocean views from our Deluxe Double Room. This 22 m² room features 1 extra-large double bed, with a cot available on request. Amenities include a private balcony, stunning views, air conditioning, an ensuite bathroom, soundproofing, and barbecue facilities.</p>
+                    <a href="#" class="learn-more-btn" data-room="deluxe-double">Explore Room</a>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-image" style="background-image: url('delux\ family\ room\ img\ 1.jpg');"></div>
+                <div class="room-content">
+                    <h2>Deluxe Family Room</h2>
+                    <p>Our spacious Deluxe Family Room features 1 extra-large double bed and 2 bunk beds, perfect for families. This room also includes AC and a private bathroom.</p>
+                    <a href="#" class="learn-more-btn" data-room="deluxe-family">Explore Room</a>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-image" style="background-image: url('dormitory\ room\ img1.jpg');"></div>
+                <div class="room-content">
+                    <h2>Single Bed Mixed Dormitory</h2>
+                    <p>Our budget-friendly Single Bed Mixed Dormitory features 1 single bed, a private kitchen, air conditioning, and barbecue facilities, perfect for travelers looking for an economical stay.</p>
+                    <a href="#" class="learn-more-btn" data-room="dormitory">Explore Room</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Room Popups -->
+    <div id="double-twin-popup" class="room-popup">
+        <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <h1 class="room-title">Double or Twin Bedroom</h1>
+            <p class="room-price">From $25/night</p>
+            <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html" class="book-now-btn">Book Now</a>
+
+            <div class="swiper room-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="double or twin bedroom img1.jpg" alt="Double or Twin Bedroom">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="double or twin bedroom img2.jpg" alt="Room View">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="double or twin bedroom img3.jpg" alt="Room Bathroom">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="room-tags">
+                <span class="room-tag">2 Double Beds or 2 Twin Beds</span>
+                <span class="room-tag">183 ft²</span>
+                <span class="room-tag">Restaurant Facilites</span>
+                <span class="room-tag">Air Conditioning</span>
+                <span class="room-tag">Private Kitchen</span>
+            </div>
+
+            <div class="room-description">
+                <p>Our spacious Double or Twin bedroom offers 183 ft² of comfort with your choice of two double beds or two twin beds. The room features modern furnishings with a contemporary design aesthetic, creating a welcoming atmosphere for both business and leisure travelers. The private kitchen is fully equipped with modern appliances, allowing you to prepare meals at your convenience. The ensuite bathroom includes premium toiletries and a rain shower for your comfort. Step outside to enjoy our barbecue facilities, perfect for social gatherings under the stars.</p>
+            </div>
+
+            <div class="room-amenities">
+                <div class="amenity-item">
+                    <i class="fas fa-wifi"></i>
+                    <span>Free High-Speed WiFi</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-snowflake"></i>
+                    <span>Air Conditioning</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-utensils"></i>
+                    <span>Restaurant Facilites</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-shower"></i>
+                    <span>Ensuite Bathroom</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-tshirt"></i>
+                    <span>Laundry Service</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-tv"></i>
+                    <span>Smart TV</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-mug-hot"></i>
+                    <span>Tea/Coffee Maker</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-lock"></i>
+                    <span>In-room Safe</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="deluxe-double-popup" class="room-popup">
+        <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <h1 class="room-title">Deluxe Double Room with Sea View</h1>
+            <p class="room-price">From $40/night</p>
+            <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html" class="book-now-btn">Book Now</a>
+
+            <div class="swiper room-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="Deluxe Double Room.jpg" alt="Deluxe Double Room">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Deluxe Double Room 2.jpg" alt="Deluxe Double Room">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Deluxe Double Room 3.jpg" alt="Deluxe Double Room">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Deluxe Double Room 4.jpg" alt="Deluxe Double Room Balcony">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="room-tags">
+                <span class="room-tag">Extra-Large Double Bed</span>
+                <span class="room-tag">22 m²</span>
+                <span class="room-tag">Sea View</span>
+                <span class="room-tag">Private Balcony</span>
+                <span class="room-tag">Soundproofing</span>
+            </div>
+
+            <div class="room-description">
+                <p>Wake up to breathtaking ocean views from our Deluxe Double Room, where luxury meets coastal charm. This beautifully appointed 22 m² sanctuary features an extra-large double bed with premium linens for ultimate comfort. The private balcony is the perfect spot to enjoy your morning coffee while watching the sunrise over the water. The room is soundproofed for your peace and quiet, and the ensuite bathroom features a spacious walk-in shower with luxury bath amenities. A cot is available on request for families traveling with small children.</p>
+            </div>
+
+            <div class="room-amenities">
+                <div class="amenity-item">
+                    <i class="fas fa-wifi"></i>
+                    <span>Free High-Speed WiFi</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-snowflake"></i>
+                    <span>Air Conditioning</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <span>Sea View</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-shower"></i>
+                    <span>Ensuite Bathroom</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-volume-mute"></i>
+                    <span>Soundproofing</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-wine-glass-alt"></i>
+                    <span>Mini Bar</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Direct Dial Phone</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-concierge-bell"></i>
+                    <span>24-hour Room Service</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="deluxe-family-popup" class="room-popup">
+        <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <h1 class="room-title">Deluxe Family Room</h1>
+            <p class="room-price">From $50/night</p>
+            <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html" class="book-now-btn">Book Now</a>
+
+            <div class="swiper room-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="delux family room img 1.jpg" alt="Deluxe Family Room">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="deluxFamilyRoom2.jpg" alt="Room Bathroom">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="deluxFamilyRoom3.jpg" alt="Room View">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="deluxFamilyRoom4.jpg" alt="Bunk Beds">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="room-tags">
+                <span class="room-tag">Extra-Large Double Bed</span>
+                <span class="room-tag">2 Bunk Beds</span>
+                <span class="room-tag">45m²</span>
+                <span class="room-tag">Family Friendly</span>
+                <span class="room-tag">Cot available</span>
+            </div>
+
+            <div class="room-description">
+                <p>Welcome to the Deluxe Family Room at Seals Harbor Hotel – your perfect base for a relaxing beach getaway with the whole family. Designed with comfort and convenience in mind, this spacious 45m² room comfortably accommodates up to four guests with one king-size bed and two cozy bunk beds. The children will love their special sleeping area, while parents enjoy the privacy of their own space. The room features thoughtful touches like blackout curtains, a ceiling fan, and a mosquito net to ensure everyone sleeps comfortably. Your private bathroom includes a rain shower, fresh towels, and complimentary toiletries, while daily housekeeping keeps everything tidy.</p>
+            </div>
+
+            <div class="room-amenities">
+                <div class="amenity-item">
+                    <i class="fas fa-wifi"></i>
+                    <span>Free High-Speed WiFi</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-snowflake"></i>
+                    <span>Air Conditioning</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-swimming-pool"></i>
+                    <span>Swimming Pool</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-shower"></i>
+                    <span>Rain Shower</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-utensils"></i>
+                    <span>Room Service</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Board Games</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-baby"></i>
+                    <span>Baby Cot Available</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-fan"></i>
+                    <span>Ceiling Fan</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="dormitory-popup" class="room-popup">
+        <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <h1 class="room-title">Single Bed Mixed Dormitory</h1>
+            <p class="room-price">From $8/night</p>
+            <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html" class="book-now-btn">Book Now</a>
+
+            <div class="swiper room-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="dormitory room img1.jpg" alt="Dormitory Room">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="dormitory room img2.jpg" alt="Dormitory View">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="dormitory room img3.jpg" alt="Dormitory View">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="dormitory room img4.jpg" alt="Dormitory Kitchen">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="room-tags">
+                <span class="room-tag">Single Bed</span>
+                <span class="room-tag">Private Kitchen</span>
+                <span class="room-tag">Air Conditioning</span>
+                <span class="room-tag">Barbecue Facilities</span>
+                <span class="room-tag">Budget Friendly</span>
+            </div>
+
+            <div class="room-description">
+                <p>Our budget-friendly Single Bed Mixed Dormitory is perfect for travelers looking for comfortable yet economical accommodation. Each guest enjoys their own single bed in a shared dormitory setting, with privacy curtains for personal space. The shared kitchen is fully equipped for preparing meals, helping you save on dining costs. Despite the affordable price, we haven't compromised on comfort - the room features air conditioning, secure lockers for your valuables, and access to our barbecue facilities. It's an ideal choice for backpackers, solo travelers, or groups looking to maximize their travel budget without sacrificing cleanliness and comfort.</p>
+            </div>
+
+            <div class="room-amenities">
+                <div class="amenity-item">
+                    <i class="fas fa-wifi"></i>
+                    <span>Free High-Speed WiFi</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-snowflake"></i>
+                    <span>Air Conditioning</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-utensils"></i>
+                    <span>Private Kitchen</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-fire"></i>
+                    <span>Barbecue Facilities</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-lock"></i>
+                    <span>Secure Lockers</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-tshirt"></i>
+                    <span>Laundry Facilities</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-route"></i>
+                    <span>Tour Desk</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-users"></i>
+                    <span>Common Lounge</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="rooms.html">Rooms</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Get Help</h3>
+                <ul>
+                    <li><a href="contact.html">Send us an Email</a></li>
+                    <li><a href="contact.html">Call Us</a></li>
+                    <li><a href="contact.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Accommodation</h3>
+                <ul>
+                    <li><a href="rooms.html#double-twin-popup">Double or Twin Room</a></li>
+                    <li><a href="rooms.html#deluxe-double-popup">Deluxe Double Room</a></li>
+                    <li><a href="rooms.html#deluxe-family-popup">Deluxe Family Room</a></li>
+                    <li><a href="rooms.html#dormitory-popup">Mixed Dormitory Bed</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for special offers and updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/sealsharborhotel/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/94773264818" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/seals_harbor_hotel/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Seals Harbour Hotel. All rights reserved | Design: Moditha Fernando</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu functionality
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const body = document.body;
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            });
+
+            // Close mobile menu when clicking a link
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    body.style.overflow = '';
+                });
+            });
+
+            // Initialize all room sliders with enhanced settings
+            document.querySelectorAll('.room-slider').forEach(slider => {
+                new Swiper(slider, {
+                    loop: true,
+                    effect: 'fade',
+                    fadeEffect: {
+                        crossFade: true
+                    },
+                    pagination: {
+                        el: slider.querySelector('.swiper-pagination'),
+                        clickable: true,
+                        dynamicBullets: true,
+                    },
+                    navigation: {
+                        nextEl: slider.querySelector('.swiper-button-next'),
+                        prevEl: slider.querySelector('.swiper-button-prev'),
+                    },
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    },
+                    keyboard: {
+                        enabled: true,
+                        onlyInViewport: true,
+                    },
+                    grabCursor: true,
+                });
+            });
+
+            // Check for hash in URL and open corresponding popup
+            const hash = window.location.hash;
+            if (hash) {
+                const popup = document.querySelector(hash);
+                if (popup) {
+                    popup.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+
+            // Popup functionality
+            const learnMoreButtons = document.querySelectorAll('.learn-more-btn');
+            learnMoreButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const roomType = this.getAttribute('data-room');
+                    const popup = document.getElementById(`${roomType}-popup`);
+                    if (popup) {
+                        popup.style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                        // Update URL with hash
+                        window.location.hash = `${roomType}-popup`;
+                        
+                        // Initialize the slider in this popup if not already initialized
+                        const slider = popup.querySelector('.swiper');
+                        if (slider && !slider.swiper) {
+                            new Swiper(slider, {
+                                loop: true,
+                                effect: 'fade',
+                                fadeEffect: {
+                                    crossFade: true
+                                },
+                                pagination: {
+                                    el: slider.querySelector('.swiper-pagination'),
+                                    clickable: true,
+                                    dynamicBullets: true,
+                                },
+                                navigation: {
+                                    nextEl: slider.querySelector('.swiper-button-next'),
+                                    prevEl: slider.querySelector('.swiper-button-prev'),
+                                },
+                                autoplay: {
+                                    delay: 5000,
+                                    disableOnInteraction: false,
+                                },
+                                keyboard: {
+                                    enabled: true,
+                                    onlyInViewport: true,
+                                },
+                                grabCursor: true,
+                            });
+                        }
+                    }
+                });
+            });
+
+            // Close popup functionality
+            const closeButtons = document.querySelectorAll('.close-popup');
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const popup = this.closest('.room-popup');
+                    if (popup) {
+                        popup.style.display = 'none';
+                        document.body.style.overflow = '';
+                        // Remove hash from URL when closing popup
+                        history.pushState("", document.title, window.location.pathname + window.location.search);
+                    }
+                });
+            });
+
+            // Close popup when clicking outside or pressing ESC
+            const popups = document.querySelectorAll('.room-popup');
+            popups.forEach(popup => {
+                popup.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        this.style.display = 'none';
+                        document.body.style.overflow = '';
+                        // Remove hash from URL when closing popup
+                        history.pushState("", document.title, window.location.pathname + window.location.search);
+                    }
+                });
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const visiblePopup = document.querySelector('.room-popup[style="display: block;"]');
+                    if (visiblePopup) {
+                        visiblePopup.style.display = 'none';
+                        document.body.style.overflow = '';
+                        // Remove hash from URL when closing popup
+                        history.pushState("", document.title, window.location.pathname + window.location.search);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

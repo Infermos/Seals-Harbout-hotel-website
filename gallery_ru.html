@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Seals Harbour Hotel | Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+.lang-menu .selected-lang:before {
+    content: '';
+    position: absolute;
+    left: 0;                       /* Position flag on the left */
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background-image: url(https://flagcdn.com/w40/ru.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+@media (min-width:1480px) {
+    .lang-menu {
+        left: 1000px !important;
+        right: auto !important;
+        margin-left: 0 !important;
+        margin-right: auto !important;
+        position: absolute !important;
+    }
+}
+
+
+
+
+
+/* Add hover effects for swiper slides */
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo_word-removebg-preview.png" alt="Marriott Logo" style="height: 44px; position: relative; top: 5px;">
+        </div>
+        <nav>
+            <a href="home_ru.html">Главная</a>
+            <a href="rooms_ru.html">Номера</a>
+            <a href="facilities_ru.html">Удобства</a>
+            <a href="meetings_ru.html">Встречи и мероприятия</a>
+            <a href="gallery_ru.html"  class="active">Галерея</a>
+            <a href="contact_ru.html">Контакты</a>
+
+            
+            
+            <div class="lang-menu">
+                <div class="lang-menu-content">
+                    <div class="selected-lang">
+                        <span style="position: relative; top: -6px;">Русский</span>
+                    </div>  
+                    <ul>
+                        
+                        <li><a href="gallery_fr.html" class="fr">Французский</a></li>
+                        <li><a href="gallery_ar.html" class="ar">Китайский</a></li>
+                        <li><a href="gallery.html" class="en" >Английский</a></li>
+                        <li><a href="gallery_de.html" class="ru">Немецкий</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        
+    </header>
+
+    <!-- Add Mobile Menu Button -->
+    <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Add Mobile Menu -->
+    <div class="mobile-menu">
+        <nav>
+            <a href="home_ru.html">Главная</a>
+            <a href="rooms_ru.html">Номера</a>
+            <a href="facilities_ru.html">Удобства</a>
+            <a href="meetings_ru.html">Встречи и Mcероприятия</a>
+            <a href="gallery_ru.html"  class="active">Галерея</a>
+            <a href="contact_ru.html">Контакты</a>
+            <div class="lang-menu">
+                <div class="lang-menu-content">
+                    <div class="selected-lang">
+                        <span style="position: relative; top: -6px;">Русский</span>
+                    </div>  
+                    <ul>
+                        
+                        <li><a href="gallery_fr.html" class="fr">Французский</a></li>
+                        <li><a href="gallery_ar.html" class="ar">Китайский</a></li>
+                        <li><a href="gallery.html" class="en" >Английский</a></li>
+                        <li><a href="gallery_de.html" class="de">Немецкий</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <button onclick="window.location.href='https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=318615&label=New_English_EN_LK_27027142825-OOHRKEm2e9cX4E5_mJSvaAS640874803405%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-199482273865%3Alp1009922%3Ali%3Adec%3Adm%3Aag27027142825%3Acmp400679785&sid=2282f1b3f1fc39bd7afc4ef015ecdbc7&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1747303756&srpvid=bd91476173de06f4&type=total&ucfs=1&'" style="background: #2652b2; color: #fff; border: none; padding: 12px 24px; border-radius: 4px; font-size: 1.1rem; cursor: pointer; width: 80%; text-align: center;">Забронировать</button>
+        </nav>
+    </div>
+    
+
+    <section style="background: #1c3f8b; padding: 48px 0 0 0; margin-bottom: 0;">
+        <div class="gallery-hero">
+            <h1>Наша галерея</h1>
+            <p>Откройте для себя красоту отеля Seals Harbour через нашу коллекцию фотографий</p>
+        </div>
+    </section>
+
+    <main class="gallery-container">
+        <div class="gallery-categories">
+            <button class="category-btn active" data-category="all">Все</button>
+            <button class="category-btn" data-category="rooms">Номера</button>
+            <button class="category-btn" data-category="dining">Ресторан</button>
+            <button class="category-btn" data-category="facilities">Удобства</button>
+            <button class="category-btn" data-category="views">Виды</button>
+            <button class="category-btn" data-category="other">Другое</button>
+        </div>
+
+        <div class="gallery-grid">
+            <!-- Room Images -->
+            <div class="gallery-item" data-category="rooms">
+                <img src="Deluxe Double Room.jpg" alt="Делюкс двухместный номер">
+                <div class="gallery-overlay">
+                    <h3>Делюкс двухместный номер</h3>
+                    <p>Просторный номер с видом на океан</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="rooms">
+                <img src="deluxFamilyRoom1.jpg" alt="Семейный номер">
+                <div class="gallery-overlay">
+                    <h3>Семейный номер</h3>
+                    <p>Идеально для семейного отдыха</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="rooms">
+                <img src="double or twin bedroom img2.jpg" alt="Семейный или двухместный номер">
+                <div class="gallery-overlay">
+                    <h3>Семейный или двухместный номер</h3>
+                    <p>Идеально для семьи или пары</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="rooms">
+                <img src="dormitory room img1.jpg" alt="Общий номер">
+                <div class="gallery-overlay">
+                    <h3>Общий номер</h3>
+                    <p>Идеально для бюджетного проживания</p>
+                </div>
+            </div>
+            
+            <!-- Dining Images -->
+            <div class="gallery-item" data-category="dining">
+                <img src="gal_restaurant.jpg" alt="Главный ресторан">
+                <div class="gallery-overlay">
+                    <h3>Ресторан Seals Harbour</h3>    
+                    <p>Международная кухня с местными блюдами</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="dining">
+                <img src="gal_bar.jpg" alt="Лобби-бар">
+                <div class="gallery-overlay">
+                    <h3>Бар Sunset</h3>
+                    <p>Фирменные коктейли с видом на океан</p>
+                </div>
+            </div>
+            
+            <!-- Facilities Images -->
+            <div class="gallery-item" data-category="facilities">
+                <img src="gal_pool1.jpg" alt="Бассейн-инфинити">
+                <div class="gallery-overlay">
+                    <h3>Бассейн-инфинити</h3>
+                    <p>Потрясающее плавание у самого океана</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="facilities">
+                <img src="gal_pool2.jpg" alt="Бассейн-инфинити">
+                <div class="gallery-overlay">
+                    <h3>Бассейн-инфинити</h3>
+                    <p>Потрясающее плавание у самого океана</p>
+
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="facilities">
+                <img src="yoga3.jpg" alt="Йога">
+                <div class="gallery-overlay">
+                    <h3>Йога</h3>
+                    <p>Расслабляющие процедуры с видом на море</p>
+                </div>
+            </div>
+            
+            <!-- View Images -->
+            <div class="gallery-item" data-category="views">
+                <img src="gal_view3.jpg.jpg" alt="Вид на закат">
+                <div class="gallery-overlay">
+                    <h3>Закат в гавани</h3>
+                    <p>Наш знаменитый золотой час</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="views">
+                <img src="gal_view.jpg" alt="Вид на побережье">
+                <div class="gallery-overlay">
+                    <h3>Вид на побережье</h3>
+                    <p>Великолепный вид на пляж Велигама</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="views">
+                <img src="gal_view2.jpg" alt="Вид с крыши">
+                <div class="gallery-overlay">
+                    <h3>Ресторан на крыше</h3>
+                    <p>Наслаждайтесь едой с отличным видом</p>
+                </div>
+            </div>
+            
+            <!-- Other Images -->
+            
+            
+            
+            
+            <!-- More images can be added as needed -->
+            
+            
+            
+        </div>
+        
+        <div class="gallery-modal">
+            <span class="close-modal">&times;</span>
+            <img class="modal-content" id="expanded-img">
+            <div class="modal-caption"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="rooms.html">Номера</a></li>
+                    <li><a href="facilities.html">Наши услуги</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Помощь</h3>
+                <ul>
+                    <li><a href="contact.html">Написать нам</a></li>
+                    <li><a href="contact.html">Позвонить нам</a></li>
+                    <li><a href="contact.html">Другие вопросы</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Размещение</h3>
+                <ul>
+                    <li><a href="rooms.html#double-twin-popup">Двухместный или семейный номер</a></li>
+                    <li><a href="rooms.html#deluxe-double-popup">Делюкс двухместный номер</a></li>
+                    <li><a href="rooms.html#deluxe-family-popup">Делюкс семейный номер</a></li>
+                    <li><a href="rooms.html#dormitory-popup">Общий смешанный номер</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Новостная рассылка</h3>
+                <p>Подпишитесь на нашу рассылку, чтобы получать новости.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Ihre E-Mail-Adresse" required>
+                    <button type="submit">Abonnieren</button>
+                </form>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/sealsharborhotel/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/94773264818" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/seals_harbor_hotel/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Seals Harbour Hotel. Все права защищены | Дизайн: Модита Фернандо</p>
+        </div>
+    </footer>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        
+    
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const body = document.body;
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                body.style.overflow = '';
+            });
+        });
+
+
+    </script>
+    
+    <script>
+      function redirectToBooking() {
+        const checkin = document.getElementById("checkin").value;
+        const checkout = document.getElementById("checkout").value;
+        const guests = document.getElementById("guests").value;
+
+        // Replace with your actual Booking.com hotel ID
+        const hotelId = 'lk/seals-harbor'; // Using the ID from the original button URL
+
+        
+        const url = `https://www.booking.com/hotel/${hotelId}.en-gb.html?checkin=${checkin}&checkout=${checkout}&group_adults=${guests}&no_rooms=1&group_children=0`;
+
+        window.open(url, '_blank'); // Opens in new tab
+      }
+
+      // Gallery Filtering
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.category-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            const category = this.getAttribute('data-category');
+            
+            galleryItems.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Modal functionality
+    const modal = document.querySelector('.gallery-modal');
+    const modalImg = document.getElementById('expanded-img');
+    const captionText = document.querySelector('.modal-caption');
+    const closeModal = document.querySelector('.close-modal');
+    
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', function() {
+            modal.style.display = 'block';
+            modalImg.src = this.querySelector('img').src;
+            captionText.innerHTML = this.querySelector('h3').innerHTML + 
+                                  '<br>' + this.querySelector('p').innerHTML;
+        });
+    });
+    
+    closeModal.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+    
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
+    </script>
+ 
+    
+</body>
+</html>

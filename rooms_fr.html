@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Seals Harbour Hotel | Accueil</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="rooms.css">
+
+    <style>
+@media (min-width:1480px) {
+    .lang-menu {
+        left: 1000px !important;
+        right: auto !important;
+        margin-left: 0 !important;
+        margin-right: auto !important;
+        position: absolute !important;
+    }
+}
+
+
+.rooms-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .room-section {
+            margin-bottom: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .room-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .room-header h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .room-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .room-card {
+            display: flex;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .room-image {
+            flex: 1;
+            min-height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .room-content {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .room-content h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .room-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .learn-more-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #2652b2;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+            width: fit-content;
+        }
+
+        .learn-more-btn:hover {
+            background: #1e429f;
+        }
+
+        @media (max-width: 768px) {
+            .room-card {
+                flex-direction: column;
+            }
+            
+            .room-image {
+                min-height: 300px;
+            }
+        }
+
+        .banner-image {
+            width: 100%;
+            /* height is set inline, but you can override here */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 40px; /* Add some space below the banner */
+        }
+
+        .lang-menu .selected-lang:before {
+    content: '';
+    position: absolute;
+    left: 0;                       /* Position flag on the left */
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background-image: url(https://flagcdn.com/w40/fr.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+        position: relative;
+        top: -540px;
+    }
+    .mobile-menu {
+        display: block;
+    }
+    header nav {
+        display: none;
+    }
+}
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo_word-removebg-preview.png" alt="Marriott Logo" style="height: 44px; position: relative; top: 5px;">
+        </div>
+        <nav>
+            <a href="home_fr.html">Accueil</a>
+            <a href="rooms_fr.html" class="active">Chambres</a>
+            <a href="facilities_fr.html">Équipements</a>
+            <a href="meetings_fr.html">Réunions & Événements</a>
+            <a href="gallery_fr.html">Galerie</a>
+            <a href="contact_fr.html">Contact</a>
+
+            
+            
+            <div class="lang-menu">
+                <div class="lang-menu-content">
+                    <div class="selected-lang">
+                        <span style="position: relative; top: -6px;">Français</span>
+                    </div>
+                    <ul>
+                        
+                        
+                        <li><a href="rooms_ar.html" class="ar">Chinois</a></li>
+                        <li><a href="rooms.html" class="en">Anglais</a></li>
+                        <li><a href="rooms_de.html" class="de">Allemand</a></li>
+                        <li><a href="rooms_ru.html" class="ru">Russe</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+       
+        
+    </header>
+
+    <div class="banner-image" style="background-image: url('rooms_banner.png'); height: 500px; background-size: cover; background-position: center;"></div>
+
+
+    <!-- Add Mobile Menu Button -->
+    <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Add Mobile Menu -->
+    <div class="mobile-menu">
+        <nav>
+            <a href="home_fr.html">Accueil</a>
+            <a href="rooms_fr.html" class="active">Chambres</a>
+            <a href="facilities_fr.html">Équipements</a>
+            <a href="meetings_fr.html">Réunions & Événements</a>
+            <a href="gallery_fr.html">Galerie</a>
+            <a href="contact_fr.html">Contact</a>
+            <div class="lang-menu">
+                <div class="lang-menu-content">
+                    <div class="selected-lang">
+                        <span>Français</span>
+                    </div>
+                    <ul>
+                        
+                        
+                        <li><a href="rooms_ar.html" class="ar">Chinois</a></li>
+                        <li><a href="rooms.html" class="en">Anglais</a></li>
+                        <li><a href="rooms_de.html" class="de">Allemand</a></li>
+                        <li><a href="rooms_ru.html" class="ru">Russe</a></li>
+                    </ul>
+                </div>
+            </div>
+            <button onclick="window.location.href='https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=318615&label=New_English_EN_LK_27027142825-OOHRKEm2e9cX4E5_mJSvaAS640874803405%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-199482273865%3Alp1009922%3Ali%3Adec%3Adm%3Aag27027142825%3Acmp400679785&sid=2282f1b3f1fc39bd7afc4ef015ecdbc7&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1747303756&srpvid=bd91476173de06f4&type=total&ucfs=1&'" style="background: #2652b2; color: #fff; border: none; padding: 12px 24px; border-radius: 4px; font-size: 1.1rem; cursor: pointer; width: 80%; text-align: center;">Réserver</button>
+        </nav>
+    </div>
+
+
+    <div class="rooms-container">
+        <div class="room-header">
+            <h1>Nos Chambres & Suites</h1>
+            <p>Découvrez le confort et le luxe dans nos hébergements soigneusement conçus, chacun créé pour offrir un séjour parfait à nos clients.</p>
+        </div>
+
+        <div class="room-section">
+            <div class="room-card">
+                <div class="room-image" style="background-image: url('double\ or\ twin\ bedroom\ img1.jpg');"></div>
+                <div class="room-content">
+                    <h2>Chambre double ou twin</h2>
+                    <p>Notre spacieuse chambre double offre 17 m² de confort avec le choix entre deux lits doubles ou deux lits simples. Équipée d'une climatisation, d'une cuisine séparée, d'un mobilier moderne, d'une salle de bain privée et d'un barbecue.</p>
+                    <a href="#" class="learn-more-btn" data-room="double-twin">En savoir plus</a>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-image" style="background-image: url('Deluxe\ Double\ Room.jpg');"></div>
+                <div class="room-content">
+                    <h2>Chambre double Deluxe avec vue sur la mer</h2>
+                    <p>Profitez d'une vue imprenable sur l'océan depuis notre chambre double Deluxe. Cette chambre de 22 m² dispose d'un très grand lit double, avec possibilité d'ajouter un lit bébé sur demande. Les équipements comprennent : un balcon privé, une vue imprenable, la climatisation, une salle de bain privée, une isolation phonique et un barbecue.</p>
+                    <a href="#" class="learn-more-btn" data-room="deluxe-double">En savoir plus</a>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-image" style="background-image: url('delux\ family\ room\ img\ 1.jpg');"></div>
+                <div class="room-content">
+                    <h2>Chambre familiale Deluxe</h2>
+                    <p>Notre spacieuse chambre familiale Deluxe dispose d'un très grand lit double et de 2 lits superposés, idéale pour les familles. La chambre comprend également la climatisation et une salle de bain privée.</p>
+                    <a href="#" class="learn-more-btn" data-room="deluxe-family">En savoir plus</a>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-image" style="background-image: url('dormitory\ room\ img1.jpg');"></div>
+                <div class="room-content">
+                    <h2>Lit simple en dortoir</h2>
+                    <p>Notre dortoir économique avec lit simple propose 1 lit simple, une cuisine séparée, la climatisation et un barbecue - parfait pour les voyageurs à la recherche d'un hébergement économique.</p>
+                    <a href="#" class="learn-more-btn" data-room="dormitory">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Room Popups -->
+    <div id="double-twin-popup" class="room-popup">
+        <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <h1 class="room-title">Chambre double ou twin</h1>
+            <p class="room-price">À partir de $25/nuit</p><br>
+            <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=1474702&label=popup-clicktrip-bn-n82-140625-seals_harbor_hotel-i1816583-s44465-weh1zqoJ9iCxeMy60-cu_tab-d501-dc3-close_no&sid=cb29c30bbca41d7b4034ee35aeb2323d&all_sr_blocks=224276204_338165583_2_0_0&checkin=2025-06-15&checkout=2025-06-16&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=224276204_338165583_2_0_0&hpos=1&matching_block_id=224276204_338165583_2_0_0&nflt=at_bun%3D30%3Bht_id%3D216&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=224276204_338165583_2_0_0__2500&srepoch=1749917376&srpvid=f0817107b6580946&type=total&ucfs=1&#room_224276204" class="book-now-btn">Réserver</a>
+            <br><br><br>
+
+            <div class="swiper room-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="double or twin bedroom img1.jpg" alt="Chambre double">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="double or twin bedroom img2.jpg" alt="Vue de la chambre">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="room-tags">
+                <span class="room-tag">2 lits doubles ou 2 lits simples</span>
+                <span class="room-tag">17 m²</span>
+                <span class="room-tag">Cuisine séparée</span>
+                <span class="room-tag">Climatisation</span>
+            </div>
+
+            <div class="room-description">
+                <p>Notre spacieuse chambre double offre 17 m² de confort avec le choix entre deux lits doubles ou deux lits simples. Équipée d'une climatisation, d'une cuisine séparée, d'un mobilier moderne, d'une salle de bain privée et d'un barbecue.</p>
+            </div>
+
+            <div class="room-amenities">
+                <div class="amenity-item">
+                    <i class="fas fa-wifi"></i>
+                    <span>Wi-Fi haut débit gratuit</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-snowflake"></i>
+                    <span>Climatisation</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-utensils"></i>
+                    <span>Cuisine séparée</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-shower"></i>
+                    <span>Salle de bain privée</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-fire"></i>
+                    <span>Barbecue</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add similar popups for other rooms -->
+    <div id="deluxe-double-popup" class="room-popup">
+        <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <h1 class="room-title">Chambre double Deluxe avec vue sur la mer</h1>
+            <p class="room-price">À partir de $40/nuit</p><br>
+            <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=1474702&label=popup-clicktrip-bn-n82-140625-seals_harbor_hotel-i1816583-s44465-weh1zqoJ9iCxeMy60-cu_tab-d501-dc3-close_no&sid=cb29c30bbca41d7b4034ee35aeb2323d&all_sr_blocks=224276204_338165583_2_0_0&checkin=2025-06-15&checkout=2025-06-16&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=224276204_338165583_2_0_0&hpos=1&matching_block_id=224276204_338165583_2_0_0&nflt=at_bun%3D30%3Bht_id%3D216&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=224276204_338165583_2_0_0__2500&srepoch=1749917376&srpvid=f0817107b6580946&type=total&ucfs=1&#room_224276203" class="book-now-btn">Réserver</a>
+            <br><br><br>
+
+            <div class="swiper room-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="Deluxe Double Room.jpg" alt="Chambre double Deluxe">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Deluxe Double Room 2.jpg" alt="Chambre double Deluxe">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Deluxe Double Room 3.jpg" alt="Chambre double Deluxe">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="room-tags">
+                <span class="room-tag">Très grand lit double</span>
+                <span class="room-tag">22 m²</span>
+                <span class="room-tag">Vue sur la mer</span>
+                <span class="room-tag">Balcon privé</span>
+            </div>
+
+            <div class="room-description">
+                <p>Profitez d'une vue imprenable sur l'océan depuis notre chambre double Deluxe. Cette chambre de 22 m² dispose d'un très grand lit double, avec possibilité d'ajouter un lit bébé sur demande. Les équipements comprennent : un balcon privé, une vue imprenable, la climatisation, une salle de bain privée, une isolation phonique et un barbecue.</p>
+            </div>
+
+            <div class="room-amenities">
+                <div class="amenity-item">
+                    <i class="fas fa-wifi"></i>
+                    <span>Wi-Fi haut débit gratuit</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-snowflake"></i>
+                    <span>Climatisation</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <span>Vue sur la mer</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-shower"></i>
+                    <span>Salle de bain privée</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-volume-mute"></i>
+                    <span>Isolation phonique</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="deluxe-family-popup" class="room-popup">
+        <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <h1 class="room-title">Chambre Familiale Deluxe</h1>
+            <p class="room-price">À partir de $50/nuit</p><br>
+            <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=1474702&label=popup-clicktrip-bn-n82-140625-seals_harbor_hotel-i1816583-s44465-weh1zqoJ9iCxeMy60-cu_tab-d501-dc3-close_no&sid=cb29c30bbca41d7b4034ee35aeb2323d&all_sr_blocks=224276204_338165583_2_0_0&checkin=2025-06-15&checkout=2025-06-16&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=224276204_338165583_2_0_0&hpos=1&matching_block_id=224276204_338165583_2_0_0&nflt=at_bun%3D30%3Bht_id%3D216&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=224276204_338165583_2_0_0__2500&srepoch=1749917376&srpvid=f0817107b6580946&type=total&ucfs=1&#room_224276207" class="book-now-btn">Réserver</a>
+            <br><br><br>
+
+            <div class="swiper room-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="delux family room img 1.jpg" alt="Chambre familiale Deluxe">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="deluxFamilyRoom2.jpg" alt="Salle de bain">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="deluxFamilyRoom3.jpg" alt="Vue de la chambre">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="room-tags">
+                <span class="room-tag">Très grand lit double</span>
+                <span class="room-tag">2 lits superposés</span>
+                <span class="room-tag">45m²</span>
+                <span class="room-tag">Lit bébé sur demande</span>
+            </div>
+
+            <div class="room-description">
+                <p>Bienvenue dans la chambre familiale Deluxe de l'hôtel Seals Harbor – la base idéale pour des vacances en famille relaxantes à la plage. Conçue pour le confort et la commodité, cette spacieuse chambre peut accueillir jusqu'à quatre personnes avec un grand lit king-size et un lit superposé confortable, parfait pour les familles ou les petits groupes. La chambre dispose d'une climatisation, d'un ventilateur au plafond et d'une moustiquaire pour vous garder au frais et à l'aise pendant votre séjour. Profitez d'une salle de bain privée avec eau chaude, serviettes fraîches et articles de toilette gratuits, et un nettoyage quotidien maintient tout propre.</p>
+            </div>
+
+            <div class="room-amenities">
+                <div class="amenity-item">
+                    <i class="fas fa-wifi"></i>
+                    <span>Wi-Fi haut débit gratuit</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-snowflake"></i>
+                    <span>Climatisation</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-swimming-pool"></i>
+                    <span>Piscine</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-shower"></i>
+                    <span>Douche tropicale</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-utensils"></i>
+                    <span>Service en chambre</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="dormitory-popup" class="room-popup">
+        <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <h1 class="room-title">Lit simple en dortoir</h1>
+            <p class="room-price">À partir de $8/nuit</p><br>
+            <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=1474702&label=popup-clicktrip-bn-n82-140625-seals_harbor_hotel-i1816583-s44465-weh1zqoJ9iCxeMy60-cu_tab-d501-dc3-close_no&sid=cb29c30bbca41d7b4034ee35aeb2323d&all_sr_blocks=224276204_338165583_2_0_0&checkin=2025-06-15&checkout=2025-06-16&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=224276204_338165583_2_0_0&hpos=1&matching_block_id=224276204_338165583_2_0_0&nflt=at_bun%3D30%3Bht_id%3D216&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=224276204_338165583_2_0_0__2500&srepoch=1749917376&srpvid=f0817107b6580946&type=total&ucfs=1&#room_224276205" class="book-now-btn">Réserver</a>
+            <br><br><br>
+
+            <div class="swiper room-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="dormitory room img1.jpg" alt="Dortoir">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="dormitory room img2.jpg" alt="Vue du dortoir">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="dormitory room img3.jpg" alt="Vue du dortoir">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="room-tags">
+                <span class="room-tag">Lit simple</span>
+                <span class="room-tag">Cuisine séparée</span>
+                <span class="room-tag">Climatisation</span>
+                <span class="room-tag">Barbecue</span>
+            </div>
+
+            <div class="room-description">
+                <p>Notre dortoir économique avec lit simple propose 1 lit simple, une cuisine séparée, la climatisation et un barbecue - parfait pour les voyageurs à la recherche d'un hébergement économique.</p>
+            </div>
+
+            <div class="room-amenities">
+                <div class="amenity-item">
+                    <i class="fas fa-wifi"></i>
+                    <span>Wi-Fi haut débit gratuit</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-snowflake"></i>
+                    <span>Climatisation</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-utensils"></i>
+                    <span>Cuisine séparée</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-fire"></i>
+                    <span>Barbecue</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-lock"></i>
+                    <span>Coffres-forts</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Liens Rapides</h3>
+                <ul>
+                    <li><a href="rooms_fr.html">Chambres</a></li>
+                    <li><a href="facilities_fr.html">Nos Services</a></li>
+                    <li><a href="#">À Propos</a></li>
+                    <li><a href="contact_fr.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Obtenir de l'Aide</h3>
+                <ul>
+                    <li><a href="contact_fr.html">Envoyez-nous un Email</a></li>
+                    <li><a href="contact_fr.html">Appelez-nous</a></li>
+                    <li><a href="contact_fr.html">Autres Questions</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Hébergement</h3>
+                <ul>
+                    <li><a href="rooms_fr.html#double-twin-popup">Chambre Double ou Twin</a></li>
+                    <li><a href="rooms_fr.html#deluxe-double-popup">Chambre Double Deluxe</a></li>
+                    <li><a href="rooms_fr.html#deluxe-family-popup">Chambre Familiale Deluxe</a></li>
+                    <li><a href="rooms_fr.html#dormitory-popup">Lit en Dortoir Mixte</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Abonnez-vous à notre newsletter pour recevoir nos actualités.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre adresse email" required>
+                    <button type="submit">S'abonner</button>
+                </form>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/sealsharborhotel/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/94773264818" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/seals_harbor_hotel/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Seals Harbor Hotel. Tous droits réservés | Design : Moditha Fernando</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const body = document.body;
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                body.style.overflow = '';
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize all room sliders
+        document.querySelectorAll('.room-slider').forEach(slider => {
+            new Swiper(slider, {
+                loop: true,
+                pagination: {
+                    el: slider.querySelector('.swiper-pagination'),
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: slider.querySelector('.swiper-button-next'),
+                    prevEl: slider.querySelector('.swiper-button-prev'),
+                },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+            });
+        });
+
+        // Check for hash in URL and open corresponding popup
+        const hash = window.location.hash;
+        if (hash) {
+            const popup = document.querySelector(hash);
+            if (popup) {
+                popup.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // Popup functionality
+        const learnMoreButtons = document.querySelectorAll('.learn-more-btn');
+        learnMoreButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const roomType = this.getAttribute('data-room');
+                const popup = document.getElementById(`${roomType}-popup`);
+                if (popup) {
+                    popup.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        // Close popup functionality
+        const closeButtons = document.querySelectorAll('.close-popup');
+        closeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const popup = this.closest('.room-popup');
+                if (popup) {
+                    popup.style.display = 'none';
+                    document.body.style.overflow = '';
+                    // Remove hash from URL when closing popup
+                    history.pushState("", document.title, window.location.pathname);
+                }
+            });
+        });
+
+        // Close popup when clicking outside
+        const popups = document.querySelectorAll('.room-popup');
+        popups.forEach(popup => {
+            popup.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.style.display = 'none';
+                    document.body.style.overflow = '';
+                    // Remove hash from URL when closing popup
+                    history.pushState("", document.title, window.location.pathname);
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
