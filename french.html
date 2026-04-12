@@ -10,8 +10,9 @@
 .lang-menu .selected-lang:before {
     content: '';
     position: absolute;
-    left: 0;                       /* Position flag on the left */
-    top: 0;
+    left: 12px;
+    top: 56%;
+    transform: translateY(-50%);
     width: 32px;
     height: 32px;
     background-image: url(https://flagcdn.com/w40/fr.png);
@@ -19,15 +20,7 @@
     background-repeat: no-repeat;
 }
 
-@media (min-width:1480px) {
-    .lang-menu {
-        left: 1000px !important;
-        right: auto !important;
-        margin-left: 0 !important;
-        margin-right: auto !important;
-        position: absolute !important;
-        
-    }
+
 }
 
 #booking-form{
@@ -373,3 +366,4 @@ Weligama, Sri Lanka</a></div>
     
 </body>
 </html>
+

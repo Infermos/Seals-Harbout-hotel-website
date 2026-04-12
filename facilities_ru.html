@@ -10,105 +10,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        
-        html {
-  scroll-behavior: smooth;
-}
-
-        .banner-image {
-            width: 100%;
-            /* height is set inline, but you can override here */
-            background-size: cover;
-            background-position: center;
-            margin-bottom: 40px; /* Add some space below the banner */   
-        }
-
+        html { scroll-behavior: smooth; }
+        p { line-height: 1.5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         .lang-menu .selected-lang:before {
-    content: '';
-    position: absolute;
-    left: 0;                       /* Position flag on the left */
-    top: 0;
-    width: 32px;
-    height: 32px;
-    background-image: url(https://flagcdn.com/w40/ru.png);
-    background-size: contain;
-    background-repeat: no-repeat;    
-}
-
-@media (min-width:1480px) {
-    .lang-menu {
-        left: 1000px !important;
-        right: auto !important;
-        margin-left: 0 !important;
-        margin-right: auto !important;
-        position: absolute !important;
-    }
-
-
-}
-
-@media (max-width: 768px) {
-    .mobile-menu-btn {
-        display: block;
-        position: relative;
-        z-index: 1000;
-        top: -540px;
-    }}
-
-
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    
-}
-
-
-
-p{
-    line-height: 1.5;
-}
-
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 56%;
+            transform: translateY(-50%);
+            width: 32px;
+            height: 32px;
+            background-image: url(https://flagcdn.com/w40/ru.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="logo_word-removebg-preview.png" alt="Marriott Logo" style="height: 44px; position: relative; top: 5px;">
-        </div>
-        <nav>
-            <a href="home_ru.html">Главная</a>
-            <a href="rooms_ru.html">Номера</a>
-            <a href="facilities_ru.html" class="active">Удобства</a>
-            <a href="meetings_ru.html">Встречи и Мероприятия</a>
-            <a href="gallery_ru.html">Галерея</a>
-            <a href="contact_ru.html">Контакты</a>
-
-            
-            
-            <div class="lang-menu">
-                <div class="lang-menu-content">
-                    <div class="selected-lang">
-                        <span style="position: relative; top: -6px;">Русский</span>
-                    </div>  
-                    <ul>
-                        
-                        
-                        <li><a href="facilities_fr.html" class="fr">Французский</a></li>
-                        <li><a href="facilities_ar.html" class="ar">Китайский</a></li>
-                        <li><a href="facilities.html" class="en">Английский</a></li>
-                        <li><a href="facilities_ru.html" class="de">Немецкий</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        
-
-        
-    </header>
-
-    <div class="banner-image" style="background-image: url('facilities_banner.png'); height: 500px; background-size: cover; background-position: center;"></div>
+    <header class="glass-header">
+<div class="glass-nav">
+<div class="logo"><img src="logo_word-removebg-preview.png" alt="Hotel Logo"></div>
+<nav class="nav-links">
+<a href="home_ru.html" class="nav-pill">Главная</a>
+<a href="rooms_ru.html" class="nav-pill">Номера</a>
+<a href="facilities_ru.html" class="nav-pill active">Удобства</a>
+<a href="meetings_ru.html" class="nav-pill">Встречи и Мероприятия</a>
+<a href="gallery_ru.html" class="nav-pill">Галерея</a>
+<a href="contact_ru.html" class="nav-pill">Контакты</a>
+</nav>
+<div class="lang-menu">
+  <div class="lang-menu-content">
+    <div class="selected-lang"><span>Русский</span></div>
+    <ul>
+      <li><a href="facilities.html" class="en">Английский</a></li>
+      <li><a href="facilities_de.html" class="de">Немецкий</a></li>
+      <li><a href="facilities_fr.html" class="fr">Французский</a></li>
+      <li><a href="facilities_ar.html" class="ar">Китайский</a></li>
+    </ul>
+  </div>
+</div>
+<a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=318615&label=New_English_EN_LK_27027142825-OOHRKEm2e9cX4E5_mJSvaAS640874803405%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-199482273865%3Alp1009922%3Ali%3Adec%3Adm%3Aag27027142825%3Acmp400679785&sid=2282f1b3f1fc39bd7afc4ef015ecdbc7&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1747303756&srpvid=bd91476173de06f4&type=total&ucfs=1&" class="book-now-pill" target="_blank">Забронировать</a>
+</div>
+</header>
 
     <!-- Add Mobile Menu Button -->
     <button class="mobile-menu-btn">
@@ -143,6 +87,8 @@ p{
             <button onclick="window.location.href='https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=318615&label=New_English_EN_LK_27027142825-OOHRKEm2e9cX4E5_mJSvaAS640874803405%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-199482273865%3Alp1009922%3Ali%3Adec%3Adm%3Aag27027142825%3Acmp400679785&sid=2282f1b3f1fc39bd7afc4ef015ecdbc7&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1747303756&srpvid=bd91476173de06f4&type=total&ucfs=1&'" style="background: #2652b2; color: #fff; border: none; padding: 12px 24px; border-radius: 4px; font-size: 1.1rem; cursor: pointer; width: 80%; text-align: center;">Забронировать</button>
         </nav>
     </div>
+
+    <div class="banner-image" style="background-image: url('facilities_banner.png'); height: 500px; background-size: cover; background-position: center;"></div>
 
     <main class="container facilities-content">
         <h1>Удобства отеля</h1>
@@ -277,3 +223,4 @@ p{
             });
     </script>
 </html>
+

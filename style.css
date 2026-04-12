@@ -16,87 +16,395 @@ body {
     max-width: 100%;
 }
 
+/* ============================= */
+/* GLASS HEADER */
+/* ============================= */
+
+.glass-header {
+  position: fixed;
+  top: 16px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* Floating navbar container */
+.glass-nav {
+  pointer-events: auto;
+  width: min(1200px, 92%);
+  padding: 12px 24px;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 12px;
+
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+
+  border-radius: 24px;
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* Logo */
+.glass-nav .logo img {
+  height: 40px;
+}
+
+/* ============================= */
+/* NAV LINKS */
+/* ============================= */
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-pill {
+  padding: 8px 13px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #1c3f8b;
+  background: transparent;
+  transition: all 0.22s ease;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.nav-pill:hover {
+  background: rgba(28, 63, 139, 0.09);
+  color: #1c3f8b;
+  transform: translateY(-1px);
+}
+
+.nav-pill.active {
+  background: linear-gradient(135deg, #1c3f8b, #2652b2);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(28, 63, 139, 0.3);
+}
+
+/* ============================= */
+/* LANGUAGE SELECTOR */
+/* ============================= */
+
+.lang-menu {
+  position: relative;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+}
+
+.selected-lang {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  height: 40px;
+  padding: 8px 18px 8px 52px; /* space for flag */
+  border-radius: 999px;
+
+  font-weight: 500;
+  color: #222;
+  cursor: pointer;
+
+  background: rgba(28, 63, 139, 0.07);
+  border: 1.5px solid rgba(28, 63, 139, 0.15);
+}
+
+.lang-menu .selected-lang:before,
+.selected-lang:before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  transform: translateY(-50%);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.lang-menu .selected-lang span {
+  margin-left: 4px; /* keep text after the flag */
+}
+
+/* ============================= */
+/* OPTIONAL CTA (if re-used later) */
+/* ============================= */
+
+.cta-pill {
+  background: linear-gradient(135deg, #6d4bff, #8f7bff);
+  color: #fff;
+  font-weight: 600;
+}
+
+.cta-pill:hover {
+  opacity: 0.9;
+}
 
 
-header {
-    background: transparent;
-    
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    padding: 0 32px;
+/* === MOBILE === */
+@media (max-width: 900px) {
+  .nav-links, .book-now-pill {
+    display: none;
+  }
+}
+
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #dae3e2;
+  color: #222;
+}
+
+/* ============================= */
+/* GLASS HEADER */
+/* ============================= */
+
+.glass-header {
+  position: fixed;
+  top: 16px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.glass-nav {
+  pointer-events: auto;
+  width: min(1200px, 92%);
+  padding: 14px 22px;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto auto; /* logo | nav | lang | book */
+  align-items: center;
+  gap: 12px;
+
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+
+  border-radius: 20px;
+  border: 1.5px solid rgba(28, 63, 139, 0.15);
+  box-shadow:
+    0 8px 32px rgba(28, 63, 139, 0.14),
+    0 2px 8px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+/* Logo */
+.glass-nav .logo img {
+  height: 40px;
+}
+
+/* ============================= */
+/* NAV LINKS */
+/* ============================= */
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-pill {
+  padding: 8px 13px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #1c3f8b;
+  background: transparent;
+  transition: all 0.22s ease;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.nav-pill:hover {
+  background: rgba(28, 63, 139, 0.09);
+  color: #1c3f8b;
+  transform: translateY(-1px);
+}
+
+.nav-pill.active {
+  background: linear-gradient(135deg, #1c3f8b, #2652b2);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(28, 63, 139, 0.3);
+}
+
+/* ============================= */
+/* BOOK NOW BUTTON */
+/* ============================= */
+
+.book-now-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: linear-gradient(135deg, #1c3f8b, #2652b2);
+  box-shadow: 0 4px 16px rgba(28, 63, 139, 0.35);
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.book-now-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(28, 63, 139, 0.5);
+  background: linear-gradient(135deg, #16336e, #1c3f8b);
+  color: #fff;
+}
+
+/* ============================= */
+/* LANGUAGE SELECTOR (FIXED) */
+/* ============================= */
+
+/* ========================================= */
+/* FIX: Force Language Menu inside Glass Nav */
+/* ========================================= */
+
+.glass-nav .lang-menu, .lang-menu {
+    /* Reset any page-level positioning overrides */
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    margin: 0 !important;
+    transform: none !important;
+
+    /* Ensure consistent header placement */
+    justify-self: end;
+    width: auto !important;
     display: flex;
     align-items: center;
-    gap: 32px;
-    height: 72px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
 }
-header::before {
-    
-    content: '';
-    position: absolute;
-    left: 0; top: 0; right: 0; bottom: 0;
-    background: rgba(218,227,226);
-    z-index: 1;
-    pointer-events: none;
+
+/* Prefer top-level language menu to avoid styling from inlined @media in localized files */
+.lang-menu {
+    min-width: 0;
 }
-.logo, nav, .header-btns {
+
+/* Fix vertical alignment of the inner pill */
+.glass-nav .selected-lang,
+.lang-menu .selected-lang {
+    margin-top: 0 !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    position: relative !important;
+}
+
+.lang-menu .lang-menu-content {
+    display: inline-flex;
+    align-items: center;
     position: relative;
-    z-index: 2;
 }
-.logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #2652b2;
-    letter-spacing: 2px;
+
+.lang-menu ul {
+    right: 0 !important;
+    left: auto !important;
 }
-nav {
+
+.nav-links {
     display: flex;
-    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+    gap: 4px;
+    min-width: 0;
 }
-nav a {
-    text-decoration: none;
-    color: #222;
-    font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background 0.2s, color 0.2s;
+
+.nav-pill {
+    white-space: nowrap;
 }
-nav a:hover {
-    background: #2652b2;
+
+/* Bridge the hover gap so the dropdown doesn't close when crossing to the first item */
+.glass-nav .lang-menu-content {
+    padding-bottom: 10px;
+}
+
+/* Adjust the dropdown position to align correctly relative to the new parent */
+.glass-nav .lang-menu ul {
+    right: 0;
+    left: auto;
+    top: 100%;
+    margin-top: 0; /* gap is bridged by lang-menu-content padding-bottom */
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 900px) {
+  .nav-links, .book-now-pill {
+    display: none;
+  }
+}
+
+/* ============================= */
+/* HERO */
+/* ============================= */
+
+.hero {
+    background: url('room.jpg') center / cover no-repeat;
+    position: relative;
     color: #fff;
+    padding: 140px 40px 80px;
 }
-nav a.active {
-    color: #2652b2;
-    font-weight: 600;
-    pointer-events: none;
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
 }
-.header-btns {
-    display: flex;
-    gap: 8px;
-    align-items: center;
+
+.hero-content {
+position: relative;
+z-index: 2;
 }
-.header-btns button {
-    background: #2652b2;
-    color: #fff;
-    border: none;
-    padding: 8px 24px;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.2s, box-shadow 0.2s;
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 16px;
 }
-.header-btns button:hover {
-    background: #1c3f8b;
-    box-shadow: 0 2px 8px rgba(37,99,235,0.15);
+
+.hero p {
+  font-size: 1.25rem;
+  line-height: 1.6;
 }
+
 
 
 .hero {
-    height: 62vh   ;
+    height: 100vh   ;
     background: #222 url('room.jpg') center/cover no-repeat;
     color: #fff;
     padding: 140px 40px 140px 40px;
@@ -370,6 +678,7 @@ footer {
     align-items: center;
     justify-content: flex-end;
     min-height: 520px;
+    transform-origin: center top;
 }
 .custom-carousel .swiper-slide img {
     width: 100%;
@@ -380,7 +689,7 @@ footer {
 .custom-carousel .swiper-slide .slide-content {
     position: absolute;
     top: 0;
-    left: -10;
+    left: 0;
     width: 100%;
     height: 100%;
     color: #fff;
@@ -682,7 +991,7 @@ header nav {
 
 
 
-.lang-menu {
+nav .lang-menu {
 width: 100px;
 text-align: right;
 font-weight: bold;
@@ -690,20 +999,15 @@ margin-top: 25px;
 position: relative;
 left: 200px;
 }
-.lang-menu .selected-lang {
-display: flex;   
-justify-content: space-between;
-line-height: 2;
-cursor: pointer;
+nav .lang-menu .selected-lang {
 display: flex;
-align-items: center;           /* Vertically center the text */
-line-height: 1;                /* Prevent excess vertical spacing */
+align-items: center;
+line-height: 1;
 cursor: pointer;
-padding-left: 40px;            /* Creates space for the flag */
-height: 32px;                  /* Matches flag height for alignment */
+padding-left: 40px;
+height: 32px;
 position: relative;
-margin-top: -12px;        
-  /* Move text up by 12px */
+margin-top: -12px;
 }
 
 .lang-menu ul {
@@ -788,43 +1092,19 @@ margin-top: -12px;
 
 @media (min-width: 768px) and (max-width: 1480px) {
     /* Header/Nav Bar Adjustments */
-    header {
-        height: 90px; /* Increased height for tablets */
-        padding: 0 20px;
-        flex-direction: column; /* Stack logo and nav vertically */
-        justify-content: center;
-        gap: 8px;
-    }
     
-    header::before {
-        backdrop-filter: blur(5px); /* Optional: Adds blur effect to background */
-    }
+    
     
     .logo {
         font-size: 1.8rem;
         margin-top: 10px; /* Push logo down slightly */
     }
     
-    nav {
-        width: 100%;
-        justify-content: center;
-        gap: 12px; /* Reduced gap between nav items */
-        padding-bottom: 10px; /* Padding at bottom */
-        flex-wrap: wrap; /* Allow items to wrap if needed */
-    }
     
-    nav a {
-        padding: 6px 12px;
-        font-size: 0.95rem;
-    }
     
-    .header-btns {
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        gap: 6px;
-    }
+    
+    
+    
     
     .header-btns button {
         padding: 6px 16px;
@@ -859,19 +1139,16 @@ margin-top: -12px;
     }
 }
 
+.hero-booking {
+    width: 800px;
+position: relative;
+z-index: 2;
+}
 #booking-form {
-    position: absolute;
-    bottom: -120px;
-    left: -90px; /* Start from the left edge */
-    right: 0; /* Extend to the right edge */
-    width: 90%; /* Slightly smaller than full width */
-    max-width: 1000px; /* Maximum width */
-    margin: 0 auto; /* Center horizontally */
-    
-    padding: 30px;
-    border-radius: 12px;
-    box-sizing: border-box; /* Include padding in width */
-    z-index: 3; /* Ensure it appears above other elements */
+background: rgba(0,0,0,0.6);
+backdrop-filter: blur(10px);
+border-radius: 14px;
+padding: 30px;
 }
 
 .form-container {

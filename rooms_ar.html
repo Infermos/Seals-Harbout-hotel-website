@@ -11,180 +11,49 @@
     <link rel="stylesheet" href="rooms.css">
 
     <style>
-@media (min-width:1480px) {
-    .lang-menu {
-        left: 1000px !important;
-        right: auto !important;
-        margin-left: 0 !important;
-        margin-right: auto !important;
-        position: absolute !important;
-    }
-}
-
-
-.rooms-container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .room-section {
-            margin-bottom: 60px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .room-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .room-header h1 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .room-header p {
-            font-size: 1.1rem;
-            color: #666;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .room-card {
-            display: flex;
-            background: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .room-image {
-            flex: 1;
-            min-height: 400px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .room-content {
-            flex: 1;
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .room-content h2 {
-            font-size: 1.8rem;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .room-content p {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .learn-more-btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background: #2652b2;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background 0.3s ease;
-            width: fit-content;
-        }
-
-        .learn-more-btn:hover {
-            background: #1e429f;
-        }
-
-        @media (max-width: 768px) {
-            .room-card {
-                flex-direction: column;
-            }
-            
-            .room-image {
-                min-height: 300px;
-            }
-        }
-
-        .banner-image {
-            width: 100%;
-            /* height is set inline, but you can override here */
-            background-size: cover;
-            background-position: center;
-            margin-bottom: 40px; /* Add some space below the banner */
-        }
-
         .lang-menu .selected-lang:before {
-    content: '';
-    position: absolute;
-    left: 0;                       /* Position flag on the left */
-    top: 0;
-    width: 32px;
-    height: 32px;
-    background-image: url(https://flagcdn.com/w40/cn.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-@media (max-width: 768px) {
-    .mobile-menu-btn {
-        display: block;
-        position: relative;
-        top: -540px;
-    }
-    .mobile-menu {
-        display: block;
-    }
-    header nav {
-        display: none;
-    }
-}
-
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 56%;
+            transform: translateY(-50%);
+            width: 32px;
+            height: 32px;
+            background-image: url(https://flagcdn.com/w40/cn.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
     </style>
 
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="logo_word-removebg-preview.png" alt="Marriott Logo" style="height: 44px; position: relative; top: 5px;">
-        </div>
-        <nav>
-            <a href="home_ar.html">首页</a>
-            <a href="rooms_ar.html" class="active">客房</a>
-            <a href="facilities_ar.html">设施</a>
-            <a href="meetings_ar.html">会议与活动</a>
-            <a href="gallery_ar.html">画廊</a>
-            <a href="contact_ar.html">联系我们</a>
-
-            
-            
-            <div class="lang-menu">
-                <div class="lang-menu-content">
-                    <div class="selected-lang">
-                        <span style="position: relative; top: -6px;">中文</span>
-                    </div>
-                    <ul>
-                        
-                        <li><a href="rooms.html" class="en">英语</a></li>
-                        <li><a href="rooms_de.html" class="de">德语</a></li>
-                        <li><a href="rooms_ru.html" class="ru">俄语</a></li>
-                        <li><a href="rooms_fr.html" class="fr">法语</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-       
-        
-    </header>
-
-    <div class="banner-image" style="background-image: url('rooms_banner.png'); height: 500px; background-size: cover; background-position: center;"></div>
+    <header class="glass-header">
+<div class="glass-nav">
+<div class="logo">
+<img src="logo_word-removebg-preview.png" alt="Hotel Logo">
+</div>
+<nav class="nav-links">
+<a href="home_ar.html" class="nav-pill">首页</a>
+<a href="rooms_ar.html" class="nav-pill active">客房</a>
+<a href="facilities_ar.html" class="nav-pill">设施</a>
+<a href="meetings_ar.html" class="nav-pill">会议与活动</a>
+<a href="gallery_ar.html" class="nav-pill">画廊</a>
+<a href="contact_ar.html" class="nav-pill">联系我们</a>
+</nav>
+<div class="lang-menu">
+  <div class="lang-menu-content">
+    <div class="selected-lang"><span>中文</span></div>
+    <ul>
+      <li><a href="rooms.html" class="en">英语</a></li>
+      <li><a href="rooms_de.html" class="de">德语</a></li>
+      <li><a href="rooms_ru.html" class="ru">俄语</a></li>
+      <li><a href="rooms_fr.html" class="fr">法语</a></li>
+    </ul>
+  </div>
+</div>
+<a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=318615&label=New_English_EN_LK_27027142825-OOHRKEm2e9cX4E5_mJSvaAS640874803405%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-199482273865%3Alp1009922%3Ali%3Adec%3Adm%3Aag27027142825%3Acmp400679785&sid=2282f1b3f1fc39bd7afc4ef015ecdbc7&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1747303756&srpvid=bd91476173de06f4&type=total&ucfs=1&" class="book-now-pill" target="_blank">立即预订</a>
+</div>
+</header>
 
 
     <!-- Add Mobile Menu Button -->
@@ -221,6 +90,7 @@
         </nav>
     </div>
 
+    <div class="banner-image" style="background-image: url('rooms_banner.png'); height: 500px; background-size: cover; background-position: center;"></div>
 
     <div class="rooms-container">
         <div class="room-header">
