@@ -389,6 +389,14 @@ Weligama, Sri lanka</a></div>
                 mobileMenu.classList.remove('active');
                 body.style.overflow = '';
             });
+            // Close menu when clicking backdrop (outside sidebar panel)
+            mobileMenu.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    mobileMenuBtn.classList.remove('active');
+                    this.classList.remove('active');
+                    body.style.overflow = '';
+                }
+            });
         });
     </script>
     

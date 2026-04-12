@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="facilities.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         html { scroll-behavior: smooth; }
         p { line-height: 1.5; }
@@ -89,70 +88,115 @@
         </nav>
     </div>
 
-    <div class="banner-image" style="background-image: url('facilities_banner.png'); height: 500px; background-size: cover; background-position: center;"></div>
-
-    <main class="container facilities-content">
-        <h1>酒店设施</h1>
-        <p>在Seals Harbour酒店，我们提供一系列设施，旨在让您的住宿舒适愉快。从休闲空间到精彩活动，我们为每个人准备了不同的体验。</p>
-        <br><br><br>
-        <div class="facility-item">
-            <div class="facility-image">
-                <img src="room.jpg" alt="客房照片" class="main-facility-image">
-                <img src="delux family room img 1.jpg" alt="客房额外照片" class="overlaid-image">
-            </div>
-            <div class="facility-details" id="facility-item-room" style="scroll-margin-top: 100px;">
-                <h2>客房</h2>
-                <p>我们在韦利格默的客房完美融合了海滨舒适和现代奢华。无论您是来冲浪、放松还是探索，每间客房都设计成您的宁静避风港 - 配备舒适的床铺、空调、免费Wi-Fi和私人阳台，可欣赏到壮丽的海景或郁郁葱葱的花园。从经济实惠的双人房到宽敞的家庭套房，您都能找到理想的空间，在天堂般的一天后放松身心。</p>
-            </div>
+    <!-- ======== HERO ======== -->
+    <section class="fac-hero">
+        <div class="fac-hero-bg" id="heroBg" style="background-image: url('facilities_banner.png')"></div>
+        <div class="fac-hero-overlay"></div>
+        <div class="fac-hero-content">
+            <span class="fac-hero-tag">Seals Harbour Hotel · 韦利格默</span>
+            <h1>世界级<br>酒店设施</h1>
+            <p>您完美海滨之旅所需的一切——就在这里，等待着您。</p>
         </div>
+        <div class="fac-scroll-hint">向下滚动</div>
+    </section>
 
-        <div class="facility-item">
-            <div class="facility-image">
-                <img src="pool.jpg" alt="游泳池照片" class="main-facility-image">
-                <img src="pool2.jpg" alt="游泳池额外照片" class="overlaid-image">
-            </div>
-            <div class="facility-details" id="facility-item-pool" style="scroll-margin-top: 100px;">
-                <h2>游泳池</h2>
-                <p>跳入我们清爽的游泳池，或在池边放松享用饮品。这是放松和享受阳光的理想场所。</p>
-            </div>
+    <!-- ======== QUICK ICONS STRIP ======== -->
+    <div class="fac-strip">
+        <div class="fac-strip-item"><i class="fas fa-bed"></i><span>豪华客房</span></div>
+        <div class="fac-strip-item"><i class="fas fa-swimmer"></i><span>无边泳池</span></div>
+        <div class="fac-strip-item"><i class="fas fa-utensils"></i><span>屋顶餐厅</span></div>
+        <div class="fac-strip-item"><i class="fas fa-water"></i><span>冲浪学校</span></div>
+        <div class="fac-strip-item"><i class="fas fa-spa"></i><span>瑜伽课程</span></div>
+    </div>
+
+    <!-- ======== INTRO ======== -->
+    <div class="fac-intro">
+        <p class="reveal">在Seals Harbour酒店，我们提供一系列精心设计的设施，让您的住宿舒适、令人兴奋且难以忘怀。从宁静的泳池休闲到充满活力的冲浪体验，我们为每一位旅客都准备了独特的体验。</p>
+    </div>
+
+    <!-- ======== FACILITY 01 ======== -->
+    <section class="fac-section" id="facility-item-room" style="scroll-margin-top: 100px;">
+        <div class="fac-section-img reveal-img">
+            <img src="room.jpg" alt="豪华客房">
+            <div class="fac-img-overlay"></div>
+            <span class="fac-num-badge">01</span>
         </div>
-
-        <div class="facility-item">
-            <div class="facility-image">
-                <img src="rooftopDine.jpg" alt="屋顶餐厅照片" class="main-facility-image">
-                <img src="rooftopDine2.jpg" alt="屋顶餐厅额外照片" class="overlaid-image">
-            </div>
-            <div class="facility-details" id="facility-item-dine" style="scroll-margin-top: 100px;">
-                <h2>屋顶餐厅</h2>
-                <p>登上我们的屋顶，享受带景观的用餐体验。俯瞰韦利格默海岸，这里是品尝美味当地和国际美食，同时欣赏日落的理想场所。我们的屋顶酒吧提供从新鲜的热带鸡尾酒到精致葡萄酒和冰镇啤酒的一切 - 都在轻松宜人的环境中。</p>
-            </div>
+        <div class="fac-section-content reveal-left">
+            <span class="fac-section-label">住宿</span>
+            <div class="fac-section-divider"></div>
+            <h2>豪华客房</h2>
+            <p>我们在韦利格默的客房完美融合了海滨舒适和现代奢华。每间客房都是您宁静的避风港——配备舒适的床铺、空调、免费Wi-Fi和私人阳台，可欣赏壮丽的海景或郁郁葱葱的花园。</p>
+            <a href="rooms_ar.html" class="fac-link-btn">浏览客房 <i class="fas fa-arrow-right"></i></a>
         </div>
+    </section>
 
-        <div class="facility-item">
-            <div class="facility-image">
-                <img src="surfing2.jpg" alt="冲浪照片" class="main-facility-image">
-                <img src="surfing.jpg" alt="冲浪额外照片" class="overlaid-image">
-            </div>
-            <div class="facility-details" id="facility-item-surf" style="scroll-margin-top: 100px;">
-                <h2>冲浪</h2>
-                <p>韦利格默是斯里兰卡最适合初学者的冲浪地点之一。距离酒店几步之遥，您会发现许多当地冲浪学校，提供课程、冲浪板租赁和指导课程。温和的海浪和沙质海底使其成为初学者想要抓住第一波浪潮的理想场所，也是更有经验的冲浪者想要提升技能的完美地点。</p>
-            </div>
+    <!-- ======== FACILITY 02 ======== -->
+    <section class="fac-section" id="facility-item-pool" style="scroll-margin-top: 100px;">
+        <div class="fac-section-img reveal-img">
+            <img src="pool.jpg" alt="无边泳池">
+            <div class="fac-img-overlay"></div>
+            <span class="fac-num-badge">02</span>
         </div>
-
-        <div class="facility-item">
-            <div class="facility-image">
-                <img src="yoga2.jpg" alt="瑜伽照片" class="main-facility-image">
-                <img src="yoga3.jpg" alt="瑜伽额外照片" class="overlaid-image">
-            </div>
-            <div class="facility-details" id="facility-item-yoga" style="scroll-margin-top: 100px;">
-                <h2>瑜伽</h2>
-                <p>通过我们在酒店直接提供的瑜伽课程，重新连接您的身心。无论您是初学者还是经验丰富的瑜伽练习者，我们的教练都会为所有级别调整课程。课程在宁静的开放空间进行 - 通常在日出或日落时分 - 让您能够伸展、呼吸和按照韦利格默的自然节奏运动。这是开始新的一天或在海滩冒险后放松的理想方式。</p>
-            </div>
+        <div class="fac-section-content reveal-right">
+            <span class="fac-section-label">休闲</span>
+            <div class="fac-section-divider"></div>
+            <h2>无边泳池</h2>
+            <p>跳入我们清爽的泳池，或在池边放松享用热带饮品。这是在斯里兰卡阳光下放松身心的理想场所。</p>
         </div>
+    </section>
 
-        <p>通过我们图库中的精彩图片，探索我们酒店及其周边环境的美景。</p>
-        <button class="gallery-button" onclick="window.location.href='gallery.html'">查看图库</button>
-    </main>
+    <!-- ======== FACILITY 03 ======== -->
+    <section class="fac-section" id="facility-item-dine" style="scroll-margin-top: 100px;">
+        <div class="fac-section-img reveal-img">
+            <img src="rooftopDine.jpg" alt="屋顶餐厅">
+            <div class="fac-img-overlay"></div>
+            <span class="fac-num-badge">03</span>
+        </div>
+        <div class="fac-section-content reveal-left">
+            <span class="fac-section-label">餐饮</span>
+            <div class="fac-section-divider"></div>
+            <h2>屋顶餐厅</h2>
+            <p>登上我们的屋顶，享受绝美景观用餐体验。俯瞰韦利格默海岸，品尝美味的当地和国际美食，欣赏醉人日落。我们的屋顶酒吧提供新鲜热带鸡尾酒、精致葡萄酒和冰镇啤酒，尽在轻松宜人的氛围中。</p>
+        </div>
+    </section>
+
+    <!-- ======== FACILITY 04 ======== -->
+    <section class="fac-section" id="facility-item-surf" style="scroll-margin-top: 100px;">
+        <div class="fac-section-img reveal-img">
+            <img src="surfing2.jpg" alt="冲浪">
+            <div class="fac-img-overlay"></div>
+            <span class="fac-num-badge">04</span>
+        </div>
+        <div class="fac-section-content reveal-right">
+            <span class="fac-section-label">冒险</span>
+            <div class="fac-section-divider"></div>
+            <h2>冲浪</h2>
+            <p>韦利格默是斯里兰卡最适合初学者冲浪的地点之一。距酒店仅几步之遥，众多当地冲浪学校提供课程、冲浪板租赁和指导。温和的海浪和沙质海底使其成为各水平冲浪者的理想场所。</p>
+        </div>
+    </section>
+
+    <!-- ======== FACILITY 05 ======== -->
+    <section class="fac-section" id="facility-item-yoga" style="scroll-margin-top: 100px;">
+        <div class="fac-section-img reveal-img">
+            <img src="yoga2.jpg" alt="瑜伽">
+            <div class="fac-img-overlay"></div>
+            <span class="fac-num-badge">05</span>
+        </div>
+        <div class="fac-section-content reveal-left">
+            <span class="fac-section-label">健康</span>
+            <div class="fac-section-divider"></div>
+            <h2>瑜伽</h2>
+            <p>通过酒店直接提供的瑜伽课程，重新连接您的身心。我们的教练为所有级别量身定制课程。课程在宁静的开放空间进行——通常在日出或日落时分——让您按照韦利格默的自然节奏伸展和呼吸。</p>
+        </div>
+    </section>
+
+    <!-- ======== GALLERY CTA ======== -->
+    <section class="fac-cta reveal">
+        <h2>亲眼见证</h2>
+        <p>通过我们图库中的精彩图片，探索酒店及其周边环境的美景。</p>
+        <a href="gallery_ar.html" class="fac-cta-btn">查看图库 <i class="fas fa-arrow-right"></i></a>
+    </section>
+
 
     <footer>
         <div class="footer-container">
@@ -202,6 +246,36 @@
         </div>
     </footer>
 </body>
+
+    <script>
+    /* ---- Hero parallax ---- */
+    const heroBg = document.getElementById('heroBg');
+    const facHero = document.querySelector('.fac-hero');
+    if (heroBg && facHero) {
+        function updateParallax() {
+            const y = window.scrollY;
+            const heroH = facHero.offsetHeight;
+            if (y <= heroH) {
+                heroBg.style.transform = 'translateY(' + (y * 0.45) + 'px)';
+            }
+        }
+        updateParallax();
+        window.addEventListener('scroll', updateParallax, { passive: true });
+    }
+
+    /* ---- Scroll reveal ---- */
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-img');
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                io.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+    </script>
+
     <script>
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
             const mobileMenu = document.querySelector('.mobile-menu');
@@ -221,6 +295,14 @@
                     mobileMenu.classList.remove('active');
                     body.style.overflow = '';
                 });
+            });
+            // Close menu when clicking backdrop (outside sidebar panel)
+            mobileMenu.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    mobileMenuBtn.classList.remove('active');
+                    this.classList.remove('active');
+                    body.style.overflow = '';
+                }
             });
     </script>
 </html>

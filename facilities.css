@@ -1,0 +1,435 @@
+/* ============================================================
+   FACILITIES PAGE — Modern Redesign
+   ============================================================ */
+
+/* ---- Reset / Base ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.fac-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 560px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.fac-hero-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -30%;
+  height: 160%;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  /* No transition — scroll-linked, must be instant */
+}
+
+.fac-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 25, 60, 0.25) 0%,
+    rgba(10, 25, 60, 0.55) 60%,
+    rgba(10, 25, 60, 0.88) 100%
+  );
+}
+
+.fac-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 6vw 80px;
+  color: #fff;
+  max-width: 820px;
+}
+
+.fac-hero-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 22px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.7s 0.3s forwards;
+}
+
+.fac-hero-content h1 {
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(28px);
+  animation: fadeUp 0.8s 0.55s forwards;
+}
+
+.fac-hero-content p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.7s 0.8s forwards;
+  max-width: 480px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
+}
+
+.fac-scroll-hint {
+  position: absolute;
+  bottom: 32px;
+  right: 6vw;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeIn 0.8s 1.4s forwards;
+}
+.fac-scroll-hint::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.6), transparent);
+  animation: scrollLine 1.6s 1.6s ease-in-out infinite;
+}
+
+/* ============================================================
+   QUICK ICONS STRIP
+   ============================================================ */
+.fac-strip {
+  background: #1c3f8b;
+  padding: 24px 6vw;
+  display: flex;
+  justify-content: center;
+  gap: clamp(20px, 5vw, 60px);
+  flex-wrap: wrap;
+}
+
+.fac-strip-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.88);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+  cursor: default;
+}
+.fac-strip-item:hover { color: #fff; }
+.fac-strip-item i {
+  font-size: 1.3rem;
+  color: rgba(255,255,255,0.6);
+  transition: color 0.2s, transform 0.3s;
+}
+.fac-strip-item:hover i { color: #fff; transform: translateY(-3px); }
+
+/* ============================================================
+   INTRO PARAGRAPH
+   ============================================================ */
+.fac-intro {
+  text-align: center;
+  padding: 80px 6vw 60px;
+  background: #f8f9fd;
+}
+.fac-intro p {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  line-height: 1.8;
+  color: #444;
+}
+
+/* ============================================================
+   FACILITY SECTIONS (alternating)
+   ============================================================ */
+.fac-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+  overflow: hidden;
+}
+.fac-section:nth-child(even) { direction: rtl; }
+.fac-section:nth-child(even) > * { direction: ltr; }
+
+/* Image side */
+.fac-section-img {
+  position: relative;
+  overflow: hidden;
+}
+.fac-section-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s ease;
+}
+.fac-section:hover .fac-section-img img { transform: scale(1.05); }
+
+.fac-section-img .fac-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(28,63,139,0.35) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Number badge */
+.fac-num-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.18);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Content side */
+.fac-section-content {
+  background: #fff;
+  padding: clamp(40px, 6vw, 80px) clamp(32px, 5vw, 72px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.fac-section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #1c3f8b;
+}
+
+.fac-section-content h2 {
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  font-weight: 800;
+  color: #111;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.fac-section-content p {
+  font-size: clamp(0.92rem, 1.3vw, 1.05rem);
+  line-height: 1.8;
+  color: #555;
+}
+
+.fac-section-divider {
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, #1c3f8b, #2652b2);
+  border-radius: 99px;
+  margin-top: 4px;
+}
+
+.fac-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 13px 28px;
+  background: linear-gradient(135deg, #1c3f8b, #2652b2);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+  transition: box-shadow 0.25s, transform 0.25s;
+  align-self: flex-start;
+}
+.fac-link-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(28, 63, 139, 0.4);
+}
+.fac-link-btn i { transition: transform 0.25s; }
+.fac-link-btn:hover i { transform: translateX(4px); }
+
+/* Alternating backgrounds */
+.fac-section:nth-child(odd) .fac-section-content  { background: #fff; }
+.fac-section:nth-child(even) .fac-section-content { background: #f4f7ff; }
+
+/* ============================================================
+   SCROLL REVEAL ANIMATIONS
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.visible { opacity: 1; transform: none; }
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-left.visible { opacity: 1; transform: none; }
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-right.visible { opacity: 1; transform: none; }
+
+.reveal-img {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-img.visible { opacity: 1; transform: scale(1); }
+
+/* Stagger delays */
+.delay-1 { transition-delay: 0.1s !important; }
+.delay-2 { transition-delay: 0.2s !important; }
+.delay-3 { transition-delay: 0.35s !important; }
+
+/* ============================================================
+   GALLERY CTA
+   ============================================================ */
+.fac-cta {
+  position: relative;
+  padding: 100px 6vw;
+  text-align: center;
+  background: linear-gradient(135deg, #0d2456 0%, #1c3f8b 50%, #2652b2 100%);
+  overflow: hidden;
+}
+
+.fac-cta::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 320px; height: 320px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+}
+.fac-cta::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; left: -40px;
+  width: 260px; height: 260px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+}
+
+.fac-cta h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+.fac-cta p {
+  color: rgba(255,255,255,0.75);
+  font-size: 1.05rem;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.fac-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 40px;
+  background: #fff;
+  color: #1c3f8b;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+  transition: transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+}
+.fac-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.35);
+}
+.fac-cta-btn i { transition: transform 0.25s; }
+.fac-cta-btn:hover i { transform: translateX(4px); }
+
+/* ============================================================
+   KEYFRAMES
+   ============================================================ */
+@keyframes fadeUp {
+  to { opacity: 1; transform: none; }
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+@keyframes scrollLine {
+  0%   { opacity: 0; transform: scaleY(0); transform-origin: top; }
+  40%  { opacity: 1; transform: scaleY(1); }
+  80%  { opacity: 0; transform: scaleY(1); }
+  100% { opacity: 0; }
+}
+
+/* ============================================================
+   MOBILE — ≤ 768px
+   ============================================================ */
+@media (max-width: 768px) {
+  .fac-hero { height: 90vh; align-items: flex-end; }
+  .fac-hero-content { padding: 0 20px 60px; }
+  .fac-scroll-hint { display: none; }
+
+  .fac-strip { gap: 18px; padding: 20px; }
+  .fac-strip-item span { display: none; }
+  .fac-strip-item i { font-size: 1.6rem; }
+
+  .fac-intro { padding: 52px 24px 40px; }
+
+  .fac-section {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    direction: ltr !important;
+  }
+  .fac-section:nth-child(even) > * { direction: ltr; }
+
+  .fac-section-img { height: 260px; }
+
+  .fac-section-content {
+    padding: 36px 24px;
+    gap: 14px;
+  }
+
+  .fac-section-content h2 { font-size: 1.7rem; }
+
+  .fac-cta { padding: 72px 24px; }
+
+  /* On mobile, image always comes first */
+  .fac-section-content { order: 2; }
+  .fac-section-img { order: 1; }
+}
+
+/* ============================================================
+   OVERRIDES — page padding for fixed header
+   ============================================================ */
+body { background: #fff; }

@@ -1701,4 +1701,284 @@ padding: 30px;
     }
 }
 
+/* ================================================================
+   MOBILE SIDEBAR — REDESIGN
+   Overrides all earlier conflicting mobile-menu rules.
+   ================================================================ */
+
+/* ── 1. Hide the desktop glass header on mobile ── */
+@media (max-width: 900px) {
+  .glass-header { display: none !important; }
+}
+
+/* ── 2. Hamburger button — fixed, top-right ── */
+.mobile-menu-btn {
+  display: none;
+  position: fixed !important;
+  top: 16px !important;
+  right: 18px !important;
+  left: auto !important;
+  z-index: 1100 !important;
+  width: 46px !important;
+  height: 46px !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: none !important;
+  border-radius: 13px !important;
+  cursor: pointer !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 5px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  padding: 0 !important;
+  transition: background 0.2s, box-shadow 0.2s !important;
+}
+
+.mobile-menu-btn span {
+  display: block !important;
+  width: 20px !important;
+  height: 2px !important;
+  background: #1c3f8b !important;
+  border-radius: 2px !important;
+  transition: all 0.3s ease !important;
+  position: static !important;
+  top: auto !important;
+  margin: 0 !important;
+}
+
+/* X state */
+.mobile-menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px) !important;
+}
+.mobile-menu-btn.active span:nth-child(2) {
+  opacity: 0 !important;
+  transform: none !important;
+}
+.mobile-menu-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px) !important;
+}
+
+/* Show on mobile, override the tablet `display: none !important` rule */
+@media (max-width: 900px) {
+  .mobile-menu-btn { display: flex !important; }
+}
+
+/* ── 3. Sidebar backdrop ── */
+.mobile-menu {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 1050 !important;
+  background: rgba(5, 12, 38, 0.6) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  padding: 0 !important;
+  transform: none !important;
+  transition: opacity 0.3s ease !important;
+  width: 100% !important;
+  height: 100vh !important;
+  /* Always hidden by default — toggled via JS to display: flex */
+  display: none !important;
+  justify-content: flex-end !important;
+  align-items: stretch !important;
+}
+
+.mobile-menu.active {
+  display: flex !important;
+}
+
+/* ── 4. Sidebar panel ── */
+.mobile-menu nav {
+  position: relative !important;
+  width: 290px !important;
+  max-width: 88vw !important;
+  height: 100% !important;
+  background: linear-gradient(170deg, #06102e 0%, #1a3880 100%) !important;
+  padding: 72px 24px 40px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch !important;
+  overflow-y: auto !important;
+  box-shadow: -12px 0 48px rgba(0, 0, 0, 0.45) !important;
+  animation: sidebarSlideIn 0.38s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
+}
+
+@keyframes sidebarSlideIn {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+/* Hotel name label at top of sidebar */
+.mobile-menu nav::before {
+  content: 'SEALS HARBOUR HOTEL';
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  color: rgba(255, 255, 255, 0.38);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+/* ── 5. Nav links ── */
+.mobile-menu nav a {
+  display: flex !important;
+  align-items: center !important;
+  padding: 12px 14px !important;
+  border-radius: 10px !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  color: rgba(255, 255, 255, 0.78) !important;
+  text-decoration: none !important;
+  background: transparent !important;
+  transition: background 0.18s, color 0.18s, padding-left 0.18s !important;
+  letter-spacing: 0.01em !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.mobile-menu nav a:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+  padding-left: 20px !important;
+}
+
+.mobile-menu nav a.active {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+}
+
+/* ── 6. Language menu inside sidebar ── */
+.mobile-menu .lang-menu {
+  width: 100% !important;
+  margin: 16px 0 0 0 !important;
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  transform: none !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding-top: 16px !important;
+  display: flex !important;
+}
+
+.mobile-menu .lang-menu-content {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  position: relative !important;
+  padding-bottom: 0 !important;
+}
+
+.mobile-menu .lang-menu .selected-lang {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 10px !important;
+  padding: 10px 16px 10px 50px !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  height: auto !important;
+  position: relative !important;
+  margin: 0 !important;
+  transform: none !important;
+  top: auto !important;
+  left: auto !important;
+  cursor: pointer !important;
+}
+
+.mobile-menu .lang-menu .selected-lang:before {
+  left: 12px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 24px !important;
+  height: 24px !important;
+  position: absolute !important;
+}
+
+.mobile-menu .lang-menu ul {
+  position: static !important;
+  width: 100% !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 10px !important;
+  margin-top: 4px !important;
+  padding: 4px !important;
+  display: none !important;
+  left: auto !important;
+  right: auto !important;
+}
+
+.mobile-menu .lang-menu-content:hover ul,
+.mobile-menu .lang-menu-content:focus-within ul {
+  display: block !important;
+}
+
+.mobile-menu .lang-menu ul li {
+  background: none !important;
+}
+
+.mobile-menu .lang-menu ul li a {
+  color: rgba(255, 255, 255, 0.8) !important;
+  padding: 10px 12px !important;
+  font-size: 0.88rem !important;
+  border-radius: 7px !important;
+  width: 100% !important;
+  background: none !important;
+  display: flex !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+}
+
+.mobile-menu .lang-menu ul li:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-radius: 7px !important;
+}
+
+.mobile-menu .lang-menu ul li a::before {
+  width: 22px !important;
+  height: 22px !important;
+  margin-right: 8px !important;
+  display: inline-block !important;
+  flex-shrink: 0 !important;
+}
+
+/* ── 7. Book Now button inside sidebar ── */
+.mobile-menu nav > button {
+  margin-top: auto !important;
+  margin-bottom: 0 !important;
+  background: #fff !important;
+  color: #1c3f8b !important;
+  border: none !important;
+  padding: 14px 24px !important;
+  border-radius: 12px !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  width: 100% !important;
+  text-align: center !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+  transition: transform 0.2s, box-shadow 0.2s !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+}
+
+.mobile-menu nav > button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.32) !important;
+}
+
 

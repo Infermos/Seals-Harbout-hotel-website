@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="/save_icon.jpg" />
+    <link rel="icon" type="image/png" href="/save_icon.jpg" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Seals Harbour Hotel | Rooms</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="rooms.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .lang-menu .selected-lang:before {
             content: '';
@@ -53,14 +53,14 @@
 </div>
 </header>
 
-    <!-- Add Mobile Menu Button -->
+    <!-- Mobile Menu Button -->
     <button class="mobile-menu-btn">
         <span></span>
         <span></span>
         <span></span>
     </button>
 
-    <!-- Add Mobile Menu -->
+    <!-- Mobile Menu -->
     <div class="mobile-menu">
         <nav>
             <a href="home.html">Home</a>
@@ -75,7 +75,7 @@
                         <span>English</span>
                     </div>
                     <ul>
-                        <li><a href="rooms_de.html" class="de" >German</a></li>
+                        <li><a href="rooms_de.html" class="de">German</a></li>
                         <li><a href="rooms_ru.html" class="ru">Russian</a></li>
                         <li><a href="rooms_fr.html" class="fr">French</a></li>
                         <li><a href="rooms_ar.html" class="ar">Chinese</a></li>
@@ -86,60 +86,282 @@
         </nav>
     </div>
 
-    <div class="banner-image" style="background-image: url('rooms_banner.png'); height: 500px; background-size: cover; background-position: center;"></div>
+    <!-- ======== HERO BANNER ======== -->
+    <div class="banner-image" style="background-image: url('rooms_banner.png');">
+        <div class="banner-content">
+            <span class="banner-tag">Seals Harbour Hotel · Weligama</span>
+            <h1>Our Rooms & Suites</h1>
+            <p>Discover your perfect coastal sanctuary</p>
+        </div>
+    </div>
 
+    <!-- ======== ROOM CARDS ======== -->
     <div class="rooms-container">
         <div class="room-header">
-            <h1>Our Rooms & Suites</h1>
-            <p>Discover our carefully curated selection of accommodations, each designed to provide the perfect sanctuary for your stay with us.</p>
+            <h1>Accommodation</h1>
+            <p>Discover our carefully curated selection of rooms, each designed to provide the perfect sanctuary for your stay.</p>
         </div>
 
         <div class="room-section">
+            <!-- Double or Twin -->
             <div class="room-card">
-                <div class="room-image" style="background-image: url('double\ or\ twin\ bedroom\ img1.jpg');"></div>
+                <div class="room-image" style="background-image: url('double\ or\ twin\ bedroom\ img1.jpg');">
+                    <div class="room-price-badge">£22 <small>/night</small></div>
+                </div>
                 <div class="room-content">
-                    <h2>Double or Twin Bedroom</h2>
-                    <p>Our spacious Double or Twin bedroom offers 183 ft² of comfort with your choice of two double beds or two twin beds. Features air conditioned room, a private kitchen, modern furnishings, ensuited bathroom, and barbecue facililties.</p>
-                    <a href="#" class="learn-more-btn" data-room="double-twin">Explore Room</a>
+                    <h2>Double or Twin Room</h2>
+                    <p>Our 17 m² Double or Twin room offers flexible sleeping arrangements — two single beds — with a private kitchen, ensuite bathroom, air conditioning, and barbecue facilities. Perfect for couples or friends.</p>
+                    <div class="room-card-btns">
+                        <a href="#" class="learn-more-btn" data-room="double-twin">Explore Room</a>
+                        <a href="#reserve-section" class="reserve-link">Reserve from £22 <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
 
+            <!-- Deluxe Double -->
             <div class="room-card">
-                <div class="room-image" style="background-image: url('Deluxe\ Double\ Room.jpg');"></div>
+                <div class="room-image" style="background-image: url('Deluxe\ Double\ Room.jpg');">
+                    <div class="room-price-badge">£37 <small>/night</small></div>
+                </div>
                 <div class="room-content">
                     <h2>Deluxe Double Room with Sea View</h2>
-                    <p>Enjoy breathtaking ocean views from our Deluxe Double Room. This 22 m² room features 1 extra-large double bed, with a cot available on request. Amenities include a private balcony, stunning views, air conditioning, an ensuite bathroom, soundproofing, and barbecue facilities.</p>
-                    <a href="#" class="learn-more-btn" data-room="deluxe-double">Explore Room</a>
+                    <p>Enjoy breathtaking ocean views from our 22 m² Deluxe Double Room. Features 1 extra-large double bed, private balcony, air conditioning, ensuite bathroom, soundproofing, and barbecue facilities. Cot available on request.</p>
+                    <div class="room-card-btns">
+                        <a href="#" class="learn-more-btn" data-room="deluxe-double">Explore Room</a>
+                        <a href="#reserve-section" class="reserve-link">Reserve from £37 <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
 
+            <!-- Deluxe Family -->
             <div class="room-card">
-                <div class="room-image" style="background-image: url('delux\ family\ room\ img\ 1.jpg');"></div>
+                <div class="room-image" style="background-image: url('delux\ family\ room\ img\ 1.jpg');">
+                    <div class="room-price-badge">£56 <small>/night</small></div>
+                </div>
                 <div class="room-content">
                     <h2>Deluxe Family Room</h2>
-                    <p>Our spacious Deluxe Family Room features 1 extra-large double bed and 2 bunk beds, perfect for families. This room also includes AC and a private bathroom.</p>
-                    <a href="#" class="learn-more-btn" data-room="deluxe-family">Explore Room</a>
+                    <p>Our spacious 22 m² Deluxe Family Room features 1 extra-large double bed and 2 bunk beds — perfect for families. Includes balcony, sea view, air conditioning, private bathroom, soundproofing, minibar, and barbecue. Cot available on request.</p>
+                    <div class="room-card-btns">
+                        <a href="#" class="learn-more-btn" data-room="deluxe-family">Explore Room</a>
+                        <a href="#reserve-section" class="reserve-link">Reserve from £56 <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
 
+            <!-- Dormitory -->
             <div class="room-card">
-                <div class="room-image" style="background-image: url('dormitory\ room\ img1.jpg');"></div>
+                <div class="room-image" style="background-image: url('dormitory\ room\ img1.jpg');">
+                    <div class="room-price-badge">£7 <small>/night</small></div>
+                </div>
                 <div class="room-content">
                     <h2>Single Bed Mixed Dormitory</h2>
-                    <p>Our budget-friendly Single Bed Mixed Dormitory features 1 single bed, a private kitchen, air conditioning, and barbecue facilities, perfect for travelers looking for an economical stay.</p>
-                    <a href="#" class="learn-more-btn" data-room="dormitory">Explore Room</a>
+                    <p>Our budget-friendly dormitory offers 1 single bed per guest in a shared setting. Includes private kitchen, air conditioning, pool view, and barbecue facilities. Ideal for solo travellers and backpackers.</p>
+                    <div class="room-card-btns">
+                        <a href="#" class="learn-more-btn" data-room="dormitory">Explore Room</a>
+                        <a href="#reserve-section" class="reserve-link">Reserve from £7 <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Room Popups -->
+    <!-- ======== BOOKING WIDGET ======== -->
+    <section class="rooms-booking" id="reserve-section">
+        <div class="rb-container">
+            <div class="rb-title">
+                <h2>Reserve Your Stay</h2>
+                <p>Select an accommodation type and how many rooms you'd like to reserve.</p>
+            </div>
+
+            <!-- Table header — desktop only -->
+            <div class="rb-table-head">
+                <span>Accommodation Type</span>
+                <span>Guests</span>
+                <span>Tonight's Price</span>
+                <span>Your Options</span>
+                <span>Rooms</span>
+            </div>
+
+            <!-- Row 1: Deluxe Family Room -->
+            <div class="rb-row">
+                <div class="rb-col-room">
+                    <div class="rb-room-name">Deluxe Family Room</div>
+                    <div class="rb-room-sub">Recommended for 2 adults, 1 child</div>
+                    <div class="rb-room-beds"><i class="fas fa-bed"></i> 1 extra-large double bed &amp; 2 bunk beds · Cot available on request</div>
+                    <div class="rb-room-size"><i class="fas fa-ruler-combined"></i> 22 m²</div>
+                    <div class="rb-room-amenities">
+                        <span><i class="fas fa-door-open"></i> Balcony</span>
+                        <span><i class="fas fa-water"></i> Sea view</span>
+                        <span><i class="fas fa-swimming-pool"></i> Pool view</span>
+                        <span><i class="fas fa-snowflake"></i> Air conditioning</span>
+                        <span><i class="fas fa-shower"></i> Private bathroom</span>
+                        <span><i class="fas fa-volume-mute"></i> Soundproofing</span>
+                        <span><i class="fas fa-fire"></i> Barbecue</span>
+                        <span><i class="fas fa-wine-glass-alt"></i> Minibar</span>
+                    </div>
+                </div>
+                <div class="rb-col-guests">
+                    <div class="rb-guest-icons">
+                        <i class="fas fa-user"></i><i class="fas fa-user"></i><i class="fas fa-user"></i><i class="fas fa-user"></i>
+                    </div>
+                    <span>Max 4 adults</span>
+                </div>
+                <div class="rb-col-price">
+                    <div class="rb-price-main">£56</div>
+                    <div class="rb-price-tax">+£1 taxes &amp; charges</div>
+                </div>
+                <div class="rb-col-options">
+                    <div class="rb-option-item rb-green"><i class="fas fa-check-circle"></i> Free cancellation</div>
+                    <div class="rb-option-item rb-green"><i class="fas fa-check-circle"></i> No prepayment needed – pay at property</div>
+                    <div class="rb-option-item rb-green"><i class="fas fa-check-circle"></i> No credit card needed</div>
+                </div>
+                <div class="rb-col-select">
+                    <div class="rb-qty-wrap">
+                        <button class="rb-qty-btn rb-minus" aria-label="Decrease">&#8722;</button>
+                        <span class="rb-qty-num">0</span>
+                        <button class="rb-qty-btn rb-plus" aria-label="Increase">&#43;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2: Double or Twin Room -->
+            <div class="rb-row">
+                <div class="rb-col-room">
+                    <div class="rb-room-name">Double or Twin Room with Bathroom</div>
+                    <div class="rb-room-sub">Flexible bed configuration</div>
+                    <div class="rb-room-beds"><i class="fas fa-bed"></i> 2 single beds · Cot available on request</div>
+                    <div class="rb-room-size"><i class="fas fa-ruler-combined"></i> 17 m²</div>
+                    <div class="rb-room-amenities">
+                        <span><i class="fas fa-utensils"></i> Private kitchen</span>
+                        <span><i class="fas fa-shower"></i> Ensuite bathroom</span>
+                        <span><i class="fas fa-swimming-pool"></i> Pool view</span>
+                        <span><i class="fas fa-snowflake"></i> Air conditioning</span>
+                        <span><i class="fas fa-fire"></i> Barbecue</span>
+                    </div>
+                </div>
+                <div class="rb-col-guests">
+                    <div class="rb-guest-icons">
+                        <i class="fas fa-user"></i><i class="fas fa-user"></i>
+                    </div>
+                    <span>Max 2 adults</span>
+                </div>
+                <div class="rb-col-price">
+                    <div class="rb-price-main">£22</div>
+                    <div class="rb-price-tax">+£0 taxes &amp; charges</div>
+                </div>
+                <div class="rb-col-options">
+                    <div class="rb-option-item rb-green"><i class="fas fa-check-circle"></i> Free cancellation</div>
+                    <div class="rb-option-item rb-green"><i class="fas fa-check-circle"></i> No prepayment needed – pay at property</div>
+                    <div class="rb-option-item rb-green"><i class="fas fa-check-circle"></i> No credit card needed</div>
+                </div>
+                <div class="rb-col-select">
+                    <div class="rb-qty-wrap">
+                        <button class="rb-qty-btn rb-minus" aria-label="Decrease">&#8722;</button>
+                        <span class="rb-qty-num">0</span>
+                        <button class="rb-qty-btn rb-plus" aria-label="Increase">&#43;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 3: Deluxe Double Room -->
+            <div class="rb-row">
+                <div class="rb-col-room">
+                    <div class="rb-room-name">Deluxe Double Room with Sea View</div>
+                    <div class="rb-room-sub">Stunning ocean panorama</div>
+                    <div class="rb-room-beds"><i class="fas fa-bed"></i> 1 extra-large double bed · Cot available on request</div>
+                    <div class="rb-room-size"><i class="fas fa-ruler-combined"></i> 22 m²</div>
+                    <div class="rb-room-amenities">
+                        <span><i class="fas fa-door-open"></i> Balcony</span>
+                        <span><i class="fas fa-water"></i> Sea view</span>
+                        <span><i class="fas fa-swimming-pool"></i> Pool view</span>
+                        <span><i class="fas fa-snowflake"></i> Air conditioning</span>
+                        <span><i class="fas fa-shower"></i> Ensuite bathroom</span>
+                        <span><i class="fas fa-volume-mute"></i> Soundproofing</span>
+                        <span><i class="fas fa-fire"></i> Barbecue</span>
+                    </div>
+                </div>
+                <div class="rb-col-guests">
+                    <div class="rb-guest-icons">
+                        <i class="fas fa-user"></i><i class="fas fa-user"></i>
+                    </div>
+                    <span>Max 2 adults</span>
+                </div>
+                <div class="rb-col-price">
+                    <div class="rb-price-main">£37</div>
+                    <div class="rb-price-tax">+£0 taxes &amp; charges</div>
+                </div>
+                <div class="rb-col-options">
+                    <div class="rb-option-item rb-green"><i class="fas fa-check-circle"></i> Free cancellation</div>
+                    <div class="rb-option-item rb-green"><i class="fas fa-check-circle"></i> No prepayment needed – pay at property</div>
+                    <div class="rb-option-item rb-green"><i class="fas fa-check-circle"></i> No credit card needed</div>
+                </div>
+                <div class="rb-col-select">
+                    <div class="rb-qty-wrap">
+                        <button class="rb-qty-btn rb-minus" aria-label="Decrease">&#8722;</button>
+                        <span class="rb-qty-num">0</span>
+                        <button class="rb-qty-btn rb-plus" aria-label="Increase">&#43;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 4: Dormitory -->
+            <div class="rb-row">
+                <div class="rb-col-room">
+                    <div class="rb-room-name">Single Bed in Mixed Dormitory Room</div>
+                    <div class="rb-room-sub">Only for 1 guest</div>
+                    <div class="rb-room-beds"><i class="fas fa-bed"></i> 1 single bed</div>
+                    <div class="rb-room-amenities">
+                        <span><i class="fas fa-utensils"></i> Private kitchen</span>
+                        <span><i class="fas fa-swimming-pool"></i> Pool view</span>
+                        <span><i class="fas fa-snowflake"></i> Air conditioning</span>
+                        <span><i class="fas fa-fire"></i> Barbecue</span>
+                    </div>
+                </div>
+                <div class="rb-col-guests">
+                    <div class="rb-guest-icons">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <span>Max 1 adult</span>
+                </div>
+                <div class="rb-col-price">
+                    <div class="rb-price-main">£7</div>
+                    <div class="rb-price-tax">+£0 taxes &amp; charges</div>
+                </div>
+                <div class="rb-col-options">
+                    <div class="rb-option-item rb-green"><i class="fas fa-check-circle"></i> Free cancellation</div>
+                    <div class="rb-option-item rb-green"><i class="fas fa-check-circle"></i> No prepayment needed – pay at property</div>
+                    <div class="rb-option-item rb-green"><i class="fas fa-check-circle"></i> No credit card needed</div>
+                </div>
+                <div class="rb-col-select">
+                    <div class="rb-qty-wrap">
+                        <button class="rb-qty-btn rb-minus" aria-label="Decrease">&#8722;</button>
+                        <span class="rb-qty-num">0</span>
+                        <button class="rb-qty-btn rb-plus" aria-label="Increase">&#43;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reserve CTA -->
+            <div class="rb-reserve">
+                <div class="rb-reserve-info">
+                    <i class="fas fa-bolt"></i>
+                    <div>
+                        <strong>It only takes 2 minutes</strong>
+                        <span>You won't be charged yet</span>
+                    </div>
+                </div>
+                <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=318615&label=New_English_EN_LK_27027142825-OOHRKEm2e9cX4E5_mJSvaAS640874803405%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-199482273865%3Alp1009922%3Ali%3Adec%3Adm%3Aag27027142825%3Acmp400679785&sid=2282f1b3f1fc39bd7afc4ef015ecdbc7&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1747303756&srpvid=bd91476173de06f4&type=total&ucfs=1&" class="rb-reserve-btn" target="_blank">I'll Reserve <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== ROOM POPUPS ======== -->
     <div id="double-twin-popup" class="room-popup">
         <div class="popup-content">
             <button class="close-popup">&times;</button>
-            <h1 class="room-title">Double or Twin Bedroom</h1>
-            <p class="room-price">From $25/night</p>
-            <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html" class="book-now-btn">Book Now</a>
+            <h1 class="room-title">Double or Twin Room</h1>
+            <p class="room-price">From £22/night</p>
+            <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=318615&label=New_English_EN_LK_27027142825-OOHRKEm2e9cX4E5_mJSvaAS640874803405%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-199482273865%3Alp1009922%3Ali%3Adec%3Adm%3Aag27027142825%3Acmp400679785&sid=2282f1b3f1fc39bd7afc4ef015ecdbc7&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1747303756&srpvid=bd91476173de06f4&type=total&ucfs=1&" class="book-now-btn" target="_blank">Book Now</a>
 
             <div class="swiper room-slider">
                 <div class="swiper-wrapper">
@@ -159,15 +381,17 @@
             </div>
 
             <div class="room-tags">
-                <span class="room-tag">2 Double Beds or 2 Twin Beds</span>
-                <span class="room-tag">183 ft²</span>
-                <span class="room-tag">Restaurant Facilites</span>
-                <span class="room-tag">Air Conditioning</span>
+                <span class="room-tag">2 Single Beds</span>
+                <span class="room-tag">17 m²</span>
                 <span class="room-tag">Private Kitchen</span>
+                <span class="room-tag">Ensuite Bathroom</span>
+                <span class="room-tag">Pool View</span>
+                <span class="room-tag">Air Conditioning</span>
+                <span class="room-tag">Barbecue</span>
             </div>
 
             <div class="room-description">
-                <p>Our spacious Double or Twin bedroom offers 183 ft² of comfort with your choice of two double beds or two twin beds. The room features modern furnishings with a contemporary design aesthetic, creating a welcoming atmosphere for both business and leisure travelers. The private kitchen is fully equipped with modern appliances, allowing you to prepare meals at your convenience. The ensuite bathroom includes premium toiletries and a rain shower for your comfort. Step outside to enjoy our barbecue facilities, perfect for social gatherings under the stars.</p>
+                <p>Our 17 m² Double or Twin Room offers flexible sleeping arrangements with 2 single beds — ideal for couples or friends. The room features a private kitchen fully equipped for self-catering, an ensuite bathroom with complimentary toiletries, air conditioning, and direct access to barbecue facilities. A cot is available on request for guests travelling with an infant.</p>
             </div>
 
             <div class="room-amenities">
@@ -181,27 +405,27 @@
                 </div>
                 <div class="amenity-item">
                     <i class="fas fa-utensils"></i>
-                    <span>Restaurant Facilites</span>
+                    <span>Private Kitchen</span>
                 </div>
                 <div class="amenity-item">
                     <i class="fas fa-shower"></i>
                     <span>Ensuite Bathroom</span>
                 </div>
                 <div class="amenity-item">
-                    <i class="fas fa-tshirt"></i>
-                    <span>Laundry Service</span>
+                    <i class="fas fa-swimming-pool"></i>
+                    <span>Pool View</span>
                 </div>
                 <div class="amenity-item">
-                    <i class="fas fa-tv"></i>
-                    <span>Smart TV</span>
+                    <i class="fas fa-fire"></i>
+                    <span>Barbecue Facilities</span>
                 </div>
                 <div class="amenity-item">
-                    <i class="fas fa-mug-hot"></i>
-                    <span>Tea/Coffee Maker</span>
+                    <i class="fas fa-soap"></i>
+                    <span>Free Toiletries</span>
                 </div>
                 <div class="amenity-item">
                     <i class="fas fa-lock"></i>
-                    <span>In-room Safe</span>
+                    <span>Safety Deposit Box</span>
                 </div>
             </div>
         </div>
@@ -211,11 +435,11 @@
         <div class="popup-content">
             <button class="close-popup">&times;</button>
             <h1 class="room-title">Deluxe Double Room with Sea View</h1>
-            <p class="room-price">From $40/night</p>
-            <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html" class="book-now-btn">Book Now</a>
+            <p class="room-price">From £37/night</p>
+            <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=318615&label=New_English_EN_LK_27027142825-OOHRKEm2e9cX4E5_mJSvaAS640874803405%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-199482273865%3Alp1009922%3Ali%3Adec%3Adm%3Aag27027142825%3Acmp400679785&sid=2282f1b3f1fc39bd7afc4ef015ecdbc7&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1747303756&srpvid=bd91476173de06f4&type=total&ucfs=1&" class="book-now-btn" target="_blank">Book Now</a>
 
             <div class="swiper room-slider">
-                <div class="swiper-wrapper">    
+                <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="Deluxe Double Room.jpg" alt="Deluxe Double Room">
                     </div>
@@ -235,15 +459,17 @@
             </div>
 
             <div class="room-tags">
-                <span class="room-tag">Extra-Large Double Bed</span>
+                <span class="room-tag">1 Extra-Large Double Bed</span>
                 <span class="room-tag">22 m²</span>
                 <span class="room-tag">Sea View</span>
                 <span class="room-tag">Private Balcony</span>
+                <span class="room-tag">Pool View</span>
                 <span class="room-tag">Soundproofing</span>
+                <span class="room-tag">Cot on Request</span>
             </div>
 
             <div class="room-description">
-                <p>Wake up to breathtaking ocean views from our Deluxe Double Room, where luxury meets coastal charm. This beautifully appointed 22 m² sanctuary features an extra-large double bed with premium linens for ultimate comfort. The private balcony is the perfect spot to enjoy your morning coffee while watching the sunrise over the water. The room is soundproofed for your peace and quiet, and the ensuite bathroom features a spacious walk-in shower with luxury bath amenities. A cot is available on request for families traveling with small children.</p>
+                <p>Wake up to breathtaking ocean views from our 22 m² Deluxe Double Room. An extra-large double bed with premium linens awaits, alongside a private balcony — the perfect spot to watch the sunrise over the water. The ensuite bathroom features a spacious shower with luxury bath amenities. Soundproofing ensures complete peace and quiet. A cot is available on request for families with small children.</p>
             </div>
 
             <div class="room-amenities">
@@ -256,8 +482,12 @@
                     <span>Air Conditioning</span>
                 </div>
                 <div class="amenity-item">
-                    <i class="fas fa-umbrella-beach"></i>
+                    <i class="fas fa-water"></i>
                     <span>Sea View</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-door-open"></i>
+                    <span>Private Balcony</span>
                 </div>
                 <div class="amenity-item">
                     <i class="fas fa-shower"></i>
@@ -268,16 +498,12 @@
                     <span>Soundproofing</span>
                 </div>
                 <div class="amenity-item">
-                    <i class="fas fa-wine-glass-alt"></i>
-                    <span>Mini Bar</span>
+                    <i class="fas fa-fire"></i>
+                    <span>Barbecue Facilities</span>
                 </div>
                 <div class="amenity-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <span>Direct Dial Phone</span>
-                </div>
-                <div class="amenity-item">
-                    <i class="fas fa-concierge-bell"></i>
-                    <span>24-hour Room Service</span>
+                    <i class="fas fa-soap"></i>
+                    <span>Free Toiletries</span>
                 </div>
             </div>
         </div>
@@ -287,8 +513,8 @@
         <div class="popup-content">
             <button class="close-popup">&times;</button>
             <h1 class="room-title">Deluxe Family Room</h1>
-            <p class="room-price">From $50/night</p>
-            <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html" class="book-now-btn">Book Now</a>
+            <p class="room-price">From £56/night</p>
+            <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=318615&label=New_English_EN_LK_27027142825-OOHRKEm2e9cX4E5_mJSvaAS640874803405%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-199482273865%3Alp1009922%3Ali%3Adec%3Adm%3Aag27027142825%3Acmp400679785&sid=2282f1b3f1fc39bd7afc4ef015ecdbc7&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1747303756&srpvid=bd91476173de06f4&type=total&ucfs=1&" class="book-now-btn" target="_blank">Book Now</a>
 
             <div class="swiper room-slider">
                 <div class="swiper-wrapper">
@@ -301,7 +527,6 @@
                     <div class="swiper-slide">
                         <img src="deluxFamilyRoom3.jpg" alt="Room View">
                     </div>
-                    
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
@@ -309,15 +534,17 @@
             </div>
 
             <div class="room-tags">
-                <span class="room-tag">Extra-Large Double Bed</span>
-                <span class="room-tag">2 Bunk Beds</span>
-                <span class="room-tag">45m²</span>
-                <span class="room-tag">Family Friendly</span>
-                <span class="room-tag">Cot available</span>
+                <span class="room-tag">1 Extra-Large Double Bed + 2 Bunk Beds</span>
+                <span class="room-tag">22 m²</span>
+                <span class="room-tag">Sea View</span>
+                <span class="room-tag">Balcony</span>
+                <span class="room-tag">Minibar</span>
+                <span class="room-tag">Cot Available</span>
+                <span class="room-tag">Max 4 Adults</span>
             </div>
 
             <div class="room-description">
-                <p>Welcome to the Deluxe Family Room at Seals Harbor Hotel – your perfect base for a relaxing beach getaway with the whole family. Designed with comfort and convenience in mind, this spacious 45m² room comfortably accommodates up to four guests with one king-size bed and two cozy bunk beds. The children will love their special sleeping area, while parents enjoy the privacy of their own space. The room features thoughtful touches like blackout curtains, a ceiling fan, and a mosquito net to ensure everyone sleeps comfortably. Your private bathroom includes a rain shower, fresh towels, and complimentary toiletries, while daily housekeeping keeps everything tidy.</p>
+                <p>The Deluxe Family Room is your perfect coastal base for the whole family. This 22 m² room sleeps up to 4 guests with 1 extra-large double bed and 2 bunk beds. Step out onto the private balcony for stunning sea views. The room is fully equipped with air conditioning, a minibar, soundproofing, and a private bathroom. Thoughtful touches include free toiletries, a safety deposit box, mosquito net, ironing facilities, a desk, and a dining area. A cot is available on request.</p>
             </div>
 
             <div class="room-amenities">
@@ -330,28 +557,28 @@
                     <span>Air Conditioning</span>
                 </div>
                 <div class="amenity-item">
-                    <i class="fas fa-swimming-pool"></i>
-                    <span>Swimming Pool</span>
+                    <i class="fas fa-door-open"></i>
+                    <span>Balcony &amp; Sea View</span>
                 </div>
                 <div class="amenity-item">
                     <i class="fas fa-shower"></i>
-                    <span>Rain Shower</span>
+                    <span>Private Bathroom</span>
                 </div>
                 <div class="amenity-item">
-                    <i class="fas fa-utensils"></i>
-                    <span>Room Service</span>
+                    <i class="fas fa-wine-glass-alt"></i>
+                    <span>Minibar</span>
                 </div>
                 <div class="amenity-item">
-                    <i class="fas fa-gamepad"></i>
-                    <span>Board Games</span>
+                    <i class="fas fa-volume-mute"></i>
+                    <span>Soundproofing</span>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-lock"></i>
+                    <span>Safety Deposit Box</span>
                 </div>
                 <div class="amenity-item">
                     <i class="fas fa-baby"></i>
-                    <span>Baby Cot Available</span>
-                </div>
-                <div class="amenity-item">
-                    <i class="fas fa-fan"></i>
-                    <span>Ceiling Fan</span>
+                    <span>Cot Available</span>
                 </div>
             </div>
         </div>
@@ -361,8 +588,8 @@
         <div class="popup-content">
             <button class="close-popup">&times;</button>
             <h1 class="room-title">Single Bed Mixed Dormitory</h1>
-            <p class="room-price">From $8/night</p>
-            <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html" class="book-now-btn">Book Now</a>
+            <p class="room-price">From £7/night</p>
+            <a href="https://www.booking.com/hotel/lk/seals-harbor.en-gb.html?aid=318615&label=New_English_EN_LK_27027142825-OOHRKEm2e9cX4E5_mJSvaAS640874803405%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-199482273865%3Alp1009922%3Ali%3Adec%3Adm%3Aag27027142825%3Acmp400679785&sid=2282f1b3f1fc39bd7afc4ef015ecdbc7&dest_id=-2240150&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1747303756&srpvid=bd91476173de06f4&type=total&ucfs=1&" class="book-now-btn" target="_blank">Book Now</a>
 
             <div class="swiper room-slider">
                 <div class="swiper-wrapper">
@@ -385,15 +612,16 @@
             </div>
 
             <div class="room-tags">
-                <span class="room-tag">Single Bed</span>
+                <span class="room-tag">1 Single Bed</span>
                 <span class="room-tag">Private Kitchen</span>
                 <span class="room-tag">Air Conditioning</span>
+                <span class="room-tag">Pool View</span>
                 <span class="room-tag">Barbecue Facilities</span>
-                <span class="room-tag">Budget Friendly</span>
+                <span class="room-tag">1 Guest Only</span>
             </div>
 
             <div class="room-description">
-                <p>Our budget-friendly Single Bed Mixed Dormitory is perfect for travelers looking for comfortable yet economical accommodation. Each guest enjoys their own single bed in a shared dormitory setting, with privacy curtains for personal space. The shared kitchen is fully equipped for preparing meals, helping you save on dining costs. Despite the affordable price, we haven't compromised on comfort - the room features air conditioning, secure lockers for your valuables, and access to our barbecue facilities. It's an ideal choice for backpackers, solo travelers, or groups looking to maximize their travel budget without sacrificing cleanliness and comfort.</p>
+                <p>Our budget-friendly Single Bed Mixed Dormitory is perfect for solo travellers seeking comfortable, affordable accommodation by the sea. Each guest enjoys their own single bed with air conditioning and a shared private kitchen fully equipped for self-catering. The barbecue facilities and pool view make it far more than a basic bed — it's a social, relaxed stay at Weligama's best-value price point.</p>
             </div>
 
             <div class="room-amenities">
@@ -414,6 +642,10 @@
                     <span>Barbecue Facilities</span>
                 </div>
                 <div class="amenity-item">
+                    <i class="fas fa-swimming-pool"></i>
+                    <span>Pool View</span>
+                </div>
+                <div class="amenity-item">
                     <i class="fas fa-lock"></i>
                     <span>Secure Lockers</span>
                 </div>
@@ -422,16 +654,13 @@
                     <span>Laundry Facilities</span>
                 </div>
                 <div class="amenity-item">
-                    <i class="fas fa-route"></i>
-                    <span>Tour Desk</span>
-                </div>
-                <div class="amenity-item">
                     <i class="fas fa-users"></i>
                     <span>Common Lounge</span>
                 </div>
             </div>
         </div>
     </div>
+
     <footer>
         <div class="footer-container">
             <div class="footer-column">
@@ -483,35 +712,40 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu functionality
+            // Mobile menu
             const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const body = document.body;
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const body = document.body;
 
-    mobileMenuBtn.addEventListener('click', function() {
-        this.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-        body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-    });
+            mobileMenuBtn.addEventListener('click', function() {
+                this.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            });
 
-    // Close menu when clicking links
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            mobileMenuBtn.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            body.style.overflow = '';
-        });
-    });
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    body.style.overflow = '';
+                });
+            });
+            // Close menu when clicking backdrop (outside sidebar panel)
+            mobileMenu.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    mobileMenuBtn.classList.remove('active');
+                    this.classList.remove('active');
+                    body.style.overflow = '';
+                }
+            });
 
-            // Initialize all room sliders with enhanced settings
+            // Initialize room sliders
             document.querySelectorAll('.room-slider').forEach(slider => {
                 new Swiper(slider, {
                     loop: true,
                     effect: 'fade',
-                    fadeEffect: {
-                        crossFade: true
-                    },
+                    fadeEffect: { crossFade: true },
                     pagination: {
                         el: slider.querySelector('.swiper-pagination'),
                         clickable: true,
@@ -521,19 +755,13 @@
                         nextEl: slider.querySelector('.swiper-button-next'),
                         prevEl: slider.querySelector('.swiper-button-prev'),
                     },
-                    autoplay: {
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    },
-                    keyboard: {
-                        enabled: true,
-                        onlyInViewport: true,
-                    },
+                    autoplay: { delay: 5000, disableOnInteraction: false },
+                    keyboard: { enabled: true, onlyInViewport: true },
                     grabCursor: true,
                 });
             });
 
-            // Check for hash in URL and open corresponding popup
+            // Open popup from URL hash
             const hash = window.location.hash;
             if (hash) {
                 const popup = document.querySelector(hash);
@@ -543,9 +771,8 @@
                 }
             }
 
-            // Popup functionality
-            const learnMoreButtons = document.querySelectorAll('.learn-more-btn');
-            learnMoreButtons.forEach(button => {
+            // Explore Room button → open popup
+            document.querySelectorAll('.learn-more-btn').forEach(button => {
                 button.addEventListener('click', function(e) {
                     e.preventDefault();
                     const roomType = this.getAttribute('data-room');
@@ -553,18 +780,13 @@
                     if (popup) {
                         popup.style.display = 'block';
                         document.body.style.overflow = 'hidden';
-                        // Update URL with hash
                         window.location.hash = `${roomType}-popup`;
-                        
-                        // Initialize the slider in this popup if not already initialized
                         const slider = popup.querySelector('.swiper');
                         if (slider && !slider.swiper) {
                             new Swiper(slider, {
                                 loop: true,
                                 effect: 'fade',
-                                fadeEffect: {
-                                    crossFade: true
-                                },
+                                fadeEffect: { crossFade: true },
                                 pagination: {
                                     el: slider.querySelector('.swiper-pagination'),
                                     clickable: true,
@@ -574,14 +796,8 @@
                                     nextEl: slider.querySelector('.swiper-button-next'),
                                     prevEl: slider.querySelector('.swiper-button-prev'),
                                 },
-                                autoplay: {
-                                    delay: 5000,
-                                    disableOnInteraction: false,
-                                },
-                                keyboard: {
-                                    enabled: true,
-                                    onlyInViewport: true,
-                                },
+                                autoplay: { delay: 5000, disableOnInteraction: false },
+                                keyboard: { enabled: true, onlyInViewport: true },
                                 grabCursor: true,
                             });
                         }
@@ -589,29 +805,24 @@
                 });
             });
 
-            // Close popup functionality
-            const closeButtons = document.querySelectorAll('.close-popup');
-            closeButtons.forEach(button => {
+            // Close popup
+            document.querySelectorAll('.close-popup').forEach(button => {
                 button.addEventListener('click', function() {
                     const popup = this.closest('.room-popup');
                     if (popup) {
                         popup.style.display = 'none';
                         document.body.style.overflow = '';
-                        // Remove hash from URL when closing popup
-                        history.pushState("", document.title, window.location.pathname + window.location.search);
+                        history.pushState('', document.title, window.location.pathname + window.location.search);
                     }
                 });
             });
 
-            // Close popup when clicking outside or pressing ESC
-            const popups = document.querySelectorAll('.room-popup');
-            popups.forEach(popup => {
+            document.querySelectorAll('.room-popup').forEach(popup => {
                 popup.addEventListener('click', function(e) {
                     if (e.target === this) {
                         this.style.display = 'none';
                         document.body.style.overflow = '';
-                        // Remove hash from URL when closing popup
-                        history.pushState("", document.title, window.location.pathname + window.location.search);
+                        history.pushState('', document.title, window.location.pathname + window.location.search);
                     }
                 });
             });
@@ -622,10 +833,23 @@
                     if (visiblePopup) {
                         visiblePopup.style.display = 'none';
                         document.body.style.overflow = '';
-                        // Remove hash from URL when closing popup
-                        history.pushState("", document.title, window.location.pathname + window.location.search);
+                        history.pushState('', document.title, window.location.pathname + window.location.search);
                     }
                 }
+            });
+
+            // Quantity selectors
+            document.querySelectorAll('.rb-row').forEach(row => {
+                const minus = row.querySelector('.rb-minus');
+                const plus  = row.querySelector('.rb-plus');
+                const num   = row.querySelector('.rb-qty-num');
+                plus.addEventListener('click', () => {
+                    num.textContent = parseInt(num.textContent) + 1;
+                });
+                minus.addEventListener('click', () => {
+                    const v = parseInt(num.textContent);
+                    if (v > 0) num.textContent = v - 1;
+                });
             });
         });
     </script>

@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Seals Harbour Hotel | Home</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="gallery.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <style>
         .lang-menu .selected-lang:before {
             content: '';
@@ -86,142 +85,193 @@
     </div>
     
 
-    <section style="background: #1c3f8b; padding: 48px 0 0 0; margin-bottom: 0;">
-        <div class="gallery-hero">
-            <h1>Our Gallery</h1>
-            <p>Explore the beauty of Seals Harbour Hotel through our collection of images</p>
+    <!-- ======== HERO ======== -->
+    <section class="gal-hero">
+        <div class="gal-hero-bg" id="galHeroBg" style="background-image: url('gal_view.jpg')"></div>
+        <div class="gal-hero-overlay"></div>
+        <div class="gal-hero-content">
+            <div class="gal-hero-text">
+                <span class="gal-hero-tag">Seals Harbour Hotel · Weligama</span>
+                <h1>Our Gallery</h1>
+                <p>Explore the beauty of Seals Harbour Hotel through our curated collection of images.</p>
+            </div>
+            <div class="gal-hero-count">
+                <div class="count-num">12</div>
+                <div class="count-label">Photos</div>
+            </div>
         </div>
     </section>
 
-    <main class="gallery-container">
-        <div class="gallery-categories">
-            <button class="category-btn active" data-category="all">All</button>
-            <button class="category-btn" data-category="rooms">Rooms</button>
-            <button class="category-btn" data-category="dining">Dining</button>
-            <button class="category-btn" data-category="facilities">Facilities</button>
-            <button class="category-btn" data-category="views">Views</button>
-            <button class="category-btn" data-category="other">Other</button>
+    <!-- ======== FILTER BAR ======== -->
+    <div class="gal-filter-wrap">
+        <div class="gal-filter-bar">
+            <button class="gal-filter-btn active" data-filter="all">
+                <i class="fas fa-th"></i> All <span class="gal-filter-count">12</span>
+            </button>
+            <button class="gal-filter-btn" data-filter="rooms">
+                <i class="fas fa-bed"></i> Rooms <span class="gal-filter-count">4</span>
+            </button>
+            <button class="gal-filter-btn" data-filter="dining">
+                <i class="fas fa-utensils"></i> Dining <span class="gal-filter-count">2</span>
+            </button>
+            <button class="gal-filter-btn" data-filter="facilities">
+                <i class="fas fa-swimmer"></i> Facilities <span class="gal-filter-count">3</span>
+            </button>
+            <button class="gal-filter-btn" data-filter="views">
+                <i class="fas fa-mountain"></i> Views <span class="gal-filter-count">3</span>
+            </button>
         </div>
+    </div>
 
-        <div class="gallery-grid">
-            <!-- Room Images -->
-            <div class="gallery-item" data-category="rooms">
-                <img src="Deluxe Double Room.jpg" alt="Deluxe Double Room">
-                <div class="gallery-overlay">
+    <!-- ======== MASONRY GRID ======== -->
+    <div class="gal-grid-wrap">
+        <div class="gal-grid" id="galGrid">
+
+            <!-- ROOMS -->
+            <div class="gal-item feature" data-cat="rooms">
+                <img src="Deluxe Double Room.jpg" alt="Deluxe Double Room" loading="lazy">
+                <div class="gal-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+                <div class="gal-overlay">
+                    <span class="gal-overlay-tag">Rooms</span>
                     <h3>Deluxe Double Room</h3>
                     <p>Spacious room with ocean view</p>
                 </div>
             </div>
-            
-            <div class="gallery-item" data-category="rooms">
-                <img src="deluxFamilyRoom1.jpg" alt="Family Room">
-                <div class="gallery-overlay">
+
+            <div class="gal-item tall" data-cat="rooms">
+                <img src="deluxFamilyRoom1.jpg" alt="Family Room" loading="lazy">
+                <div class="gal-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+                <div class="gal-overlay">
+                    <span class="gal-overlay-tag">Rooms</span>
                     <h3>Family Room</h3>
                     <p>Perfect for family vacations</p>
                 </div>
             </div>
 
-            <div class="gallery-item" data-category="rooms">
-                <img src="double or twin bedroom img2.jpg" alt="Family or twin bedroom">
-                <div class="gallery-overlay">
-                    <h3>Family or twin  bedroom</h3>
-                    <p>Perfect for family or couple vacations</p>
+            <div class="gal-item" data-cat="rooms">
+                <img src="double or twin bedroom img2.jpg" alt="Double or Twin Room" loading="lazy">
+                <div class="gal-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+                <div class="gal-overlay">
+                    <span class="gal-overlay-tag">Rooms</span>
+                    <h3>Double or Twin Room</h3>
+                    <p>Ideal for couples or friends</p>
                 </div>
             </div>
 
-            <div class="gallery-item" data-category="rooms">
-                <img src="dormitory room img1.jpg" alt="Dormitory Room">
-                <div class="gallery-overlay">
+            <div class="gal-item" data-cat="rooms">
+                <img src="dormitory room img1.jpg" alt="Dormitory Room" loading="lazy">
+                <div class="gal-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+                <div class="gal-overlay">
+                    <span class="gal-overlay-tag">Rooms</span>
                     <h3>Dormitory Room</h3>
-                    <p>Perfect for budget friendly stays</p>
-                </div>
-            </div>
-            
-            <!-- Dining Images -->
-            <div class="gallery-item" data-category="dining">
-                <img src="gal_restaurant.jpg" alt="Main Restaurant">
-                <div class="gallery-overlay">
-                    <h3>Seals Harbor Restaurant</h3>    
-                    <p>International cuisine with local flavors</p>
-                </div>
-            </div>
-            
-            <div class="gallery-item" data-category="dining">
-                <img src="gal_bar.jpg" alt="Lobby Bar">
-                <div class="gallery-overlay">
-                    <h3>Sunset Bar</h3>
-                    <p>Signature cocktails with ocean view</p>
-                </div>
-            </div>
-            
-            <!-- Facilities Images -->
-            <div class="gallery-item" data-category="facilities">
-                <img src="gal_pool1.jpg" alt="Infinity Pool">
-                <div class="gallery-overlay">
-                    <h3>Infinity Pool</h3>
-                    <p>Stunning ocean-edge swimming experience</p>
+                    <p>Budget-friendly shared stays</p>
                 </div>
             </div>
 
-            <div class="gallery-item" data-category="facilities">
-                <img src="gal_pool2.jpg" alt="Infinity Pool">
-                <div class="gallery-overlay">
-                    <h3>Infinity Pool</h3>
-                    <p>Stunning ocean-edge swimming experience</p>
-
-                </div>
-            </div>
-            
-            <div class="gallery-item" data-category="facilities">
-                <img src="yoga3.jpg" alt="Yoga">
-                <div class="gallery-overlay">
-                    <h3>Yoga</h3>
-                    <p>Relaxing treatments with sea views</p>
-                </div>
-            </div>
-            
-            <!-- View Images -->
-            <div class="gallery-item" data-category="views">
-                <img src="gal_view3.jpg" alt="Sunset View">
-                <div class="gallery-overlay">
+            <!-- VIEWS -->
+            <div class="gal-item tall" data-cat="views">
+                <img src="gal_view3.jpg" alt="Harbor Sunset" loading="lazy">
+                <div class="gal-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+                <div class="gal-overlay">
+                    <span class="gal-overlay-tag">Views</span>
                     <h3>Harbor Sunset</h3>
                     <p>Our famous golden hour</p>
                 </div>
             </div>
 
-            <div class="gallery-item" data-category="views">
-                <img src="gal_view.jpg" alt="Coastal View">
-                <div class="gallery-overlay">
+            <!-- DINING -->
+            <div class="gal-item wide" data-cat="dining">
+                <img src="gal_restaurant.jpg" alt="Seals Harbor Restaurant" loading="lazy">
+                <div class="gal-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+                <div class="gal-overlay">
+                    <span class="gal-overlay-tag">Dining</span>
+                    <h3>Seals Harbor Restaurant</h3>
+                    <p>International cuisine with local flavours</p>
+                </div>
+            </div>
+
+            <div class="gal-item" data-cat="dining">
+                <img src="gal_bar.jpg" alt="Sunset Bar" loading="lazy">
+                <div class="gal-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+                <div class="gal-overlay">
+                    <span class="gal-overlay-tag">Dining</span>
+                    <h3>Sunset Bar</h3>
+                    <p>Signature cocktails with ocean view</p>
+                </div>
+            </div>
+
+            <!-- FACILITIES -->
+            <div class="gal-item" data-cat="facilities">
+                <img src="gal_pool1.jpg" alt="Infinity Pool" loading="lazy">
+                <div class="gal-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+                <div class="gal-overlay">
+                    <span class="gal-overlay-tag">Facilities</span>
+                    <h3>Infinity Pool</h3>
+                    <p>Ocean-edge swimming experience</p>
+                </div>
+            </div>
+
+            <div class="gal-item tall" data-cat="facilities">
+                <img src="gal_pool2.jpg" alt="Poolside" loading="lazy">
+                <div class="gal-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+                <div class="gal-overlay">
+                    <span class="gal-overlay-tag">Facilities</span>
+                    <h3>Poolside Lounge</h3>
+                    <p>Relax and soak up the sun</p>
+                </div>
+            </div>
+
+            <div class="gal-item" data-cat="facilities">
+                <img src="yoga3.jpg" alt="Yoga" loading="lazy">
+                <div class="gal-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+                <div class="gal-overlay">
+                    <span class="gal-overlay-tag">Facilities</span>
+                    <h3>Yoga Sessions</h3>
+                    <p>Open-air yoga at sunrise</p>
+                </div>
+            </div>
+
+            <!-- MORE VIEWS -->
+            <div class="gal-item" data-cat="views">
+                <img src="gal_view.jpg" alt="Coastal View" loading="lazy">
+                <div class="gal-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+                <div class="gal-overlay">
+                    <span class="gal-overlay-tag">Views</span>
                     <h3>Coastal View</h3>
-                    <p>Breathtaking views of the Weligama Beach</p>
+                    <p>Breathtaking Weligama Beach panorama</p>
                 </div>
             </div>
-            
-            <div class="gallery-item" data-category="views">
-                <img src="gal_view2.jpg" alt="Rooftop View">
-                <div class="gallery-overlay">
+
+            <div class="gal-item" data-cat="views">
+                <img src="gal_view2.jpg" alt="Rooftop View" loading="lazy">
+                <div class="gal-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+                <div class="gal-overlay">
+                    <span class="gal-overlay-tag">Views</span>
                     <h3>Rooftop Dining</h3>
-                    <p>Enjoy meals while with an excellent view</p>
+                    <p>Dine with an exceptional view</p>
                 </div>
             </div>
-            
-            <!-- Other Images -->
-            
-            
-            
-            
-            <!-- More images can be added as needed -->
-            
-            
-            
+
         </div>
-        
-        <div class="gallery-modal">
-            <span class="close-modal">&times;</span>
-            <img class="modal-content" id="expanded-img">
-            <div class="modal-caption"></div>
+    </div>
+
+    <!-- ======== LIGHTBOX ======== -->
+    <div class="gal-lightbox" id="galLightbox" role="dialog" aria-modal="true">
+        <div class="gal-lb-backdrop" id="galLbBackdrop"></div>
+        <button class="gal-lb-close" id="galLbClose" aria-label="Close"><i class="fas fa-times"></i></button>
+        <button class="gal-lb-prev" id="galLbPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+        <button class="gal-lb-next" id="galLbNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        <div class="gal-lb-box">
+            <div class="gal-lb-img-wrap">
+                <img id="galLbImg" src="" alt="">
+            </div>
+            <div class="gal-lb-caption">
+                <h3 id="galLbTitle"></h3>
+                <p id="galLbDesc"></p>
+            </div>
+            <div class="gal-lb-counter" id="galLbCounter"></div>
         </div>
-    </main>
+    </div>
 
     <footer>
         <div class="footer-container">
@@ -271,100 +321,172 @@
         </div>
     </footer>
     
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        
-    
+    /* ============================================================
+       GALLERY — Hero Parallax
+    ============================================================ */
+    const galHeroBg = document.getElementById('galHeroBg');
+    const galHero   = document.querySelector('.gal-hero');
+    if (galHeroBg && galHero) {
+        function updateGalParallax() {
+            const y = window.scrollY;
+            if (y <= galHero.offsetHeight) {
+                galHeroBg.style.transform = `translateY(${y * 0.45}px)`;
+            }
+        }
+        updateGalParallax();
+        window.addEventListener('scroll', updateGalParallax, { passive: true });
+    }
 
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const body = document.body;
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenuBtn.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-            body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    /* ============================================================
+       SCROLL REVEAL for grid items
+    ============================================================ */
+    const galItems = document.querySelectorAll('.gal-item');
+    const revealIO = new IntersectionObserver((entries) => {
+        entries.forEach((e, i) => {
+            if (e.isIntersecting) {
+                // Stagger delay based on position in row
+                const delay = (Array.from(galItems).indexOf(e.target) % 4) * 80;
+                setTimeout(() => e.target.classList.add('visible'), delay);
+                revealIO.unobserve(e.target);
+            }
         });
+    }, { threshold: 0.08 });
+    galItems.forEach(el => revealIO.observe(el));
 
-        // Close mobile menu when clicking a link
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenuBtn.classList.remove('active');
-                mobileMenu.classList.remove('active');
-                body.style.overflow = '';
-            });
-        });
+    /* ============================================================
+       FILTER
+    ============================================================ */
+    const filterBtns = document.querySelectorAll('.gal-filter-btn');
 
-
-    </script>
-    
-    <script>
-      function redirectToBooking() {
-        const checkin = document.getElementById("checkin").value;
-        const checkout = document.getElementById("checkout").value;
-        const guests = document.getElementById("guests").value;
-
-        // Replace with your actual Booking.com hotel ID
-        const hotelId = 'lk/seals-harbor'; // Using the ID from the original button URL
-
-        
-        const url = `https://www.booking.com/hotel/${hotelId}.en-gb.html?checkin=${checkin}&checkout=${checkout}&group_adults=${guests}&no_rooms=1&group_children=0`;
-
-        window.open(url, '_blank'); // Opens in new tab
-      }
-
-      // Gallery Filtering
-document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('.category-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Remove active class from all buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Add active class to clicked button
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            filterBtns.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
-            
-            const category = this.getAttribute('data-category');
-            
-            galleryItems.forEach(item => {
-                if (category === 'all' || item.getAttribute('data-category') === category) {
-                    item.style.display = 'block';
+
+            const cat = this.dataset.filter;
+            let shown = 0;
+
+            galItems.forEach(item => {
+                const matches = cat === 'all' || item.dataset.cat === cat;
+                if (matches) {
+                    item.style.opacity    = '';
+                    item.style.transform  = '';
+                    item.style.pointerEvents = '';
+                    item.style.display    = '';
+                    shown++;
                 } else {
-                    item.style.display = 'none';
+                    item.style.opacity    = '0';
+                    item.style.transform  = 'scale(0.88)';
+                    item.style.pointerEvents = 'none';
+                    // Collapse with a slight delay so transition plays
+                    setTimeout(() => {
+                        if (item.style.opacity === '0') item.style.display = 'none';
+                    }, 350);
                 }
             });
         });
     });
-    
-    // Modal functionality
-    const modal = document.querySelector('.gallery-modal');
-    const modalImg = document.getElementById('expanded-img');
-    const captionText = document.querySelector('.modal-caption');
-    const closeModal = document.querySelector('.close-modal');
-    
-    document.querySelectorAll('.gallery-item').forEach(item => {
-        item.addEventListener('click', function() {
-            modal.style.display = 'block';
-            modalImg.src = this.querySelector('img').src;
-            captionText.innerHTML = this.querySelector('h3').innerHTML + 
-                                  '<br>' + this.querySelector('p').innerHTML;
+
+    /* ============================================================
+       LIGHTBOX
+    ============================================================ */
+    const lightbox   = document.getElementById('galLightbox');
+    const lbImg      = document.getElementById('galLbImg');
+    const lbTitle    = document.getElementById('galLbTitle');
+    const lbDesc     = document.getElementById('galLbDesc');
+    const lbCounter  = document.getElementById('galLbCounter');
+    const lbClose    = document.getElementById('galLbClose');
+    const lbBackdrop = document.getElementById('galLbBackdrop');
+    const lbPrev     = document.getElementById('galLbPrev');
+    const lbNext     = document.getElementById('galLbNext');
+
+    let currentIndex = 0;
+    let activeItems  = [];
+
+    function openLightbox(items, index) {
+        activeItems  = items;
+        currentIndex = index;
+        showSlide(currentIndex);
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    function showSlide(index) {
+        const item  = activeItems[index];
+        const img   = item.querySelector('img');
+        const title = item.querySelector('h3');
+        const desc  = item.querySelector('p');
+
+        lbImg.classList.add('loading');
+        lbImg.onload = () => lbImg.classList.remove('loading');
+        lbImg.src    = img.src;
+        lbImg.alt    = img.alt;
+        lbTitle.textContent   = title ? title.textContent : '';
+        lbDesc.textContent    = desc  ? desc.textContent  : '';
+        lbCounter.textContent = `${index + 1} / ${activeItems.length}`;
+    }
+
+    function navigate(dir) {
+        currentIndex = (currentIndex + dir + activeItems.length) % activeItems.length;
+        showSlide(currentIndex);
+    }
+
+    // Open on item click
+    document.getElementById('galGrid').addEventListener('click', function (e) {
+        const item = e.target.closest('.gal-item');
+        if (!item) return;
+        // Only click visible items
+        const visibleItems = Array.from(galItems).filter(i => i.style.display !== 'none');
+        const index = visibleItems.indexOf(item);
+        if (index >= 0) openLightbox(visibleItems, index);
+    });
+
+    lbClose.addEventListener('click', closeLightbox);
+    lbBackdrop.addEventListener('click', closeLightbox);
+    lbPrev.addEventListener('click', () => navigate(-1));
+    lbNext.addEventListener('click', () => navigate(1));
+
+    // Keyboard nav
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape')      closeLightbox();
+        if (e.key === 'ArrowLeft')   navigate(-1);
+        if (e.key === 'ArrowRight')  navigate(1);
+    });
+
+    /* ============================================================
+       MOBILE MENU
+    ============================================================ */
+    const mobileMenuBtn  = document.querySelector('.mobile-menu-btn');
+    const mobileMenu     = document.querySelector('.mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuBtn.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
         });
+            // Close menu when clicking backdrop (outside sidebar panel)
+            mobileMenu.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    mobileMenuBtn.classList.remove('active');
+                    this.classList.remove('active');
+                    body.style.overflow = '';
+                }
+            });
     });
-    
-    closeModal.addEventListener('click', function() {
-        modal.style.display = 'none';
-    });
-    
-    window.addEventListener('click', function(event) {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-});
     </script>
  
     

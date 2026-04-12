@@ -249,7 +249,17 @@
             link.addEventListener('click', () => {
                 mobileMenuBtn.classList.remove('active');
                 mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
             });
+        });
+
+        // Close menu when clicking backdrop (outside sidebar panel)
+        mobileMenu.addEventListener('click', function(e) {
+            if (e.target === this) {
+                mobileMenuBtn.classList.remove('active');
+                this.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         });
         
         // Form submission

@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="facilities.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         html { scroll-behavior: smooth; }
         p { line-height: 1.5; }
@@ -89,70 +88,115 @@
         </nav>
     </div>
 
-    <div class="banner-image" style="background-image: url('facilities_banner.png'); height: 500px; background-size: cover; background-position: center;"></div>
-
-    <main class="container facilities-content">
-        <h1>Hotel-Einrichtungen</h1>
-        <p>Im Seals Harbour Hotel bieten wir eine Vielzahl von Einrichtungen, die Ihren Aufenthalt angenehm und erholsam gestalten. Von entspannenden Räumen bis hin zu aufregenden Aktivitäten ist für jeden etwas dabei.</p>
-        <br><br><br>
-        <div class="facility-item">
-            <div class="facility-image">
-                <img src="room.jpg" alt="Zimmerbild" class="main-facility-image">
-                <img src="delux family room img 1.jpg" alt="Überlagertes Zimmerbild" class="overlaid-image">
-            </div>
-            <div class="facility-details"  id="facility-item-room" style="scroll-margin-top: 100px;">
-                <h2>Zimmer</h2>
-                <p>Unsere Zimmer in Weligama bieten die perfekte Mischung aus Küstenkomfort und modernem Luxus. Ob Sie zum Surfen, Entspannen oder Erkunden hier sind, jedes Zimmer ist als Ihr friedlicher Rückzugsort konzipiert - mit gemütlichen Betten, Klimaanlage, kostenlosem WLAN und privaten Balkonen mit atemberaubendem Blick auf den Ozean oder üppige Gärten. Von preiswerten Doppelzimmern bis hin zu geräumigen Familiensuiten finden Sie den idealen Raum, um sich nach einem Tag im Paradies zu entspannen.</p>
-            </div>
+    <!-- ======== HERO ======== -->
+    <section class="fac-hero">
+        <div class="fac-hero-bg" id="heroBg" style="background-image: url('facilities_banner.png')"></div>
+        <div class="fac-hero-overlay"></div>
+        <div class="fac-hero-content">
+            <span class="fac-hero-tag">Seals Harbour Hotel · Weligama</span>
+            <h1>Erstklassige<br>Einrichtungen</h1>
+            <p>Alles, was Sie für den perfekten Küstenurlaub brauchen — direkt hier, wartet auf Sie.</p>
         </div>
+        <div class="fac-scroll-hint">Scroll</div>
+    </section>
 
-        <div class="facility-item">
-            <div class="facility-image">
-                <img src="pool.jpg" alt="Poolbild" class="main-facility-image">
-                <img src="pool2.jpg" alt="Überlagertes Poolbild" class="overlaid-image">
-            </div>
-            <div class="facility-details"  id="facility-item-pool" style="scroll-margin-top: 100px;">
-                <h2>Pool</h2>
-                <p>Tauchen Sie in unseren erfrischenden Swimmingpool oder entspannen Sie am Pool mit einem Getränk. Es ist der perfekte Ort zum Entspannen und Sonne tanken.</p>
-            </div>
+    <!-- ======== QUICK ICONS STRIP ======== -->
+    <div class="fac-strip">
+        <div class="fac-strip-item"><i class="fas fa-bed"></i><span>Luxuszimmer</span></div>
+        <div class="fac-strip-item"><i class="fas fa-swimmer"></i><span>Infinity Pool</span></div>
+        <div class="fac-strip-item"><i class="fas fa-utensils"></i><span>Dachrestaurant</span></div>
+        <div class="fac-strip-item"><i class="fas fa-water"></i><span>Surfschule</span></div>
+        <div class="fac-strip-item"><i class="fas fa-spa"></i><span>Yogastunden</span></div>
+    </div>
+
+    <!-- ======== INTRO ======== -->
+    <div class="fac-intro">
+        <p class="reveal">Im Seals Harbour Hotel bieten wir eine Vielzahl von Einrichtungen, die Ihren Aufenthalt angenehm und erholsam gestalten. Von entspannenden Räumen bis hin zu aufregenden Aktivitäten ist für jeden etwas dabei.</p>
+    </div>
+
+    <!-- ======== FACILITY 01 ======== -->
+    <section class="fac-section" id="facility-item-room" style="scroll-margin-top: 100px;">
+        <div class="fac-section-img reveal-img">
+            <img src="room.jpg" alt="Luxuszimmer">
+            <div class="fac-img-overlay"></div>
+            <span class="fac-num-badge">01</span>
         </div>
-
-        <div class="facility-item">
-            <div class="facility-image">
-                <img src="rooftopDine.jpg" alt="Rooftop-Restaurant Bild" class="main-facility-image">
-                <img src="rooftopDine2.jpg" alt="Überlagertes Rooftop-Bild" class="overlaid-image">
-            </div>
-            <div class="facility-details"  id="facility-item-dine" style="scroll-margin-top: 100px;">
-                <h2>Rooftop-Restaurant</h2>
-                <p>Besuchen Sie unser Dachrestaurant für ein kulinarisches Erlebnis mit Aussicht. Mit Blick auf die Küste von Weligama ist es der perfekte Ort, um köstliche lokale und internationale Gerichte zu genießen, während Sie den Sonnenuntergang beobachten. Unsere Dachbar serviert alles von frischen tropischen Cocktails bis hin zu feinen Weinen und gekühlten Bieren - alles in einer entspannten, malerischen Atmosphäre.</p>
-            </div>
+        <div class="fac-section-content reveal-left">
+            <span class="fac-section-label">Unterkunft</span>
+            <div class="fac-section-divider"></div>
+            <h2>Luxuszimmer</h2>
+            <p>Unsere Zimmer in Weligama bieten die perfekte Mischung aus Küstenkomfort und modernem Luxus. Ob Sie zum Surfen, Entspannen oder Erkunden hier sind, jedes Zimmer ist als Ihr friedlicher Rückzugsort konzipiert — mit gemütlichen Betten, Klimaanlage, kostenlosem WLAN und privaten Balkonen mit atemberaubendem Blick auf den Ozean oder üppige Gärten.</p>
+            <a href="rooms_de.html" class="fac-link-btn">Zimmer entdecken <i class="fas fa-arrow-right"></i></a>
         </div>
+    </section>
 
-        <div class="facility-item">
-            <div class="facility-image">
-                <img src="surfing2.jpg" alt="Surfen Bild" class="main-facility-image">
-                <img src="surfing.jpg" alt="Überlagertes Surfen Bild" class="overlaid-image">
-            </div>
-            <div class="facility-details"  id="facility-item-surf" style="scroll-margin-top: 100px;">
-                <h2>Surfen</h2>
-                <p>Weligama ist einer der besten Spots in Sri Lanka für anfängerfreundliches Surfen. Nur einen kurzen Spaziergang vom Hotel entfernt finden Sie zahlreiche lokale Surfschulen, die Unterricht, Brettverleih und geführte Sessions anbieten. Die sanften Wellen und der sandige Grund machen es perfekt für Anfänger, die ihre erste Welle erwischen möchten, sowie für erfahrenere Surfer, die ihre Fähigkeiten verfeinern wollen.</p>
-            </div>
+    <!-- ======== FACILITY 02 ======== -->
+    <section class="fac-section" id="facility-item-pool" style="scroll-margin-top: 100px;">
+        <div class="fac-section-img reveal-img">
+            <img src="pool.jpg" alt="Infinity Pool">
+            <div class="fac-img-overlay"></div>
+            <span class="fac-num-badge">02</span>
         </div>
-
-        <div class="facility-item">
-            <div class="facility-image">
-                <img src="yoga2.jpg" alt="Yoga Bild" class="main-facility-image">
-                <img src="yoga3.jpg" alt="Überlagertes Yoga Bild" class="overlaid-image">
-            </div>
-            <div class="facility-details"  id="facility-item-yoga" style="scroll-margin-top: 100px;">
-                <h2>Yoga</h2>
-                <p>Verbinden Sie sich durch unsere geführten Yogastunden, die direkt im Hotel angeboten werden, neu mit Geist und Körper. Ob Sie Anfänger oder erfahrener Yogi sind, unsere Instruktoren passen jede Klasse an alle Niveaus an. Die Sessions finden in friedlichen, offenen Räumen statt - oft bei Sonnenaufgang oder Sonnenuntergang - sodass Sie sich im natürlichen Rhythmus von Weligama dehnen, atmen und fließen können. Es ist der perfekte Weg, um Ihren Tag zu beginnen oder nach einem Strandabenteuer zu entspannen.</p>
-            </div>
+        <div class="fac-section-content reveal-right">
+            <span class="fac-section-label">Freizeit</span>
+            <div class="fac-section-divider"></div>
+            <h2>Infinity Pool</h2>
+            <p>Tauchen Sie in unseren erfrischenden Pool oder entspannen Sie am Pool mit einem kühlen Getränk. Der perfekte Ort, um die srilankische Sonne zu genießen und den Tag verstreichen zu lassen.</p>
         </div>
+    </section>
 
-        <p>Entdecken Sie die Schönheit unseres Hotels und der Umgebung durch beeindruckende Bilder in unserer Galerie.</p>
-        <button class="gallery-button" onclick="window.location.href='gallery.html'">Zur Galerie</button>
-    </main>
+    <!-- ======== FACILITY 03 ======== -->
+    <section class="fac-section" id="facility-item-dine" style="scroll-margin-top: 100px;">
+        <div class="fac-section-img reveal-img">
+            <img src="rooftopDine.jpg" alt="Dachrestaurant">
+            <div class="fac-img-overlay"></div>
+            <span class="fac-num-badge">03</span>
+        </div>
+        <div class="fac-section-content reveal-left">
+            <span class="fac-section-label">Gastronomie</span>
+            <div class="fac-section-divider"></div>
+            <h2>Dachrestaurant</h2>
+            <p>Besuchen Sie unser Dachrestaurant für ein kulinarisches Erlebnis mit Aussicht. Mit Blick auf die Küste von Weligama genießen Sie köstliche lokale und internationale Gerichte beim Sonnenuntergang. Unsere Dachbar serviert frische tropische Cocktails, edle Weine und gekühlte Biere in entspannter, malerischer Atmosphäre.</p>
+        </div>
+    </section>
+
+    <!-- ======== FACILITY 04 ======== -->
+    <section class="fac-section" id="facility-item-surf" style="scroll-margin-top: 100px;">
+        <div class="fac-section-img reveal-img">
+            <img src="surfing2.jpg" alt="Surfen">
+            <div class="fac-img-overlay"></div>
+            <span class="fac-num-badge">04</span>
+        </div>
+        <div class="fac-section-content reveal-right">
+            <span class="fac-section-label">Abenteuer</span>
+            <div class="fac-section-divider"></div>
+            <h2>Surfen</h2>
+            <p>Weligama ist einer der besten Spots in Sri Lanka für anfängerfreundliches Surfen. Nur einen kurzen Spaziergang vom Hotel entfernt finden Sie zahlreiche lokale Surfschulen mit Unterricht, Brettverleih und geführten Sessions. Die sanften Wellen und der sandige Grund machen es perfekt für alle Niveaus.</p>
+        </div>
+    </section>
+
+    <!-- ======== FACILITY 05 ======== -->
+    <section class="fac-section" id="facility-item-yoga" style="scroll-margin-top: 100px;">
+        <div class="fac-section-img reveal-img">
+            <img src="yoga2.jpg" alt="Yoga">
+            <div class="fac-img-overlay"></div>
+            <span class="fac-num-badge">05</span>
+        </div>
+        <div class="fac-section-content reveal-left">
+            <span class="fac-section-label">Wellness</span>
+            <div class="fac-section-divider"></div>
+            <h2>Yoga</h2>
+            <p>Verbinden Sie sich neu mit Geist und Körper durch unsere geführten Yogastunden direkt im Hotel. Unsere Instruktoren passen jede Klasse an alle Niveaus an. Die Sessions finden in friedlichen, offenen Räumen statt — oft bei Sonnenaufgang oder Sonnenuntergang — im natürlichen Rhythmus von Weligama.</p>
+        </div>
+    </section>
+
+    <!-- ======== GALLERY CTA ======== -->
+    <section class="fac-cta reveal">
+        <h2>Überzeugen Sie sich selbst</h2>
+        <p>Entdecken Sie beeindruckende Fotos unseres Hotels, der Zimmer und der Umgebung in unserer Galerie.</p>
+        <a href="gallery_de.html" class="fac-cta-btn">Zur Galerie <i class="fas fa-arrow-right"></i></a>
+    </section>
+
 
     <footer>
         <div class="footer-container">
@@ -202,6 +246,36 @@
         </div>
     </footer>
 </body>
+
+    <script>
+    /* ---- Hero parallax ---- */
+    const heroBg = document.getElementById('heroBg');
+    const facHero = document.querySelector('.fac-hero');
+    if (heroBg && facHero) {
+        function updateParallax() {
+            const y = window.scrollY;
+            const heroH = facHero.offsetHeight;
+            if (y <= heroH) {
+                heroBg.style.transform = 'translateY(' + (y * 0.45) + 'px)';
+            }
+        }
+        updateParallax();
+        window.addEventListener('scroll', updateParallax, { passive: true });
+    }
+
+    /* ---- Scroll reveal ---- */
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-img');
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                io.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+    </script>
+
     <script>
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
             const mobileMenu = document.querySelector('.mobile-menu');
@@ -221,6 +295,14 @@
                     mobileMenu.classList.remove('active');
                     body.style.overflow = '';
                 });
+            });
+            // Close menu when clicking backdrop (outside sidebar panel)
+            mobileMenu.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    mobileMenuBtn.classList.remove('active');
+                    this.classList.remove('active');
+                    body.style.overflow = '';
+                }
             });
     </script>
 </html>
