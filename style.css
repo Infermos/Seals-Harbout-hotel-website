@@ -1706,9 +1706,11 @@ padding: 30px;
    Overrides all earlier conflicting mobile-menu rules.
    ================================================================ */
 
-/* ── 1. Hide the desktop glass header on mobile ── */
+/* ── 1. Hide all desktop headers on mobile ── */
 @media (max-width: 900px) {
   .glass-header { display: none !important; }
+  /* Catch any old-style plain <header> elements too */
+  header:not(.glass-header) { display: none !important; }
 }
 
 /* ── 2. Hamburger button — fixed, top-right ── */
@@ -1979,6 +1981,116 @@ padding: 30px;
 .mobile-menu nav > button:hover {
   transform: translateY(-2px) !important;
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.32) !important;
+}
+
+/* ================================================================
+   HERO BOOKING FORM — MOBILE FIX
+   ================================================================ */
+@media (max-width: 900px) {
+  /* Hero section */
+  .hero {
+    height: auto !important;
+    min-height: 100svh !important;
+    padding: 80px 20px 48px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 28px !important;
+  }
+
+  .hero-content {
+    max-width: 100% !important;
+    position: relative !important;
+    z-index: 2;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.7rem, 6vw, 2.4rem) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .hero-content p {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem) !important;
+    line-height: 1.6 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Booking form wrapper */
+  .hero-booking {
+    width: 100% !important;
+    max-width: 100% !important;
+    position: static !important;
+    z-index: 2;
+    box-sizing: border-box !important;
+  }
+
+  /* Booking form itself */
+  #booking-form {
+    position: static !important;
+    width: 100% !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    top: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+    padding: 20px !important;
+    border-radius: 16px !important;
+    box-sizing: border-box !important;
+    background: rgba(0, 0, 0, 0.62) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+  }
+
+  /* Stack form inputs vertically */
+  .form-inputs {
+    flex-direction: column !important;
+    gap: 14px !important;
+    width: 100% !important;
+  }
+
+  .form-inputs label {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  #booking-form input[type="date"],
+  #booking-form input[type="number"],
+  #booking-form input[type="text"] {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 12px !important;
+    font-size: 1rem !important;
+    border-radius: 8px !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #fff !important;
+  }
+
+  .input-label {
+    color: #fff !important;
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 6px !important;
+    display: block !important;
+  }
+
+  /* Submit button full-width */
+  #booking-form button[type="submit"],
+  .form-inputs button[type="submit"] {
+    width: 100% !important;
+    padding: 14px !important;
+    font-size: 1rem !important;
+    border-radius: 10px !important;
+    background: #1c3f8b !important;
+    color: #fff !important;
+    border: none !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    margin-top: 4px !important;
+    letter-spacing: 0.04em !important;
+  }
 }
 
 
